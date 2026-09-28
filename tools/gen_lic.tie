@@ -23,6 +23,9 @@ type tie<logic>
 // 语言切换图标（文/A 翻译徽标，纯文本复合，零外部资源）
 // 语言切换图标：Material Design "translate" 标准图标（文/A，现成通用，fill=currentColor 随导航变色）
 const lang_icon: string = "<svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\" focusable=\"false\"><path fill=\"currentColor\" d=\"M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z\"/></svg>"
+// 黑白切换图标：Material "dark_mode"(月) / "light_mode"(日)，与 translate 图标同源
+const ico_moon: string = "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" aria-hidden=\"true\" focusable=\"false\"><path fill=\"currentColor\" d=\"M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z\"/></svg>"
+const ico_sun: string = "<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" aria-hidden=\"true\" focusable=\"false\"><path fill=\"currentColor\" d=\"M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z\"/></svg>"
 
 // ---------- 通用字符串工具 ----------
 
@@ -202,39 +205,58 @@ func clause_id(s: string) -> string {
 
 // ---------- 页面骨架 ----------
 
-// 顶部导航（license 页：Text 项高亮；语言下拉为原生 details/summary，零 JS）
+// 顶部导航（license 页：Text 项高亮；语言下拉为原生 details/summary；zh 控制导航标签语言）
 // home: 本语言树根；other_prefix: 对应他语言同名页；lang_self/other: 语言显示名
-func emit_nav(h: i64, home: string, other_prefix: string, lang_self: string, lang_other: string, on_text: bool) {
-    sb_append(h, "<nav class=\"top\"><div class=\"brand\"><a href=\"" + home + "\">Tie Public License</a></div><div class=\"links\">")
-    sb_append(h, "<a href=\"" + home + "\">Home</a>")
-    if on_text {
-        sb_append(h, "<a class=\"on\" href=\"#\">Text</a>")
-    } else {
-        sb_append(h, "<a href=\"" + home + "2.2/\">Text</a>")
+func emit_nav(h: i64, home: string, other_prefix: string, lang_self: string, lang_other: string, zh: bool) {
+    var l_home = "Home"
+    var l_text = "Text"
+    var l_cmp = "Compare"
+    var l_using = "Using"
+    var l_faq = "FAQ"
+    var l_about = "About"
+    var l_theme = "Toggle dark / light theme"
+    if zh {
+        l_home = "首页"
+        l_text = "文本"
+        l_cmp = "对比"
+        l_using = "采用"
+        l_faq = "常见问题"
+        l_about = "关于"
+        l_theme = "切换深浅色主题"
     }
-    sb_append(h, "<a href=\"" + home + "compare/\">Compare</a>")
-    sb_append(h, "<a href=\"" + home + "using/\">Using</a>")
-    sb_append(h, "<a href=\"" + home + "faq/\">FAQ</a>")
-    sb_append(h, "<a href=\"" + home + "about/\">About</a>")
+    sb_append(h, "<nav class=\"top\"><div class=\"brand\"><a href=\"" + home + "\">Tie Public License</a></div><div class=\"links\">")
+    sb_append(h, "<a href=\"" + home + "\">" + l_home + "</a>")
+    if zh {
+        sb_append(h, "<a class=\"on\" href=\"#\">" + l_text + "</a>")
+    } else {
+        sb_append(h, "<a href=\"" + home + "2.2/\">" + l_text + "</a>")
+    }
+    sb_append(h, "<a href=\"" + home + "compare/\">" + l_cmp + "</a>")
+    sb_append(h, "<a href=\"" + home + "using/\">" + l_using + "</a>")
+    sb_append(h, "<a href=\"" + home + "faq/\">" + l_faq + "</a>")
+    sb_append(h, "<a href=\"" + home + "about/\">" + l_about + "</a>")
     sb_append(h, "<details class=\"lang\"><summary aria-label=\"Language: " + lang_self + " / " + lang_other + "\">" + lang_icon + "</summary><div class=\"menu\"><a href=\"" + other_prefix + "\">" + lang_other + "</a></div></details>")
+    sb_append(h, "<button class=\"theme\" id=\"themeBtn\" type=\"button\" aria-label=\"" + l_theme + "\"><span class=\"ico-moon\">" + ico_moon + "</span><span class=\"ico-sun\">" + ico_sun + "</span></button>")
     sb_append(h, "</div></nav>\n")
 }
 
 // 页面头尾壳
-func emit_shell_open(h: i64, title: string, home: string, other_prefix: string, lang_self: string, lang_other: string) {
+func emit_shell_open(h: i64, title: string, home: string, other_prefix: string, lang_self: string, lang_other: string, zh: bool) {
     sb_append(h, "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n")
     sb_append(h, "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n")
     sb_append(h, "<title>" + esc_html(title) + "</title>\n")
     sb_append(h, "<meta name=\"description\" content=\"The Tie Public License (TPL) — a permissive, attribution-based open source license published by the TIE-LANG organization.\">\n")
-    sb_append(h, "<link rel=\"stylesheet\" href=\"/assets/site.css\">\n")
+    sb_append(h, "<link rel=\"stylesheet\" href=\"/assets/site.css?v=7\">\n")
+    sb_append(h, "<script>(function(){var t;try{t=localStorage.getItem(\"tpl_theme\")}catch(e){}if(t!=\"dark\"&&t!=\"light\"){t=window.matchMedia&&window.matchMedia(\"(prefers-color-scheme: dark)\").matches?\"dark\":\"light\"}document.documentElement.dataset.theme=t})()</script>\n")
     sb_append(h, "</head>\n<body>\n")
-    emit_nav(h, home, other_prefix, lang_self, lang_other, true)
+    emit_nav(h, home, other_prefix, lang_self, lang_other, zh)
     sb_append(h, "<main>\n")
 }
 
 func emit_shell_close(h: i64, home: string) {
     sb_append(h, "</main>\n")
-    sb_append(h, "<footer>Tie Public License · maintained by the TIE-LANG organization · <a href=\"https://github.com/tie-lang/TPL\">text repository</a> · <a href=\"" + home + "\">home</a></footer>\n")
+    sb_append(h, "<footer>Tie Public License · maintained by the TIE-LANG organization · <a href=\"https://github.com/tie-lang/TPL\">text repository</a> · <a href=\"https://github.com/tie-lang/tpl-www\">website repository</a> · <a href=\"" + home + "\">home</a></footer>\n")
+    sb_append(h, "<script>var tb=document.getElementById(\"themeBtn\");if(tb){tb.addEventListener(\"click\",function(){var r=document.documentElement,t=r.dataset.theme==\"dark\"?\"light\":\"dark\";r.dataset.theme=t;try{localStorage.setItem(\"tpl_theme\",t)}catch(e){}})}</script>\n")
     sb_append(h, "</body>\n</html>\n")
 }
 
@@ -341,7 +363,7 @@ func gen_version(src: string, ver: string, date: string, current: bool, out_root
 
     // ---- 英文页（权威版本）----
     var h = string_builder()
-    emit_shell_open(h, "Tie Public License " + ver, "/en/", "/zh-cn/2.2/", "English", "中文")
+    emit_shell_open(h, "Tie Public License " + ver, "/en/", "/zh-cn/2.2/", "English", "中文", false)
     sb_append(h, "<div class=\"lic-head\">")
     sb_append(h, "<h1>Tie Public License " + ver + "</h1>")
     sb_append(h, "<p class=\"meta\">")
@@ -364,7 +386,7 @@ func gen_version(src: string, ver: string, date: string, current: bool, out_root
 
     // ---- 中文回落页：英文权威文本 + 横幅 ----
     var z = string_builder()
-    emit_shell_open(z, "Tie Public License " + ver, "/zh-cn/", "/en/2.2/", "中文", "English")
+    emit_shell_open(z, "Tie Public License " + ver, "/zh-cn/", "/en/2.2/", "中文", "English", true)
     sb_append(z, "<div class=\"banner\">此页为英文权威文本 —— 中文翻译尚未发布。英文版本为准（English version prevails）。<a href=\"/zh-cn/\">中文说明页</a></div>\n")
     sb_append(z, "<div class=\"lic-head\">")
     sb_append(z, "<h1>Tie Public License " + ver + "</h1>")

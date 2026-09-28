@@ -1,20 +1,108 @@
 /* ============================================================
    TPL website — single stylesheet
-   Style: llvm.org-inspired minimalism. Light theme only.
-   No frameworks, no build step, no client-side JS anywhere.
+   Style: llvm.org-inspired minimalism. Light + dark themes.
+   Theme: data-theme attr set by inline head script (localStorage,
+   falls back to prefers-color-scheme). No frameworks, no build.
    ============================================================ */
+
+:root {
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --fg-soft: #333333;
+  --muted: #666666;
+  --muted-2: #888888;
+  --border: #dddddd;
+  --border-strong: #cccccc;
+  --link: #185fa5;
+  --link-hover-bg: #f2f6fb;
+  --nav-fg: #444444;
+  --nav-line: #185fa5;
+  --thead-bg: #f2f6fb;
+  --tpl-col-bg: #e6f1fb;
+  --yes-fg: #1b6d1b;
+  --no-fg: #a32d2d;
+  --warn-bg: #fff3bf;
+  --warn-fg: #8a6d00;
+  --dispute-bg: #fdecec;
+  --dispute-fg: #a32d2d;
+  --banner-bg: #faeeda;
+  --banner-border: #efc48f;
+  --banner-fg: #63470b;
+  --code-bg: #f6f6f6;
+  --code-border: #e2e2e2;
+  --inline-code-bg: #f2f2f2;
+}
+
+[data-theme="dark"] {
+  --bg: #1b1d21;
+  --fg: #e2e4e8;
+  --fg-soft: #c9ccd2;
+  --muted: #9aa0a8;
+  --muted-2: #7d838c;
+  --border: #3a3d44;
+  --border-strong: #4a4e56;
+  --link: #6db3f2;
+  --link-hover-bg: #2a3540;
+  --nav-fg: #b8bdc4;
+  --nav-line: #6db3f2;
+  --thead-bg: #242830;
+  --tpl-col-bg: #20334a;
+  --yes-fg: #7fd47f;
+  --no-fg: #ff9a9a;
+  --warn-bg: #4a3f14;
+  --warn-fg: #ffd54d;
+  --dispute-bg: #4a2222;
+  --dispute-fg: #ff9a9a;
+  --banner-bg: #3a2f14;
+  --banner-border: #6b5a24;
+  --banner-fg: #ffd98a;
+  --code-bg: #24272d;
+  --code-border: #3a3d44;
+  --inline-code-bg: #2b2f36;
+}
+
+/* 无 JS 时跟随系统偏好 */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    --bg: #1b1d21;
+    --fg: #e2e4e8;
+    --fg-soft: #c9ccd2;
+    --muted: #9aa0a8;
+    --muted-2: #7d838c;
+    --border: #3a3d44;
+    --border-strong: #4a4e56;
+    --link: #6db3f2;
+    --link-hover-bg: #2a3540;
+    --nav-fg: #b8bdc4;
+    --nav-line: #6db3f2;
+    --thead-bg: #242830;
+    --tpl-col-bg: #20334a;
+    --yes-fg: #7fd47f;
+    --no-fg: #ff9a9a;
+    --warn-bg: #4a3f14;
+    --warn-fg: #ffd54d;
+    --dispute-bg: #4a2222;
+    --dispute-fg: #ff9a9a;
+    --banner-bg: #3a2f14;
+    --banner-border: #6b5a24;
+    --banner-fg: #ffd98a;
+    --code-bg: #24272d;
+    --code-border: #3a3d44;
+    --inline-code-bg: #2b2f36;
+  }
+}
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  background: #ffffff;
-  color: #1a1a1a;
+  background: var(--bg);
+  color: var(--fg);
   font: 15px/1.65 -apple-system, "Segoe UI", "Helvetica Neue", Arial,
         "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 }
 
-a { color: #185fa5; text-decoration: none; }
+a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* ---------- top navigation ---------- */
@@ -26,21 +114,26 @@ nav.top {
   flex-wrap: wrap;
   gap: 6px 16px;
   padding: 10px 24px;
-  border-bottom: 2px solid #185fa5;
+  border-bottom: 2px solid var(--nav-line);
 }
 
 nav.top .brand a {
-  color: #111111;
+  color: var(--fg);
   font-size: 16px;
   font-weight: 500;
 }
 
-nav.top .links { display: flex; gap: 18px; }
+nav.top .links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+}
 
-nav.top .links a { color: #444444; font-size: 14px; }
+nav.top .links a { color: var(--nav-fg); font-size: 14px; }
 
 nav.top .links a:hover,
-nav.top .links a.on { color: #185fa5; }
+nav.top .links a.on { color: var(--link); }
 
 /* ---------- language dropdown (native details/summary, zero JS) ---------- */
 
@@ -55,43 +148,71 @@ details.lang summary {
   padding: 0;
   cursor: pointer;
   list-style: none;
-  color: #444444;
-  border: 1px solid #cccccc;
+  color: var(--nav-fg);
+  border: 1px solid var(--border-strong);
   border-radius: 4px;
   user-select: none;
 }
 
 details.lang summary::-webkit-details-marker { display: none; }
 
-details.lang summary:hover { color: #185fa5; border-color: #185fa5; }
+details.lang summary:hover { color: var(--link); border-color: var(--link); }
 
-details.lang[open] summary { color: #185fa5; border-color: #185fa5; }
+details.lang[open] summary { color: var(--link); border-color: var(--link); }
 
 details.lang summary svg { display: block; }
-
 
 details.lang .menu {
   position: absolute;
   right: 0;
   top: calc(100% + 4px);
-  background: #ffffff;
-  border: 1px solid #cccccc;
+  background: var(--bg);
+  border: 1px solid var(--border-strong);
   border-radius: 4px;
   min-width: 96px;
   padding: 4px 0;
   z-index: 10;
-  box-shadow: none;
 }
 
 details.lang .menu a {
   display: block;
   padding: 6px 14px;
   font-size: 14px;
-  color: #444444;
+  color: var(--nav-fg);
   white-space: nowrap;
 }
 
-details.lang .menu a:hover { color: #185fa5; background: #f2f6fb; text-decoration: none; }
+details.lang .menu a:hover { color: var(--link); background: var(--link-hover-bg); text-decoration: none; }
+
+/* ---------- theme toggle (icons swap via CSS, JS only flips data-theme) ---------- */
+
+button.theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 26px;
+  padding: 0;
+  background: none;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  color: var(--nav-fg);
+  cursor: pointer;
+}
+
+button.theme:hover { color: var(--link); border-color: var(--link); }
+
+button.theme svg { display: block; }
+
+.ico-sun { display: none; }
+
+[data-theme="dark"] .ico-moon { display: none; }
+[data-theme="dark"] .ico-sun { display: inline-flex; }
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) .ico-moon { display: none; }
+  html:not([data-theme]) .ico-sun { display: inline-flex; }
+}
 
 /* ---------- main column ---------- */
 
@@ -109,28 +230,28 @@ p, li { margin: 0 0 10px; }
 
 ul { margin: 0 0 14px; padding-left: 22px; }
 
-.muted { color: #777777; }
+.muted { color: var(--muted); }
 
 /* ---------- license pages (generated) ---------- */
 
 .lic-head {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid var(--border);
   padding-bottom: 14px;
   margin-bottom: 20px;
 }
 
-.lic-head .meta { color: #666666; font-size: 13px; margin: 4px 0; }
+.lic-head .meta { color: var(--muted); font-size: 13px; margin: 4px 0; }
 
 .lic p {
   white-space: pre-wrap;   /* preserve the source text indentation and line breaks */
   font-size: 14px;
-  color: #222222;
+  color: var(--fg-soft);
   margin: 0 0 16px;
 }
 
 .lic h2 {
   font-size: 17px;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid var(--border);
   padding-bottom: 6px;
   margin-top: 32px;
 }
@@ -138,9 +259,9 @@ ul { margin: 0 0 14px; padding-left: 22px; }
 /* ---------- fallback banner (untranslated pages) ---------- */
 
 .banner {
-  background: #faeeda;
-  border: 1px solid #efc48f;
-  color: #63470b;
+  background: var(--banner-bg);
+  border: 1px solid var(--banner-border);
+  color: var(--banner-fg);
   padding: 10px 14px;
   font-size: 14px;
   margin: 0 0 22px;
@@ -155,13 +276,13 @@ table.versions {
 }
 
 table.versions td {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--border);
   padding: 8px 4px;
   font-size: 14px;
   vertical-align: top;
 }
 
-table.versions td.muted { color: #777777; }
+table.versions td.muted { color: var(--muted); }
 
 /* ---------- comparison matrix ---------- */
 
@@ -174,14 +295,14 @@ table.matrix {
 
 table.matrix th,
 table.matrix td {
-  border: 1px solid #dddddd;
+  border: 1px solid var(--border);
   padding: 7px 9px;
   text-align: center;
   vertical-align: top;
 }
 
 table.matrix th {
-  background: #f2f6fb;
+  background: var(--thead-bg);
   font-weight: 500;
 }
 
@@ -192,32 +313,28 @@ table.matrix th:first-child {
 }
 
 table.matrix .tpl-col {
-  background: #e6f1fb;
+  background: var(--tpl-col-bg);
 }
 
-table.matrix td.yes { color: #1b6d1b; }
-table.matrix td.no  { color: #a32d2d; }
-table.matrix td.mid { color: #777777; }
-
-/* silent / not addressed — yellow */
+/* 三色语义：绿=宽松利好，黄=沉默/部分/未提及，红=义务负担/有争议 */
+table.matrix td.yes { color: var(--yes-fg); }
+table.matrix td.no  { color: var(--no-fg); }
 table.matrix td.warn {
-  background: #fff3bf;
-  color: #8a6d00;
+  background: var(--warn-bg);
+  color: var(--warn-fg);
 }
-
-/* disputed — red */
 table.matrix td.dispute {
-  background: #fdecec;
-  color: #a32d2d;
+  background: var(--dispute-bg);
+  color: var(--dispute-fg);
 }
 
-.table-note { color: #888888; font-size: 12.5px; }
+.table-note { color: var(--muted-2); font-size: 12.5px; }
 
 /* ---------- code blocks (Using page notice templates) ---------- */
 
 pre {
-  background: #f6f6f6;
-  border: 1px solid #e2e2e2;
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
   padding: 12px 14px;
   overflow-x: auto;
   font-size: 13px;
@@ -225,7 +342,7 @@ pre {
 }
 
 code {
-  background: #f2f2f2;
+  background: var(--inline-code-bg);
   padding: 1px 5px;
   font-size: 90%;
 }
@@ -243,11 +360,11 @@ pre code { background: none; padding: 0; }
 /* ---------- footer ---------- */
 
 footer {
-  border-top: 1px solid #dddddd;
-  color: #888888;
+  border-top: 1px solid var(--border);
+  color: var(--muted-2);
   font-size: 12px;
   text-align: center;
   padding: 14px 20px 22px;
 }
 
-footer a { color: #666666; }
+footer a { color: var(--muted); }
