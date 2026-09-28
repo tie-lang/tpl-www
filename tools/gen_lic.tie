@@ -20,6 +20,9 @@ type tie<logic>
 // 注意：勿用 str_char 访问大串（O(N²)，46KB 级即劣化）；一律 str_byte +
 // str_sub_bytes + string_builder。
 
+// 语言切换无障碍图标（通用无障碍人形符号，内联 SVG，零外部资源）
+const lang_icon: string = "<span class=\"ico-lang\" aria-hidden=\"true\"><span>文</span><span>A</span></span>"0 0 24 24\" width=\"18\" height=\"18\" aria-hidden=\"true\" focusable=\"false\"><circle cx=\"12\" cy=\"12\" r=\"10.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"12\" cy=\"6.6\" r=\"1.9\" fill=\"currentColor\"/><path d=\"M6.2 9.6c3.8.9 7.8.9 11.6 0l.5 1.9c-1.6.4-3.2.66-4.8.76v3.24l2.1 6-1.9.7L12 16.4l-1.7 5.8-1.9-.7 2.1-6v-3.24c-1.6-.1-3.2-.36-4.8-.76z\" fill=\"currentColor\"/></svg>"
+
 // ---------- 通用字符串工具 ----------
 
 // 整行是否为空白（全字节为空格/制表符）
@@ -212,7 +215,7 @@ func emit_nav(h: i64, home: string, other_prefix: string, lang_self: string, lan
     sb_append(h, "<a href=\"" + home + "using/\">Using</a>")
     sb_append(h, "<a href=\"" + home + "faq/\">FAQ</a>")
     sb_append(h, "<a href=\"" + home + "about/\">About</a>")
-    sb_append(h, "<details class=\"lang\"><summary>" + lang_self + "</summary><div class=\"menu\"><a href=\"" + other_prefix + "\">" + lang_other + "</a></div></details>")
+    sb_append(h, "<details class=\"lang\"><summary aria-label=\"Language: " + lang_self + " / " + lang_other + "\">" + lang_icon + "</summary><div class=\"menu\"><a href=\"" + other_prefix + "\">" + lang_other + "</a></div></details>")
     sb_append(h, "</div></nav>\n")
 }
 

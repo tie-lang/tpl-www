@@ -47,11 +47,15 @@ nav.top .links a.on { color: #185fa5; }
 details.lang { position: relative; }
 
 details.lang summary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 26px;
+  padding: 0;
   cursor: pointer;
   list-style: none;
   color: #444444;
-  font-size: 14px;
-  padding: 2px 8px;
   border: 1px solid #cccccc;
   border-radius: 4px;
   user-select: none;
@@ -62,6 +66,19 @@ details.lang summary::-webkit-details-marker { display: none; }
 details.lang summary:hover { color: #185fa5; border-color: #185fa5; }
 
 details.lang[open] summary { color: #185fa5; border-color: #185fa5; }
+
+details.lang summary svg { display: block; }
+
+/* 文/A translation badge (dropdown trigger icon) */
+.ico-lang {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0 1px;
+  line-height: 1;
+  font-size: 10px;
+  font-weight: 500;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
 
 details.lang .menu {
   position: absolute;
@@ -191,6 +208,18 @@ table.matrix .tpl-col {
 table.matrix td.yes { color: #1b6d1b; }
 table.matrix td.no  { color: #a32d2d; }
 table.matrix td.mid { color: #777777; }
+
+/* silent / not addressed — yellow */
+table.matrix td.warn {
+  background: #fff3bf;
+  color: #8a6d00;
+}
+
+/* disputed — red */
+table.matrix td.dispute {
+  background: #fdecec;
+  color: #a32d2d;
+}
 
 .table-note { color: #888888; font-size: 12.5px; }
 
