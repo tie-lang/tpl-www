@@ -20,7 +20,9 @@
   --thead-bg: #f2f6fb;
   --tpl-col-bg: #e6f1fb;
   --yes-fg: #1b6d1b;
+  --yes-bg: #eaf3de;
   --no-fg: #a32d2d;
+  --no-bg: #fdecec;
   --warn-bg: #fff3bf;
   --warn-fg: #8a6d00;
   --dispute-bg: #fdecec;
@@ -48,7 +50,9 @@
   --thead-bg: #242830;
   --tpl-col-bg: #20334a;
   --yes-fg: #7fd47f;
+  --yes-bg: #24391f;
   --no-fg: #ff9a9a;
+  --no-bg: #4a2222;
   --warn-bg: #4a3f14;
   --warn-fg: #ffd54d;
   --dispute-bg: #4a2222;
@@ -78,7 +82,9 @@
     --thead-bg: #242830;
     --tpl-col-bg: #20334a;
     --yes-fg: #7fd47f;
+    --yes-bg: #24391f;
     --no-fg: #ff9a9a;
+    --no-bg: #4a2222;
     --warn-bg: #4a3f14;
     --warn-fg: #ffd54d;
     --dispute-bg: #4a2222;
@@ -317,8 +323,14 @@ table.matrix .tpl-col {
 }
 
 /* 三色语义：绿=宽松利好，黄=沉默/部分/未提及，红=义务负担/有争议 */
-table.matrix td.yes { color: var(--yes-fg); }
-table.matrix td.no  { color: var(--no-fg); }
+table.matrix td.yes {
+  color: var(--yes-fg);
+  background: var(--yes-bg);
+}
+table.matrix td.no {
+  color: var(--no-fg);
+  background: var(--no-bg);
+}
 table.matrix td.warn {
   background: var(--warn-bg);
   color: var(--warn-fg);
