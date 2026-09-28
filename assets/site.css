@@ -42,7 +42,49 @@ nav.top .links a { color: #444444; font-size: 14px; }
 nav.top .links a:hover,
 nav.top .links a.on { color: #185fa5; }
 
-nav.top .links a.lang { margin-left: 10px; }
+/* ---------- language dropdown (native details/summary, zero JS) ---------- */
+
+details.lang { position: relative; }
+
+details.lang summary {
+  cursor: pointer;
+  list-style: none;
+  color: #444444;
+  font-size: 14px;
+  padding: 2px 8px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  user-select: none;
+}
+
+details.lang summary::-webkit-details-marker { display: none; }
+
+details.lang summary:hover { color: #185fa5; border-color: #185fa5; }
+
+details.lang[open] summary { color: #185fa5; border-color: #185fa5; }
+
+details.lang .menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  min-width: 96px;
+  padding: 4px 0;
+  z-index: 10;
+  box-shadow: none;
+}
+
+details.lang .menu a {
+  display: block;
+  padding: 6px 14px;
+  font-size: 14px;
+  color: #444444;
+  white-space: nowrap;
+}
+
+details.lang .menu a:hover { color: #185fa5; background: #f2f6fb; text-decoration: none; }
 
 /* ---------- main column ---------- */
 
@@ -113,6 +155,44 @@ table.versions td {
 }
 
 table.versions td.muted { color: #777777; }
+
+/* ---------- comparison matrix ---------- */
+
+table.matrix {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0 10px;
+  font-size: 13.5px;
+}
+
+table.matrix th,
+table.matrix td {
+  border: 1px solid #dddddd;
+  padding: 7px 9px;
+  text-align: center;
+  vertical-align: top;
+}
+
+table.matrix th {
+  background: #f2f6fb;
+  font-weight: 500;
+}
+
+table.matrix td:first-child,
+table.matrix th:first-child {
+  text-align: left;
+  white-space: nowrap;
+}
+
+table.matrix .tpl-col {
+  background: #e6f1fb;
+}
+
+table.matrix td.yes { color: #1b6d1b; }
+table.matrix td.no  { color: #a32d2d; }
+table.matrix td.mid { color: #777777; }
+
+.table-note { color: #888888; font-size: 12.5px; }
 
 /* ---------- code blocks (Using page notice templates) ---------- */
 
