@@ -198,8 +198,8 @@ func clause_id(s: string) -> string {
 
 // ---------- 页面骨架 ----------
 
-// 顶部导航（license 页：Text 项高亮）
-func emit_nav(h: i64, home: string, zh_home: string, on_text: bool) {
+// 顶部导航（license 页：Text 项高亮；语言切换经 /lang/xx 写偏好 cookie）
+func emit_nav(h: i64, home: string, lang_label: string, lang_href: string, on_text: bool) {
     sb_append(h, "<nav class=\"top\"><div class=\"brand\"><a href=\"" + home + "\">Tie Public License</a></div><div class=\"links\">")
     sb_append(h, "<a href=\"" + home + "\">Home</a>")
     if on_text {
@@ -209,19 +209,19 @@ func emit_nav(h: i64, home: string, zh_home: string, on_text: bool) {
     }
     sb_append(h, "<a href=\"" + home + "using/\">Using</a>")
     sb_append(h, "<a href=\"" + home + "faq/\">FAQ</a>")
-    sb_append(h, "<a class=\"lang\" href=\"" + zh_home + "\">中文</a>")
+    sb_append(h, "<a class=\"lang\" href=\"" + lang_href + "\">" + lang_label + "</a>")
     sb_append(h, "</div></nav>\n")
 }
 
 // 页面头尾壳
-func emit_shell_open(h: i64, title: string, home: string, zh_home: string) {
+func emit_shell_open(h: i64, title: string, home: string, lang_label: string, lang_href: string) {
     sb_append(h, "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n")
     sb_append(h, "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n")
     sb_append(h, "<title>" + esc_html(title) + "</title>\n")
     sb_append(h, "<meta name=\"description\" content=\"The Tie Public License (TPL) — a permissive, attribution-based open source license published by the TIE-LANG organization.\">\n")
     sb_append(h, "<link rel=\"stylesheet\" href=\"/assets/site.css\">\n")
     sb_append(h, "</head>\n<body>\n")
-    emit_nav(h, home, zh_home, true)
+    emit_nav(h, home, lang_label, lang_href, true)
     sb_append(h, "<main>\n")
 }
 
@@ -334,7 +334,7 @@ func gen_version(src: string, ver: string, date: string, current: bool, out_root
 
     // ---- 英文页（权威版本）----
     var h = string_builder()
-    emit_shell_open(h, "Tie Public License " + ver, "/en/", "/zh/")
+    emit_shell_open(h, "Tie Public License " + ver, "/en/", "中文", "/lang/zh/")
     sb_append(h, "<div class=\"lic-head\">")
     sb_append(h, "<h1>Tie Public License " + ver + "</h1>")
     sb_append(h, "<p class=\"meta\">")
@@ -357,7 +357,7 @@ func gen_version(src: string, ver: string, date: string, current: bool, out_root
 
     // ---- 中文回落页：英文权威文本 + 横幅 ----
     var z = string_builder()
-    emit_shell_open(z, "Tie Public License " + ver, "/zh/", "/en/")
+    emit_shell_open(z, "Tie Public License " + ver, "/zh/", "English", "/lang/en/")
     sb_append(z, "<div class=\"banner\">此页为英文权威文本 —— 中文翻译尚未发布。英文版本为准（English version prevails）。<a href=\"/zh/\">中文说明页</a></div>\n")
     sb_append(z, "<div class=\"lic-head\">")
     sb_append(z, "<h1>Tie Public License " + ver + "</h1>")
