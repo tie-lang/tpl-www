@@ -1,0 +1,390 @@
+type tie<logic>
+// gen_lic.tie —— TPL 官网许可证页面生成器（纯 tie，tiec 原生编译运行）
+//
+// 单一来源原则：站点上的许可证 HTML 一律由本工具从 tie-lang/TPL 仓的
+// 文本文件（tpl.txt / 2.2 / 2.1 / 2.0）生成，禁止手抄、禁止手改生成产物。
+// 换版流程：TPL 仓双写（tpl.txt + 版本号副本）→ 重跑本工具 → 提交产物。
+//
+// 编译：tiec --no-cache gen_lic.tie
+// 运行：gen_lic.exe   （路径均为绝对路径，与 cwd 无关）
+//
+// 生成规则：
+//   * 行切分按字节扫描（str_byte O(1)），UTF-8 字节原样透传，不做解码
+//   * HTML 转义 & < >（其余字节原样）
+//   * 空行分块 → <p>（CSS white-space:pre-wrap 保留缩进与换行）
+//   * 标题行（前缀判定）→ <h2 id>：PREAMBLE / SECTION N - ... / APPENDIX ... /
+//     END OF TERMS AND CONDITIONS；正文里全大写段落（如 §9 的
+//     WHERE APPLICABLE LAW...）不是标题，按普通段落保真输出
+//   * 条款行 N.N 开头 → <p id="s-N-N">，供 FAQ 等页面深链
+//
+// 注意：勿用 str_char 访问大串（O(N²)，46KB 级即劣化）；一律 str_byte +
+// str_sub_bytes + string_builder。
+
+// ---------- 通用字符串工具 ----------
+
+// 整行是否为空白（全字节为空格/制表符）
+func is_blank(s: string) -> bool {
+    var n = len(s)
+    var i: i64 = 0
+    while i < n {
+        var b = str_byte(s, i)
+        if b != 32 && b != 9 {
+            return false
+        }
+        i = i + 1
+    }
+    return true
+}
+
+// HTML 转义一行：& < > → 实体；其余（含 UTF-8 多字节）原样透传
+func esc_html(s: string) -> string {
+    var h = string_builder()
+    var n = len(s)
+    var run: i64 = 0
+    var i: i64 = 0
+    while i < n {
+        var b = str_byte(s, i)
+        if b == 38 || b == 60 || b == 62 {
+            if i > run {
+                sb_append(h, str_sub_bytes(s, run, i))
+            }
+            if b == 38 {
+                sb_append(h, "&amp;")
+            }
+            if b == 60 {
+                sb_append(h, "&lt;")
+            }
+            if b == 62 {
+                sb_append(h, "&gt;")
+            }
+            run = i + 1
+        }
+        i = i + 1
+    }
+    if n > run {
+        sb_append(h, str_sub_bytes(s, run, n))
+    }
+    return sb_build(h)
+}
+
+// 按字节切行（'\n' 分隔，剥离行尾 '\r'；UTF-8 安全）
+func split_lines(s: string) -> table<string> {
+    var out = table_new_string()
+    var n = len(s)
+    var start: i64 = 0
+    var i: i64 = 0
+    while i <= n {
+        // i == n 时收尾最后一段（即使无换行结尾）
+        if i == n {
+            if i > start {
+                var tail = str_sub_bytes(s, start, i)
+                var tn = len(tail)
+                if tn > 0 && str_byte(tail, tn - 1) == 13 {
+                    tail = str_sub_bytes(tail, 0, tn - 1)
+                }
+                table_push(out, tail)
+            }
+        } else {
+            var b = str_byte(s, i)
+            if b == 10 {
+                var line = str_sub_bytes(s, start, i)
+                var ln = len(line)
+                if ln > 0 && str_byte(line, ln - 1) == 13 {
+                    line = str_sub_bytes(line, 0, ln - 1)
+                }
+                table_push(out, line)
+                start = i + 1
+            }
+        }
+        i = i + 1
+    }
+    return out
+}
+
+// ---------- 标题与条款识别 ----------
+
+// 前缀判定：s 是否以 prefix 开头
+func has_prefix(s: string, prefix: string) -> bool {
+    var n = len(s)
+    var pn = len(prefix)
+    if pn > n {
+        return false
+    }
+    var i: i64 = 0
+    while i < pn {
+        if str_byte(s, i) != str_byte(prefix, i) {
+            return false
+        }
+        i = i + 1
+    }
+    return true
+}
+
+// 是否为章节标题行（仅前缀/全等判定，不认全大写——正文有全大写段落）
+func is_heading(s: string) -> bool {
+    if s == "PREAMBLE" { return true }
+    if s == "END OF TERMS AND CONDITIONS" { return true }
+    if has_prefix(s, "SECTION ") { return true }
+    if s == "APPENDIX" { return true }
+    if has_prefix(s, "APPENDIX ") { return true }
+    return false
+}
+
+// 标题锚点 id：SECTION 12 - ... → section-12；PREAMBLE → preamble；
+// APPENDIX ... → appendix；END OF TERMS AND CONDITIONS → end
+func heading_id(s: string) -> string {
+    if s == "PREAMBLE" { return "preamble" }
+    if s == "END OF TERMS AND CONDITIONS" { return "end" }
+    if has_prefix(s, "SECTION ") {
+        var n = len(s)
+        var j: i64 = 8
+        while j < n {
+            var b = str_byte(s, j)
+            if b < 48 || b > 57 {
+                break
+            }
+            j = j + 1
+        }
+        if j > 8 {
+            return "section-" + str_sub_bytes(s, 8, j)
+        }
+        return "section"
+    }
+    return "appendix"
+}
+
+// 字节是否为数字
+func is_digit(b: i64) -> bool {
+    return b >= 48 && b <= 57
+}
+
+// 是否为条款起始行："N.N ..."（N 为一至多位数字，后跟空格）
+// 例：1.1 / 1.10 / 4.8 / 15.2
+func is_clause(s: string) -> bool {
+    var n = len(s)
+    if n < 4 { return false }
+    if !is_digit(str_byte(s, 0)) { return false }
+    var j: i64 = 0
+    while j < n && is_digit(str_byte(s, j)) {
+        j = j + 1
+    }
+    if j == 0 || j >= n || str_byte(s, j) != 46 { return false } // '.'
+    j = j + 1
+    var k = j
+    while k < n && is_digit(str_byte(s, k)) {
+        k = k + 1
+    }
+    if k == j { return false }          // 点后无数字
+    if k >= n { return false }
+    return str_byte(s, k) == 32          // 数字后必须跟空格
+}
+
+// 条款锚点 id："1.10 ..." → "s-1-10"
+func clause_id(s: string) -> string {
+    var n = len(s)
+    var j: i64 = 0
+    while j < n && is_digit(str_byte(s, j)) {
+        j = j + 1
+    }
+    var major = str_sub_bytes(s, 0, j)
+    var k = j + 1
+    var k0 = k
+    while k < n && is_digit(str_byte(s, k)) {
+        k = k + 1
+    }
+    var minor = str_sub_bytes(s, k0, k)
+    return "s-" + major + "-" + minor
+}
+
+// ---------- 页面骨架 ----------
+
+// 顶部导航（license 页：Text 项高亮）
+func emit_nav(h: i64, home: string, zh_home: string, on_text: bool) {
+    sb_append(h, "<nav class=\"top\"><div class=\"brand\"><a href=\"" + home + "\">Tie Public License</a></div><div class=\"links\">")
+    sb_append(h, "<a href=\"" + home + "\">Home</a>")
+    if on_text {
+        sb_append(h, "<a class=\"on\" href=\"#\">Text</a>")
+    } else {
+        sb_append(h, "<a href=\"" + home + "2.2/\">Text</a>")
+    }
+    sb_append(h, "<a href=\"" + home + "using/\">Using</a>")
+    sb_append(h, "<a href=\"" + home + "faq/\">FAQ</a>")
+    sb_append(h, "<a class=\"lang\" href=\"" + zh_home + "\">中文</a>")
+    sb_append(h, "</div></nav>\n")
+}
+
+// 页面头尾壳
+func emit_shell_open(h: i64, title: string, home: string, zh_home: string) {
+    sb_append(h, "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n")
+    sb_append(h, "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n")
+    sb_append(h, "<title>" + esc_html(title) + "</title>\n")
+    sb_append(h, "<meta name=\"description\" content=\"The Tie Public License (TPL) — a permissive, attribution-based open source license published by the TIE-LANG organization.\">\n")
+    sb_append(h, "<link rel=\"stylesheet\" href=\"/assets/site.css\">\n")
+    sb_append(h, "</head>\n<body>\n")
+    emit_nav(h, home, zh_home, true)
+    sb_append(h, "<main>\n")
+}
+
+func emit_shell_close(h: i64, home: string) {
+    sb_append(h, "</main>\n")
+    sb_append(h, "<footer>Tie Public License · maintained by the TIE-LANG organization · <a href=\"https://github.com/tie-lang/TPL\">text repository</a> · <a href=\"" + home + "\">home</a></footer>\n")
+    sb_append(h, "</body>\n</html>\n")
+}
+
+// ---------- 许可证正文转换 ----------
+
+// 输出一个块：块内行以 \n 连接，条款起始块带 id 锚点
+func flush_block(h: i64, blk: table<string>) {
+    var cnt = len(blk)
+    if cnt == 0 {
+        return
+    }
+    var first = blk[0]
+    var id_attr = ""
+    if is_clause(first) {
+        id_attr = " id=\"" + clause_id(first) + "\""
+    }
+    sb_append(h, "<p" + id_attr + ">")
+    var j: i64 = 0
+    while j < cnt {
+        if j > 0 {
+            sb_append(h, "\n")
+        }
+        sb_append(h, blk[j])
+        j = j + 1
+    }
+    sb_append(h, "</p>\n")
+}
+
+// 把许可文本行流转换为 HTML 片段（h1 由页头承担，文本自带的前两行标题跳过）
+// 追加规则：空行分块 → <p>；标题行 → <h2 id>；条款行强制开新块并带锚点
+func emit_body(h: i64, src: string) {
+    var lines = split_lines(src)
+    var n = len(lines)
+
+    var cur = table_new_string()   // 当前块的行
+    var cur_open = false
+    var skip_title = true          // 跳过文本自带的 "TIE PUBLIC LICENSE" + "Version X.Y" 两行
+    var i: i64 = 0
+
+    while i < n {
+        var line = lines[i]
+        i = i + 1
+
+        if skip_title {
+            if is_blank(line) { continue }
+            if has_prefix(line, "TIE PUBLIC LICENSE") { continue }
+            if has_prefix(line, "Version ") {
+                skip_title = false
+                continue
+            }
+            // 兜底：结构不符就不再跳
+            skip_title = false
+        }
+
+        if is_blank(line) {
+            if cur_open {
+                flush_block(h, cur)
+                cur = table_new_string()
+                cur_open = false
+            }
+            continue
+        }
+
+        if is_heading(line) {
+            if cur_open {
+                flush_block(h, cur)
+                cur = table_new_string()
+                cur_open = false
+            }
+            sb_append(h, "<h2 id=\"" + heading_id(line) + "\">" + esc_html(line) + "</h2>\n")
+            continue
+        }
+
+        if is_clause(line) && cur_open {
+            flush_block(h, cur)
+            cur = table_new_string()
+            cur_open = false
+        }
+
+        table_push(cur, esc_html(line))
+        cur_open = true
+    }
+    if cur_open {
+        flush_block(h, cur)
+    }
+}
+
+// ---------- 版本页生成 ----------
+
+// 生成一个版本的 en 页 + zh 回落页 + 纯文本副本
+// src: TPL 仓文本路径；ver/date: 元数据；current: 是否当前版本
+// out_root: 站点根目录
+func gen_version(src: string, ver: string, date: string, current: bool, out_root: string) {
+    var body = file_read(src)
+    if len(body) < 100 {
+        print_err("gen_lic: source too small or unreadable: " + src)
+        exit(1)
+    }
+
+    var en_dir = out_root + "en\\" + ver
+    var zh_dir = out_root + "zh\\" + ver
+    mkdir_all(en_dir)
+    mkdir_all(zh_dir)
+
+    // ---- 英文页（权威版本）----
+    var h = string_builder()
+    emit_shell_open(h, "Tie Public License " + ver, "/en/", "/zh/")
+    sb_append(h, "<div class=\"lic-head\">")
+    sb_append(h, "<h1>Tie Public License " + ver + "</h1>")
+    sb_append(h, "<p class=\"meta\">")
+    if current {
+        sb_append(h, "Current version")
+    } else {
+        sb_append(h, "Archived version")
+    }
+    sb_append(h, " · published " + date + " · <a href=\"/en/" + ver + "/tpl-" + ver + ".txt\">plain text</a></p>")
+    sb_append(h, "<p class=\"meta versions\">Versions: <a href=\"/en/2.2/\">2.2</a> · <a href=\"/en/2.1/\">2.1</a> · <a href=\"/en/2.0/\">2.0</a></p>")
+    sb_append(h, "</div>\n")
+    sb_append(h, "<div class=\"lic\">\n")
+    emit_body(h, body)
+    sb_append(h, "</div>\n")
+    emit_shell_close(h, "/en/")
+    file_write(en_dir + "\\index.html", sb_build(h))
+
+    // ---- 纯文本副本 ----
+    file_write(en_dir + "\\tpl-" + ver + ".txt", body)
+
+    // ---- 中文回落页：英文权威文本 + 横幅 ----
+    var z = string_builder()
+    emit_shell_open(z, "Tie Public License " + ver, "/zh/", "/en/")
+    sb_append(z, "<div class=\"banner\">此页为英文权威文本 —— 中文翻译尚未发布。英文版本为准（English version prevails）。<a href=\"/zh/\">中文说明页</a></div>\n")
+    sb_append(z, "<div class=\"lic-head\">")
+    sb_append(z, "<h1>Tie Public License " + ver + "</h1>")
+    sb_append(z, "<p class=\"meta\">")
+    if current {
+        sb_append(z, "当前版本 · ")
+    } else {
+        sb_append(z, "历史存档版本 · ")
+    }
+    sb_append(z, "发布于 " + date + " · <a href=\"/zh/" + ver + "/tpl-" + ver + ".txt\">纯文本</a></p>")
+    sb_append(z, "<p class=\"meta versions\">版本：<a href=\"/zh/2.2/\">2.2</a> · <a href=\"/zh/2.1/\">2.1</a> · <a href=\"/zh/2.0/\">2.0</a></p>")
+    sb_append(z, "</div>\n")
+    sb_append(z, "<div class=\"lic\">\n")
+    emit_body(z, body)
+    sb_append(z, "</div>\n")
+    emit_shell_close(z, "/zh/")
+    file_write(zh_dir + "\\index.html", sb_build(z))
+
+    println("[gen] " + ver + " -> en/zh pages + txt (" + to_string(len(body)) + " bytes)")
+}
+
+func main() {
+    var root = "F:\\Projects\\tpl-www\\"
+    // 当前版本读权威 tpl.txt；历史版本读版本号副本（二者本就逐字节一致）
+    gen_version("F:\\Projects\\TPL\\tpl.txt", "2.2", "2026-09-25", true,  root)
+    gen_version("F:\\Projects\\TPL\\2.1",    "2.1", "2026-09-17", false, root)
+    gen_version("F:\\Projects\\TPL\\2.0",    "2.0", "2026-09-15", false, root)
+    println("[gen] done")
+    exit(0)
+}
