@@ -331,13 +331,13 @@ func gen_version(src: string, ver: string, date: string, current: bool, out_root
     }
 
     var en_dir = out_root + "en\\" + ver
-    var zh_dir = out_root + "zh\\" + ver
+    var zh_dir = out_root + "zh-cn\\" + ver
     mkdir_all(en_dir)
     mkdir_all(zh_dir)
 
     // ---- 英文页（权威版本）----
     var h = string_builder()
-    emit_shell_open(h, "Tie Public License " + ver, "/en/", "/zh/2.2/", "English", "中文")
+    emit_shell_open(h, "Tie Public License " + ver, "/en/", "/zh-cn/2.2/", "English", "中文")
     sb_append(h, "<div class=\"lic-head\">")
     sb_append(h, "<h1>Tie Public License " + ver + "</h1>")
     sb_append(h, "<p class=\"meta\">")
@@ -360,8 +360,8 @@ func gen_version(src: string, ver: string, date: string, current: bool, out_root
 
     // ---- 中文回落页：英文权威文本 + 横幅 ----
     var z = string_builder()
-    emit_shell_open(z, "Tie Public License " + ver, "/zh/", "/en/2.2/", "中文", "English")
-    sb_append(z, "<div class=\"banner\">此页为英文权威文本 —— 中文翻译尚未发布。英文版本为准（English version prevails）。<a href=\"/zh/\">中文说明页</a></div>\n")
+    emit_shell_open(z, "Tie Public License " + ver, "/zh-cn/", "/en/2.2/", "中文", "English")
+    sb_append(z, "<div class=\"banner\">此页为英文权威文本 —— 中文翻译尚未发布。英文版本为准（English version prevails）。<a href=\"/zh-cn/\">中文说明页</a></div>\n")
     sb_append(z, "<div class=\"lic-head\">")
     sb_append(z, "<h1>Tie Public License " + ver + "</h1>")
     sb_append(z, "<p class=\"meta\">")
@@ -370,13 +370,13 @@ func gen_version(src: string, ver: string, date: string, current: bool, out_root
     } else {
         sb_append(z, "历史存档版本 · ")
     }
-    sb_append(z, "发布于 " + date + " · <a href=\"/zh/" + ver + "/tpl-" + ver + ".txt\">纯文本</a></p>")
-    sb_append(z, "<p class=\"meta versions\">版本：<a href=\"/zh/2.2/\">2.2</a> · <a href=\"/zh/2.1/\">2.1</a> · <a href=\"/zh/2.0/\">2.0</a></p>")
+    sb_append(z, "发布于 " + date + " · <a href=\"/zh-cn/" + ver + "/tpl-" + ver + ".txt\">纯文本</a></p>")
+    sb_append(z, "<p class=\"meta versions\">版本：<a href=\"/zh-cn/2.2/\">2.2</a> · <a href=\"/zh-cn/2.1/\">2.1</a> · <a href=\"/zh-cn/2.0/\">2.0</a></p>")
     sb_append(z, "</div>\n")
     sb_append(z, "<div class=\"lic\">\n")
     emit_body(z, body)
     sb_append(z, "</div>\n")
-    emit_shell_close(z, "/zh/")
+    emit_shell_close(z, "/zh-cn/")
     file_write(zh_dir + "\\index.html", sb_build(z))
 
     println("[gen] " + ver + " -> en/zh pages + txt (" + to_string(len(body)) + " bytes)")
