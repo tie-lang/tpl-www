@@ -69,16 +69,6 @@ details.lang[open] summary { color: #185fa5; border-color: #185fa5; }
 
 details.lang summary svg { display: block; }
 
-/* 文/A translation badge (dropdown trigger icon) */
-.ico-lang {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 0 1px;
-  line-height: 1;
-  font-size: 10px;
-  font-weight: 500;
-  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-}
 
 details.lang .menu {
   position: absolute;
