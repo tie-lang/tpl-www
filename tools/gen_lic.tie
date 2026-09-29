@@ -328,21 +328,103 @@ func init_langs() {
 // 语言下拉列出全部语言（省略当前语言），仍为零 JS 原生 details/summary
 func emit_nav(h: i64, cur: string, ver_suffix: string, zh: bool) {
     var home = "/" + cur + "/"
+    // 导航标签：按语言代码取值（新增语言 = 此处加一段）
     var l_home = "Home"
     var l_text = "Text"
     var l_cmp = "Compare"
     var l_using = "Using"
     var l_faq = "FAQ"
     var l_about = "About"
+    var l_loc = "Localization"
+    var l_con = "Contributing"
     var l_theme = "Toggle dark / light theme"
-    if zh {
+    if cur == "zh-cn" {
         l_home = "首页"
         l_text = "文本"
         l_cmp = "对比"
         l_using = "采用"
         l_faq = "常见问题"
         l_about = "关于"
+        l_loc = "本地化"
+        l_con = "贡献"
         l_theme = "切换深浅色主题"
+    }
+    if cur == "es" {
+        l_home = "Inicio"
+        l_text = "Texto"
+        l_cmp = "Comparar"
+        l_using = "Uso"
+        l_faq = "Preguntas frecuentes"
+        l_about = "Acerca de"
+        l_loc = "Localización"
+        l_con = "Contribuir"
+        l_theme = "Cambiar tema claro / oscuro"
+    }
+    if cur == "fr" {
+        l_home = "Accueil"
+        l_text = "Texte"
+        l_cmp = "Comparer"
+        l_using = "Utilisation"
+        l_faq = "FAQ"
+        l_about = "À propos"
+        l_loc = "Localisation"
+        l_con = "Contribuer"
+        l_theme = "Basculer thème clair / sombre"
+    }
+    if cur == "de" {
+        l_home = "Start"
+        l_text = "Text"
+        l_cmp = "Vergleich"
+        l_using = "Verwendung"
+        l_faq = "Häufige Fragen"
+        l_about = "Über"
+        l_loc = "Lokalisierung"
+        l_con = "Mitwirken"
+        l_theme = "Helles / dunkles Design umschalten"
+    }
+    if cur == "ja" {
+        l_home = "ホーム"
+        l_text = "テキスト"
+        l_cmp = "比較"
+        l_using = "採用"
+        l_faq = "よくある質問"
+        l_about = "本ライセンスについて"
+        l_loc = "ローカライズ"
+        l_con = "貢献"
+        l_theme = "ライト／ダークテーマの切り替え"
+    }
+    if cur == "pt" {
+        l_home = "Início"
+        l_text = "Texto"
+        l_cmp = "Comparar"
+        l_using = "Utilização"
+        l_faq = "Perguntas frequentes"
+        l_about = "Acerca de"
+        l_loc = "Localização"
+        l_con = "Contribuir"
+        l_theme = "Alternar tema claro / escuro"
+    }
+    if cur == "ru" {
+        l_home = "Главная"
+        l_text = "Текст"
+        l_cmp = "Сравнение"
+        l_using = "Применение"
+        l_faq = "Частые вопросы"
+        l_about = "О лицензии"
+        l_loc = "Локализация"
+        l_con = "Участие"
+        l_theme = "Переключить светлую / тёмную тему"
+    }
+    if cur == "ko" {
+        l_home = "홈"
+        l_text = "본문"
+        l_cmp = "비교"
+        l_using = "적용"
+        l_faq = "자주 묻는 질문"
+        l_about = "소개"
+        l_loc = "현지화"
+        l_con = "기여"
+        l_theme = "밝은 / 어두운 테마 전환"
     }
     if cur == "ar" {
         l_home = "الرئيسية"
@@ -351,6 +433,8 @@ func emit_nav(h: i64, cur: string, ver_suffix: string, zh: bool) {
         l_using = "الاستخدام"
         l_faq = "الأسئلة الشائعة"
         l_about = "حول"
+        l_loc = "التعريب"
+        l_con = "المساهمة"
         l_theme = "تبديل السمة الفاتحة والداكنة"
     }
     sb_append(h, "<nav class=\"top\"><div class=\"brand\"><a href=\"" + home + "\">Tie Public License</a></div><div class=\"links\">")
@@ -360,6 +444,8 @@ func emit_nav(h: i64, cur: string, ver_suffix: string, zh: bool) {
     sb_append(h, "<a href=\"" + home + "using/\">" + l_using + "</a>")
     sb_append(h, "<a href=\"" + home + "faq/\">" + l_faq + "</a>")
     sb_append(h, "<a href=\"" + home + "about/\">" + l_about + "</a>")
+    sb_append(h, "<a href=\"" + home + "localization/\">" + l_loc + "</a>")
+    sb_append(h, "<a href=\"" + home + "contributing/\">" + l_con + "</a>")
     sb_append(h, "<details class=\"lang\"><summary aria-label=\"Language\">" + lang_icon + "</summary><div class=\"menu\">")
     var n = len(g_lang_codes)
     var i: i64 = 0
