@@ -411,7 +411,8 @@ func gen_version(src: string, ver: string, date: string, current: bool, out_root
 func main() {
     var root = "F:\\Projects\\tpl-www\\"
     // 当前版本读权威 tpl.txt；历史版本读版本号副本（二者本就逐字节一致）
-    gen_version("F:\\Projects\\TPL\\tpl.txt", "2.2", "2026-09-25", true,  root)
+    gen_version("F:\\Projects\\TPL\\2.3",    "2.3", "2026-09-29", true,  root)
+    gen_version("F:\\Projects\\TPL\\2.2",    "2.2", "2026-09-25", false, root)
     gen_version("F:\\Projects\\TPL\\2.1",    "2.1", "2026-09-17", false, root)
     gen_version("F:\\Projects\\TPL\\2.0",    "2.0", "2026-09-15", false, root)
     println("[gen] done")
