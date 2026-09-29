@@ -181,6 +181,14 @@ func is_quote_start(s: string, i: i64) -> bool {
     if b == 226 && i + 2 < n && str_byte(s, i + 1) == 128 && str_byte(s, i + 2) == 156 {
         return true
     }
+    // 日式引号「（U+300C = E3 80 8C）
+    if b == 227 && i + 2 < n && str_byte(s, i + 1) == 128 && str_byte(s, i + 2) == 140 {
+        return true
+    }
+    // 德语低引号 „（U+201E = E2 80 9E）
+    if b == 226 && i + 2 < n && str_byte(s, i + 1) == 128 && str_byte(s, i + 2) == 158 {
+        return true
+    }
     return false
 }
 

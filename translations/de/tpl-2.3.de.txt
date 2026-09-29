@@ -1,34 +1,26 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tie Public License 2.3</title>
-<meta name="description" content="The Tie Public License (TPL) — a permissive, attribution-based open source license published by the TIE-LANG organization.">
-<link rel="stylesheet" href="/assets/site.css?v=8">
-<script>(function(){var t;try{t=localStorage.getItem("tpl_theme")}catch(e){}if(t!="dark"&&t!="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t})()</script>
-</head>
-<body>
-<nav class="top"><div class="brand"><a href="/de/">Tie Public License</a></div><div class="links"><a href="/de/">Home</a><a class="on" href="#">Text</a><a href="/de/compare/">Compare</a><a href="/de/using/">Using</a><a href="/de/faq/">FAQ</a><a href="/de/about/">About</a><details class="lang"><summary aria-label="Language"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg></summary><div class="menu"><a href="/en/2.3/">English</a><a href="/zh-cn/2.3/">中文</a><a href="/es/2.3/">Español</a><a href="/fr/2.3/">Français</a><a href="/ja/2.3/">日本語</a><a href="/pt/2.3/">Português</a><a href="/ru/2.3/">Русский</a><a href="/ko/2.3/">한국어</a></div></details><button class="theme" id="themeBtn" type="button" aria-label="Toggle dark / light theme"><span class="ico-moon"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span><span class="ico-sun"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg></span></button></div></nav>
-<main>
-<div class="banner">Diese Seite enthält eine nicht amtliche Referenzübersetzung von TPL 2.3. Maßgeblich ist der englische Text (§15.8).</div>
-<div class="lic-head"><h1>Tie Public License 2.3</h1><p class="meta">Current version · published 2026-09-29 · <a href="/de/2.3/tpl-2.3.txt">plain text</a></p><p class="meta versions">Versions: <a href="/de/2.2/">2.2</a> · <a href="/de/2.1/">2.1</a> · <a href="/de/2.0/">2.0</a></p></div>
-<div class="lic">
-<p>Copyright (c) &lt;year&gt; &lt;name of copyright holder&gt;. All rights reserved.</p>
-<p>Diese Lizenz kann mit ihrem Kurznamen „TPL" bezeichnet werden (z. B. „TPL 2.3").</p>
-<p>Der Text dieser Lizenz wird von der Organisation TIE-LANG als generische,
+TIE PUBLIC LICENSE
+Version 2.3
+
+Copyright (c) <year> <name of copyright holder>. All rights reserved.
+
+Diese Lizenz kann mit ihrem Kurznamen „TPL" bezeichnet werden (z. B. „TPL 2.3").
+
+Der Text dieser Lizenz wird von der Organisation TIE-LANG als generische,
 wiederverwendbare Open-Source-Lizenz veröffentlicht. Sie kann von jeder
 natürlichen oder juristischen Person (einem „Lizenzgeber") übernommen werden,
 die Werke unter dieser Lizenz verbreitet oder bereitstellt, ohne jede
-Verbundenheit mit der Organisation TIE-LANG oder deren Billigung.</p>
-<h2 id="preamble">PREAMBLE</h2>
-<p>Die Tie Public License ist eine permissive, auf Namensnennung beruhende
+Verbundenheit mit der Organisation TIE-LANG oder deren Billigung.
+
+PREAMBLE
+
+Die Tie Public License ist eine permissive, auf Namensnennung beruhende
 Open-Source-Lizenz für Werke jeder Art: Software, Dokumente, Schriften,
 Datensätze, Medien, Modelle, Hardware-Entwürfe oder sonstiges. Sie ist
 allgemein verwendbar und hinsichtlich des Einsatzbereichs neutral: Jeder kann
 sie für jede Art von Werk übernehmen, und jeder darf lizenzierte Werke für
-jeden Zweck nutzen.</p>
-<p>Ihre Grundsätze: Das lizenzierte Material darf von jedem für jeden Zweck
+jeden Zweck nutzen.
+
+Ihre Grundsätze: Das lizenzierte Material darf von jedem für jeden Zweck
 genutzt, kopiert, geändert und weiterverbreitet werden, allein vorbehaltlich
 der Bedingungen dieser Lizenz (Erlaubnis); die Pflichten zur Namensnennung und
 zur Beibehaltung von Hinweisen schützen den Lizenzgeber, die Mitwirkenden und
@@ -40,32 +32,39 @@ Material selbst, nicht das, was Sie damit bauen (Nutzerwerke); die Rechte
 Dritter, deren Bestandteile dem lizenzierten Material beiliegen, werden
 geachtet, und ihre Hinweise werden mit jeder Kopie weitergegeben (Dritte); und
 die Einräumungen erstrecken sich auf alle, überall, für jede Art der Nutzung
-(Universalität).</p>
-<p>Durch die Nutzung, Vervielfältigung, Änderung, Ihren Beitrag zu oder die
+(Universalität).
+
+Durch die Nutzung, Vervielfältigung, Änderung, Ihren Beitrag zu oder die
 Weiterverbreitung jeglichen Teils des lizenzierten Materials erklären Sie sich
 mit den Bestimmungen dieser Lizenz einverstanden. Wenn Sie nicht einverstanden
 sind, sind Sie nicht berechtigt, das lizenzierte Material zu nutzen, zu
-kopieren, zu ändern oder weiterzuverbreiten.</p>
-<h2 id="section-1">SECTION 1 - DEFINITIONEN</h2>
-<p>Für Zwecke dieser Lizenz haben die nachstehenden Begriffe die unten
+kopieren, zu ändern oder weiterzuverbreiten.
+
+SECTION 1 - DEFINITIONEN
+
+Für Zwecke dieser Lizenz haben die nachstehenden Begriffe die unten
 angegebenen Bedeutungen. Im Singular definierte Begriffe schließen den Plural
-ein und umgekehrt, soweit der Zusammenhang dies erfordert.</p>
-<p id="s-1-1">1.1 „Lizenziertes Material" bezeichnet zusammengefasst alle Werke, Materialien
+ein und umgekehrt, soweit der Zusammenhang dies erfordert.
+
+1.1 „Lizenziertes Material" bezeichnet zusammengefasst alle Werke, Materialien
 oder sonstigen Gegenstände jeder Art — einschließlich, aber nicht beschränkt
 auf Programme und Bibliotheken, Dokumentation, Quell- und Objektformen von
 Programmen, Beispiele, Beispieldaten, Datensätze, Konfigurationsdateien,
 Build-Skripte, Mediendateien, Schriften, Modelle, Hardware-Entwürfe sowie
 grafische Bestandteile (einschließlich Logos und Grafiken) — die (a) vom
 Lizenzgeber oder für diesen erstellt und (b) vom Lizenzgeber unter dieser
-Lizenz verbreitet oder bereitgestellt werden.</p>
-<p id="s-1-2">1.2 „Lizenzgeber" bezeichnet die natürliche oder juristische Person,
+Lizenz verbreitet oder bereitgestellt werden.
+
+1.2 „Lizenzgeber" bezeichnet die natürliche oder juristische Person,
 einschließlich ihrer Erben, Rechtsnachfolger und Zessionare, die die Rechte am
 lizenzierten Material innehat und dieses unter dieser Lizenz verbreitet oder
-bereitstellt.</p>
-<p id="s-1-3">1.3 „Sie" (und die entsprechende besitzanzeigende Form „Ihr") bezeichnet die
+bereitstellt.
+
+1.3 „Sie" (und die entsprechende besitzanzeigende Form „Ihr") bezeichnet die
 natürliche oder juristische Person, die die durch diese Lizenz eingeräumten
-Befugnisse ausübt.</p>
-<p id="s-1-4">1.4 „Quellform" bezeichnet die für Änderungen bevorzugte Form des lizenzierten
+Befugnisse ausübt.
+
+1.4 „Quellform" bezeichnet die für Änderungen bevorzugte Form des lizenzierten
 Materials nebst den zugehörigen Definitionsdateien, Skripten, Konfigurationen
 und Dokumentationen, die Teil dieser Form sind. Die Quellform richtet sich nach
 der Art des Werkes: Bei einem Programm ist sie in der Regel dessen Quellcode
@@ -76,12 +75,14 @@ einem Modell dessen Trainingsdefinitionen und -konfigurationen; bei einem
 Hardware-Entwurf dessen Entwurfsdateien. Wird das lizenzierte Material in
 mehreren Formen bereitgestellt, ist die Quellform die vom Lizenzgeber als
 solche bezeichnete Form oder, ohne eine solche Bezeichnung, die für Änderungen
-bevorzugte Form.</p>
-<p id="s-1-5">1.5 „Objektform" bezeichnet jede Form des lizenzierten Materials, die keine
+bevorzugte Form.
+
+1.5 „Objektform" bezeichnet jede Form des lizenzierten Materials, die keine
 Quellform ist, einschließlich der durch Kompilierung, Rendering, Export,
 Generierung, Minimierung, Aggregation oder jede andere mechanische Umwandlung
-oder Übersetzung der Quellform entstandenen Formen, ganz oder teilweise.</p>
-<p id="s-1-6">1.6 „Abgeleitetes Werk" bezeichnet jedes Werk — gleich ob in Quell- oder
+oder Übersetzung der Quellform entstandenen Formen, ganz oder teilweise.
+
+1.6 „Abgeleitetes Werk" bezeichnet jedes Werk — gleich ob in Quell- oder
 Objektform —, das auf dem lizenzierten Material beruht, davon abgeleitet ist
 oder einen Teil davon enthält, sei es wörtlich oder mit Änderungen,
 Übersetzungen, Anpassungen, Erweiterungen, Einfügungen, Streichungen oder
@@ -90,42 +91,49 @@ die aus dem lizenzierten Material stammen oder Änderungen bzw. Anpassungen
 daran darstellen, und umfasst weder eigenständige und unabhängige Werke noch
 lediglich mit dem lizenzierten Material zusammengeführte Werke. Ein
 Nutzerwerk, das lizenziertes Material nicht in Quellform enthält oder
-vervielfältigt, ist kein abgeleitetes Werk.</p>
-<p id="s-1-7">1.7 „Nutzerwerk" bezeichnet jedes Werk — einschließlich, aber nicht beschränkt
+vervielfältigt, ist kein abgeleitetes Werk.
+
+1.7 „Nutzerwerk" bezeichnet jedes Werk — einschließlich, aber nicht beschränkt
 auf Programme, Anwendungen, Skripte, Dokumente, Datensätze, Schriften,
 Entwürfe, Medien, Modelle und andere schöpferische oder funktionale Werke —,
 das Sie für oder mit dem lizenzierten Material erstellen, herstellen,
 erzeugen oder generieren, sofern dieses Werk nicht das lizenzierte Material
 selbst ist und lizenziertes Material nicht in Quellform enthält oder
-vervielfältigt. Zur Klarstellung:</p>
-<p>  (a) ein Werk kann ein Nutzerwerk sein, unabhängig davon, ob es von einem
+vervielfältigt. Zur Klarstellung:
+
+  (a) ein Werk kann ein Nutzerwerk sein, unabhängig davon, ob es von einem
       Menschen geschaffen wurde, und umfasst Werke, die mit Hilfe des
       lizenzierten Materials geschaffen, erzeugt oder gerendert wurden,
       einschließlich Werken, die von Systemen der künstlichen Intelligenz oder
       Modellen des maschinellen Lernens erzeugt wurden, die für oder mit dem
-      lizenzierten Material verwendet werden;</p>
-<p>  (b) die Tatsache, dass ein Nutzerwerk gemeinsam mit dem lizenzierten
+      lizenzierten Material verwendet werden;
+
+  (b) die Tatsache, dass ein Nutzerwerk gemeinsam mit dem lizenzierten
       Material geschaffen, kompiliert, ausgeführt, gerendert, gehostet oder
       anderweitig wesentlich genutzt wird — etwa ein in einer unter dieser
       Lizenz verbreiteten Sprache geschriebenes Programm, eine auf einer
       Bibliothek aufbauende Anwendung, ein mit solchen Werkzeugen gesetztes
       Dokument, eine in einem Spiel gerenderte Schrift oder ein mit einer
       solchen Bibliothek trainiertes Modell —, macht dieses Nutzerwerk nicht
-      schon dadurch zu einem abgeleiteten Werk des lizenzierten Materials; und</p>
-<p>  (c) ein Nutzerwerk umfasst nicht eine Datei des lizenzierten Materials selbst
+      schon dadurch zu einem abgeleiteten Werk des lizenzierten Materials; und
+
+  (c) ein Nutzerwerk umfasst nicht eine Datei des lizenzierten Materials selbst
       oder eine Änderung einer solchen Datei, auch wenn sie als Teil eines
-      Nutzerwerks verbreitet wird.</p>
-<p id="s-1-8">1.8 „Beitrag" bezeichnet jedes Werk, einschließlich jeder Änderung oder
+      Nutzerwerks verbreitet wird.
+
+1.8 „Beitrag" bezeichnet jedes Werk, einschließlich jeder Änderung oder
 Ergänzung des lizenzierten Materials, das von Ihnen oder einem Dritten
 absichtlich beim Lizenzgeber zur Aufnahme in das lizenzierte Material
 eingereicht wird. „Einreichen" bezeichnet jede Form elektronischer,
 mündlicher oder schriftlicher Mitteilung an den Lizenzgeber oder dessen
 Vertreter, einschließlich der Mitteilung über Mailinglisten,
 Versionskontrollsysteme, Ticketsysteme, Prüfsysteme oder Dokumentation, die
-der Absender zur Prüfung auf Aufnahme in das lizenzierte Material bestimmt.</p>
-<p id="s-1-9">1.9 „Mitwirkender" bezeichnet jede natürliche oder juristische Person, die
-einen Beitrag leistet.</p>
-<p id="s-1-10">1.10 „Kennzeichen" bezeichnet die Namen, Wortmarken, Logos, Bildzeichen,
+der Absender zur Prüfung auf Aufnahme in das lizenzierte Material bestimmt.
+
+1.9 „Mitwirkender" bezeichnet jede natürliche oder juristische Person, die
+einen Beitrag leistet.
+
+1.10 „Kennzeichen" bezeichnet die Namen, Wortmarken, Logos, Bildzeichen,
 Aufmachungen, Dienstleistungsmarken und sonstigen unterscheidungskräftigen
 Bezeichnungen, die der Lizenzgeber innehat oder kontrolliert und zur
 Kennzeichnung des lizenzierten Materials, des Lizenzgebers oder der vom
@@ -133,21 +141,24 @@ Lizenzgeber angebotenen Produkt- und Dienstfamilie verwendet. Verbreitet der
 Lizenzgeber eine Hinweisdatei nach Section 5.7, umfasst das Kennzeichen die
 darin bezeichneten unterscheidungskräftigen Bezeichnungen; nichts in dieser
 Lizenz gewährt jedoch Rechte an einer nicht ausdrücklich bezeichneten oder
-nicht vom Lizenzgeber gehaltenen Marke.</p>
-<p id="s-1-11">1.11 „Verbreitung" (und das Verb „verbreiten") bezeichnet jede Handlung, durch
+nicht vom Lizenzgeber gehaltenen Marke.
+
+1.11 „Verbreitung" (und das Verb „verbreiten") bezeichnet jede Handlung, durch
 die das lizenzierte Material oder abgeleitete Werke Dritten auf irgendeine
 Weise zugänglich gemacht werden, einschließlich, aber nicht beschränkt auf
 Verkauf, Verkaufsangebot, Lizenzierung, Unterlizenzierung, Übertragung,
 Abtretung, Veröffentlichung, Hochladen in ein Netzwerk, ein Repository oder
 einen Marktplatz, Aufnahme in eine Sammlung oder ein Sammelwerk, öffentliche
 Zurschaustellung, öffentliche Aufführung oder Bereitstellung als gehosteter
-oder verwalteter Dienst.</p>
-<p id="s-1-12">1.12 „Anwendbares Recht" bezeichnet die Gesetze und Vorschriften der
+oder verwalteter Dienst.
+
+1.12 „Anwendbares Recht" bezeichnet die Gesetze und Vorschriften der
 Gerichtsbarkeit, in der die betreffenden Rechte und Pflichten aus dieser
 Lizenz durchzusetzen sind, wie nach Section 12 bestimmt, zusammen mit
 zwingenden Vorschriften der Gesetze anderer Gerichtsbarkeiten, die nicht
-abbedungen werden können.</p>
-<p id="s-1-13">1.13 „Material Dritter" bezeichnet jedes Werk, jeden Bestandteil, Datensatz,
+abbedungen werden können.
+
+1.13 „Material Dritter" bezeichnet jedes Werk, jeden Bestandteil, Datensatz,
 jede Schrift, jedes Modell, jede Mediendatei oder jeden sonstigen
 Bestandteil, der (a) weder das lizenzierte Material noch ein Beitrag ist;
 (b) von einer anderen Person oder Einrichtung als dem Lizenzgeber oder einem
@@ -156,41 +167,50 @@ lizenzierten Material beigefügt, darin eingebettet oder zusammen mit ihm
 bereitgestellt wird, gleich ob in einer Hinweisdatei, einem Manifest für
 Bestandteile Dritter (unter welcher Bezeichnung auch immer, etwa
 „THIRD-PARTY-NOTICES" oder „CREDITS") oder der Begleitdokumentation
-ausgewiesen.</p>
-<p id="s-1-14">1.14 „Rechteinhaber Dritter" bezeichnet die Person oder Einrichtung, die
-Rechte an Material Dritter innehat.</p>
-<p id="s-1-15">1.15 „Verbundenes Unternehmen" bezeichnet in Bezug auf eine Partei jede
+ausgewiesen.
+
+1.14 „Rechteinhaber Dritter" bezeichnet die Person oder Einrichtung, die
+Rechte an Material Dritter innehat.
+
+1.15 „Verbundenes Unternehmen" bezeichnet in Bezug auf eine Partei jede
 juristische Person, die diese Partei unmittelbar oder mittelbar kontrolliert,
 von ihr kontrolliert wird oder mit ihr unter gemeinsamer Kontrolle steht,
 wobei „Kontrolle" den Besitz von mehr als fünfzig Prozent (50 %) der
 Stimmrechte der Einrichtung oder die Befugnis bezeichnet, deren Geschäftsführung
-und Politik zu bestimmen oder bestimmen zu lassen.</p>
-<h2 id="section-2">SECTION 2 - EINRÄUMUNG VON URHEBERRECHTEN UND DATENBANKRECHTEN</h2>
-<p>Vorbehaltlich der Bestimmungen dieser Lizenz räumen der Lizenzgeber und jeder
+und Politik zu bestimmen oder bestimmen zu lassen.
+
+SECTION 2 - EINRÄUMUNG VON URHEBERRECHTEN UND DATENBANKRECHTEN
+
+Vorbehaltlich der Bestimmungen dieser Lizenz räumen der Lizenzgeber und jeder
 Mitwirkende Ihnen hiermit eine zeitlich unbeschränkte, weltweite,
 nicht ausschließliche, gebührenfreie und unwiderrufliche (außer wie in
 Section 11 ausdrücklich vorgesehen) Urheberrechtslizenz ein, und, soweit nach
 dem anwendbaren Recht Datenbankrechte (einschließlich sui-generis-
 Datenbankrechte) am lizenzierten Material bestehen, eine Lizenz an diesen
-Datenbankrechten, um:</p>
-<p id="s-2-1">2.1 Vervielfältigen und Nutzen — das lizenzierte Material ganz oder teilweise
+Datenbankrechten, um:
+
+2.1 Vervielfältigen und Nutzen — das lizenzierte Material ganz oder teilweise
 zu vervielfältigen, zu nutzen, auszuführen, anzuzeigen, aufzuführen und auf
 jede andere Weise zu verwerten, in jedem Medium, Format oder Kontext, für
 jeden Zweck, ob kommerziell oder nicht kommerziell, in jedem Tätigkeitsbereich,
-unabhängig von Identität, Verbundenheit oder Standort des Nutzers;</p>
-<p id="s-2-2">2.2 Ändern — das lizenzierte Material zu ändern, zu übersetzen, anzupassen,
+unabhängig von Identität, Verbundenheit oder Standort des Nutzers;
+
+2.2 Ändern — das lizenzierte Material zu ändern, zu übersetzen, anzupassen,
 umzuwandeln, zu portieren und auf jede andere Weise abgeleitete Werke davon zu
-erstellen;</p>
-<p id="s-2-3">2.3 Verbreiten — Kopien des lizenzierten Materials und abgeleiteter Werke in
+erstellen;
+
+2.3 Verbreiten — Kopien des lizenzierten Materials und abgeleiteter Werke in
 Quell- oder Objektform über jeden Verbreitungsweg zu verbreiten, zu verkaufen,
 zum Verkauf anzubieten, unterzulizenzieren, öffentlich anzuzeigen, öffentlich
-aufzuführen und auf jede andere Weise zu übertragen; und</p>
-<p id="s-2-4">2.4 Weiterlizenzieren — vorbehaltlich der Bedingungen der Section 5 das
+aufzuführen und auf jede andere Weise zu übertragen; und
+
+2.4 Weiterlizenzieren — vorbehaltlich der Bedingungen der Section 5 das
 lizenzierte Material und abgeleitete Werke davon zu Bedingungen Ihrer Wahl
 weiter zu lizenzieren, einschließlich der Bedingungen anderer Lizenzen, sofern
 eine solche Einräumung nicht dazu genutzt wird, die Ihnen durch diese Lizenz
-auferlegten Bedingungen und Pflichten zu umgehen oder zu unterlaufen.</p>
-<p id="s-2-5">2.5 Art der Einräumung — Diese Lizenz ist hinsichtlich des lizenzierten
+auferlegten Bedingungen und Pflichten zu umgehen oder zu unterlaufen.
+
+2.5 Art der Einräumung — Diese Lizenz ist hinsichtlich des lizenzierten
 Materials in Quellform ausdrücklich permissiv. Sie sind nicht verpflichtet,
 die Quellform Ihrer abgeleiteten Werke offenzulegen, zu veröffentlichen oder
 freizugeben, und es steht Ihnen frei, das lizenzierte Material in
@@ -199,14 +219,16 @@ die Namensnennungspflichten der Section 5 erfüllen. Die Einräumungen dieser
 Section treten zu den Ausnahmen und Beschränkungen des Urheberrechts nach dem
 anwendbaren Recht hinzu und beschränken diese nicht, einschließlich, aber nicht
 beschränkt auf faire Nutzung, zulässige Zitate und sonstige zulässige
-Ausnahmen.</p>
-<p id="s-2-6">2.6 Universelle Einräumung — Die Einräumungen dieser Lizenz erstrecken sich
+Ausnahmen.
+
+2.6 Universelle Einräumung — Die Einräumungen dieser Lizenz erstrecken sich
 auf jede Person und juristische Person, ohne Beschränkung nach Anzahl,
 Identität, Verbundenheit, Geografie oder Tätigkeitsbereich, und auf jede Art
 der Nutzung des lizenzierten Materials und abgeleiteter Werke. Kein
 Anwendungsfall, Einsatzbereich oder Nutzerkreis ist ausgeschlossen, außer wie
-in dieser Lizenz ausdrücklich vorgesehen.</p>
-<p id="s-2-7">2.7 Vorbehalt kommerzieller Lizenzen — Nichts in dieser Lizenz hindert den
+in dieser Lizenz ausdrücklich vorgesehen.
+
+2.7 Vorbehalt kommerzieller Lizenzen — Nichts in dieser Lizenz hindert den
 Lizenzgeber daran, zu gesonderten Bedingungen Lizenzen oder Erlasse einzelner
 Bedingungen dieser Lizenz anzubieten (eine „kommerzielle Lizenz"),
 einschließlich gegen eine Gebühr oder sonstige Gegenleistung. Die
@@ -214,15 +236,17 @@ Verfügbarkeit des lizenzierten Materials unter dieser Lizenz erschöpft,
 beschränkt oder verwirkt nicht das Recht des Lizenzgebers, solche
 kommerziellen Lizenzen zu erteilen, und Sie erwerben kein Recht, die
 Bedingungen einer solchen kommerziellen Lizenz zu verlangen, zu bepreisen oder
-vorzuschreiben.</p>
-<p id="s-2-8">2.8 Datenbankrechte — Soweit am lizenzierten Material oder an dessen Inhalten
+vorzuschreiben.
+
+2.8 Datenbankrechte — Soweit am lizenzierten Material oder an dessen Inhalten
 Datenbankrechte bestehen, berechtigt die durch diese Section eingeräumte
 Datenbankrechtslizenz Sie, die Gesamtheit oder einen wesentlichen Teil der
 Inhalte des lizenzierten Materials zu entnehmen, weiterzuverwenden, zu
 vervielfältigen und zu verbreiten, vorbehaltlich der Sections 5 und 6 und in
 Übereinstimmung mit diesen, auf gleicher Grundlage wie die nach dieser Section
-eingeräumte Urheberrechtslizenz.</p>
-<p id="s-2-9">2.9 Urheberpersönlichkeitsrechte — Im größtmöglichen nach dem anwendbaren
+eingeräumte Urheberrechtslizenz.
+
+2.9 Urheberpersönlichkeitsrechte — Im größtmöglichen nach dem anwendbaren
 Recht zulässigen Umfang und ausschließlich insoweit, als dem Lizenzgeber
 Urheberpersönlichkeitsrechte am lizenzierten Material zustehen, verzichtet der
 Lizenzgeber auf diese Rechte (einschließlich des Rechts auf Anerkennung der
@@ -230,9 +254,11 @@ Urheberschaft und des Rechts auf Integrität) und verpflichtet sich, sie Ihnen
 gegenüber im Zusammenhang mit der Ausübung der nach dieser Lizenz
 eingeräumten Rechte nicht geltend zu machen; die Pflichten zur Namensnennung
 und zur Beibehaltung von Hinweisen nach Section 5 bleiben hiervon unberührt
-und in vollem Umfang wirksam.</p>
-<h2 id="section-3">SECTION 3 - EINRÄUMUNG VON PATENTLIZENZEN</h2>
-<p id="s-3-1">3.1 Einräumung — Vorbehaltlich der Bestimmungen dieser Lizenz räumen der
+und in vollem Umfang wirksam.
+
+SECTION 3 - EINRÄUMUNG VON PATENTLIZENZEN
+
+3.1 Einräumung — Vorbehaltlich der Bestimmungen dieser Lizenz räumen der
 Lizenzgeber und jeder Mitwirkende Ihnen eine zeitlich unbeschränkte,
 weltweite, nicht ausschließliche, gebührenfreie und unwiderrufliche (außer wie
 in den Sections 3.3 und 11 ausdrücklich vorgesehen) Patentlizenz ein, das
@@ -247,15 +273,17 @@ für Patentansprüche, die der Lizenzgeber oder ein Mitwirkender innehatte oder
 kontrollierte, als das lizenzierte Material, auf das sich der Anspruch
 bezieht, verbreitet wurde, oder die danach erworben wurden, mit Ausnahme von
 Patentansprüchen, die im Zusammenhang mit der Übertragung eines Werkes
-erworben wurden, das seinerseits die betreffenden Patentansprüche verletzt.</p>
-<p id="s-3-2">3.2 Keine stillschweigende Patentlizenz — Vorbehaltlich und außer wie in
+erworben wurden, das seinerseits die betreffenden Patentansprüche verletzt.
+
+3.2 Keine stillschweigende Patentlizenz — Vorbehaltlich und außer wie in
 Section 3.1 ausdrücklich vorgesehen, gewährt diese Lizenz keine Patentlizenz
 an Patenten, die der Lizenzgeber oder ein Mitwirkender innehat oder
 kontrolliert, und eine solche gilt auch nicht als stillschweigend, durch
 Verwirkung oder anderweitig gewährt, gleich ob sie aus dieser Lizenz, der
 Verbreitung des lizenzierten Materials, der Nutzung eines abgeleiteten Werkes
-oder einer kommerziellen Vereinbarung hergeleitet wird.</p>
-<p id="s-3-3">3.3 Vergeltungsbeendigung bei Ansprüchen aus geistigem Eigentum — Wenn Sie
+oder einer kommerziellen Vereinbarung hergeleitet wird.
+
+3.3 Vergeltungsbeendigung bei Ansprüchen aus geistigem Eigentum — Wenn Sie
 oder eines Ihrer verbundenen Unternehmen (unmittelbar oder über einen in Ihrem
 oder deren Namen handelnden Dritten) eine Forderung, Klage oder ein Verfahren
 erheben, mit der bzw. dem geltend gemacht wird, dass das lizenzierte Material,
@@ -269,25 +297,30 @@ der Lizenzgeber oder ein Mitwirkender gegen Sie, Ihre verbundenen Unternehmen
 oder Ihre Produkte erhoben hat, oder wenn sie bzw. es sich gegen eine Partei
 richtet, die eine solche Antwort bereits eingereicht hat. Diese Section 3.3
 lässt die nach Section 2 eingeräumten Urheberrechts- und Datenbankrechtslizenzen
-unberührt.</p>
-<h2 id="section-4">SECTION 4 - NUTZERWERKE, VERKNÜPFUNGEN UND KÜNSTLICHE INTELLIGENZ</h2>
-<p id="s-4-1">4.1 Eigentum — Nutzerwerke, die Sie für oder mit dem lizenzierten Material
+unberührt.
+
+SECTION 4 - NUTZERWERKE, VERKNÜPFUNGEN UND KÜNSTLICHE INTELLIGENZ
+
+4.1 Eigentum — Nutzerwerke, die Sie für oder mit dem lizenzierten Material
 erstellen, sind Ihre eigenen Werke. Außer soweit solche Nutzerwerke
 lizenziertes Material in Quellform nach Section 5 enthalten oder
 vervielfältigen, gewährt diese Lizenz keine Rechte an Ihren Nutzerwerken und
-auferlegt hinsichtlich dieser keine Pflichten.</p>
-<p id="s-4-2">4.2 Keine Namensnennung bei Nutzerwerken — Sie sind nicht verpflichtet, in
+auferlegt hinsichtlich dieser keine Pflichten.
+
+4.2 Keine Namensnennung bei Nutzerwerken — Sie sind nicht verpflichtet, in
 oder im Zusammenhang mit einem Nutzerwerk, das Sie für oder mit dem
 lizenzierten Material erstellen, einen Urheberrechtshinweis, Lizenztext, eine
 Namensnennungserklärung, eine Marke oder einen Link zu dieser Lizenz
 aufzunehmen, sofern dieses Nutzerwerk lizenziertes Material nicht in Quellform
-enthält oder vervielfältigt.</p>
-<p id="s-4-3">4.3 Kein Copyleft — Nichts in dieser Lizenz verpflichtet Sie, die Quellform
+enthält oder vervielfältigt.
+
+4.3 Kein Copyleft — Nichts in dieser Lizenz verpflichtet Sie, die Quellform
 Ihrer Nutzerwerke oder abgeleiteten Werke unter dieser oder einer anderen
 Lizenz zu lizenzieren, zu veröffentlichen, offenzulegen oder freizugeben, und
 kein Akt des Empfangs oder der Nutzung des lizenzierten Materials gilt als
-Einwilligung in eine solche Verpflichtung.</p>
-<p id="s-4-4">4.4 Künstliche Intelligenz und maschinelles Lernen — Für Zwecke dieser Section
+Einwilligung in eine solche Verpflichtung.
+
+4.4 Künstliche Intelligenz und maschinelles Lernen — Für Zwecke dieser Section
 bezeichnet „wesentliche Teile" des lizenzierten Materials einen Teil, der —
 qualitativ oder quantitativ bewertet — im Verhältnis zum lizenzierten Material
 als Ganzem bedeutend ist oder dessen Entnahme oder Weiterverbreitung die
@@ -295,8 +328,9 @@ berechtigten Interessen des Lizenzgebers beeinträchtigen würde, unter
 Berücksichtigung von Art und Umfang des lizenzierten Materials, im Einklang mit
 dem Maßstab des „wesentlichen Teils" des europäischen Datenbankrechts
 (Richtlinie 96/9/EG, Artikel 7, in der Auslegung durch den Gerichtshof der
-Europäischen Union). Darüber hinaus:</p>
-<p>  (a) die Vervielfältigung des lizenzierten Materials zum Zweck des Trainings,
+Europäischen Union). Darüber hinaus:
+
+  (a) die Vervielfältigung des lizenzierten Materials zum Zweck des Trainings,
       der Feinabstimmung (einschließlich Reinforcement Learning aus menschlichem
       oder automatisiertem Feedback, Low-Rank- und anderer
       parameter-effizienter Anpassungen sowie Wissensdestillation), der
@@ -305,25 +339,29 @@ Europäischen Union). Darüber hinaus:</p>
       eine nach Section 2 zulässige Nutzung und Vervielfältigung des
       lizenzierten Materials dar, vorbehaltlich der Hinweispflichten der
       Section 5.1 hinsichtlich jeder zurückbehaltenen Kopie des lizenzierten
-      Materials in Quellform;</p>
-<p>  (b) die Gewichte, Parameter und sonstigen gelernten Artefakte eines so
+      Materials in Quellform;
+
+  (b) die Gewichte, Parameter und sonstigen gelernten Artefakte eines so
       trainierten Modells („Modellgewichte") sind weder Objektform noch
       abgeleitete Werke noch lizenziertes Material und stellen ein Nutzerwerk
       der Partei dar, die das Modell trainiert hat, im Sinne von Section 1.7.
       Entsprechendes gilt für die Artefakte von Modellen, die auf Grundlage
       eines solchen Modells feinabgestimmt, angepasst oder zusammengeführt
-      wurden, sowie für daraus abgeleitete weitere Modelle;</p>
-<p>  (c) die von einem Modell erzeugte Ausgabe ist ein Nutzerwerk der Person oder
+      wurden, sowie für daraus abgeleitete weitere Modelle;
+
+  (c) die von einem Modell erzeugte Ausgabe ist ein Nutzerwerk der Person oder
       Einrichtung, die sie erzeugt, unabhängig davon, ob das Modell mit dem
       lizenzierten Material trainiert wurde, und gilt nicht schon deshalb als
       abgeleitetes Werk des lizenzierten Materials oder unterliegt den
       Bedingungen dieser Lizenz; soweit eine Ausgabe jedoch lizenziertes
       Material in Quellform oder wesentliche Teile davon enthält oder
-      vervielfältigt, bleibt dieser Teil Section 5 unterworfen; und</p>
-<p>  (d) allein aufgrund des Trainings haften der Ausgabe eines Modells keine
+      vervielfältigt, bleibt dieser Teil Section 5 unterworfen; und
+
+  (d) allein aufgrund des Trainings haften der Ausgabe eines Modells keine
       Pflichten zur Namensnennung, zum Hinweis oder zur Lizenzierung nach
-      dieser Lizenz an.</p>
-<p>  (e) die Erzeugung von Einbettungen, Vektorindizes, Abrufindizes oder
+      dieser Lizenz an.
+
+  (e) die Erzeugung von Einbettungen, Vektorindizes, Abrufindizes oder
       statistischen Zusammenfassungen des lizenzierten Materials oder darauf
       beruhender Werke ist eine nach Section 2 zulässige Nutzung, und solche
       Artefakte sind weder lizenziertes Material noch Objektform noch
@@ -331,12 +369,14 @@ Europäischen Union). Darüber hinaus:</p>
       erzeugt hat; die Weiterverbreitung wesentlicher wörtlicher Teile des
       lizenzierten Materials, die mittels solcher Artefakte erlangt oder darin
       vervielfältigt wurden, bleibt jedoch den Sections 2 und 5 unterworfen;
-      und</p>
-<p>  (f) die Erstellung, Durchführung und Veröffentlichung von Benchmarks,
+      und
+
+  (f) die Erstellung, Durchführung und Veröffentlichung von Benchmarks,
       Bewertungen, Vergleichen oder Studien zum oder in Bezug auf das
       lizenzierte Material ist nach Section 2 zulässig, und deren Ergebnisse
-      sind Nutzerwerke; und</p>
-<p>  (g) nichts in dieser Section 4.4 beschränkt die Anwendung des Markenrechts,
+      sind Nutzerwerke; und
+
+  (g) nichts in dieser Section 4.4 beschränkt die Anwendung des Markenrechts,
       des Rechts gegen unlauteren Wettbewerb, des Rechts gegen
       Anmaßung oder des Rechts gegen unlautere Aneignung (soweit nicht durch
       das Urheberrecht verdrängt) auf Verhaltensweisen im Zusammenhang mit dem
@@ -344,8 +384,9 @@ Europäischen Union). Darüber hinaus:</p>
       der Benennung, Markenführung oder Vermarktung von Modellen oder deren
       Ausgaben, und stellt hiergegen keine Einwendung dar; solche Gesetze
       gelten nach ihren eigenen Bestimmungen, vorbehaltlich der
-      beschreibenden Nutzungserlaubnisse der Section 8.</p>
-<p id="s-4-5">4.5 Verknüpfungen und Schnittstellen — Die Einbeziehung des lizenzierten
+      beschreibenden Nutzungserlaubnisse der Section 8.
+
+4.5 Verknüpfungen und Schnittstellen — Die Einbeziehung des lizenzierten
 Materials in ein verbundenes Werk durch Verknüpfung (statisch oder dynamisch),
 durch Kommunikation über eine Anwendungsprogrammierschnittstelle oder ein
 Protokoll, durch Laden oder Geladenwerden als Modul oder Plugin, durch
@@ -361,45 +402,53 @@ lizenzierten Materials darstellt, Section 5 unterworfen. Die Erklärung, dass
 eine Schnittstelle, ein Format oder ein Protokoll mit denen des lizenzierten
 Materials kompatibel ist, und die Implementierung einer solchen kompatiblen
 Schnittstelle macht das implementierende Werk nicht schon dadurch zu einem
-abgeleiteten Werk.</p>
-<h2 id="section-5">SECTION 5 - BEDINGUNGEN FÜR NUTZUNG UND VERBREITUNG</h2>
-<p id="s-5-1">5.1 Beibehaltung von Hinweisen — Zwingend. Jede Nutzung, Vervielfältigung oder
+abgeleiteten Werk.
+
+SECTION 5 - BEDINGUNGEN FÜR NUTZUNG UND VERBREITUNG
+
+5.1 Beibehaltung von Hinweisen — Zwingend. Jede Nutzung, Vervielfältigung oder
 Verbreitung des lizenzierten Materials muss in jeder Kopie oder jedem
 wesentlichen Teil davon alle Urheberrechts-, Marken-, Namensnennungs- und
 sonstigen Rechtshinweise beibehalten, die im Ihnen verbreiteten lizenzierten
 Material enthalten sind oder diesem beiliegen, und zwar in der Form, in der sie
-erscheinen.</p>
-<p id="s-5-2">5.2 Weiterverbreitung in Quellform — Wenn Sie lizenziertes Material in
+erscheinen.
+
+5.2 Weiterverbreitung in Quellform — Wenn Sie lizenziertes Material in
 Quellform verbreiten, müssen Sie mit jeder Kopie die nach Section 5.1
 erforderlichen Hinweise beibehalten und entweder eine Kopie dieser Lizenz
 beifügen oder einen gut sichtbaren Verweis (etwa einen Link) auf deren
-vollständigen Text angeben.</p>
-<p id="s-5-3">5.3 Weiterverbreitung in Objektform — Wenn Sie lizenziertes Material in
+vollständigen Text angeben.
+
+5.3 Weiterverbreitung in Objektform — Wenn Sie lizenziertes Material in
 Objektform verbreiten, gleich ob in ein größeres Werk einbezogen oder nicht,
 müssen Sie eines der Folgenden tun: (a) der Objektform die Quellform beifügen;
 (b) ein mindestens drei Jahre gültiges schriftliches Angebot machen, die
 Quellform bereitzustellen; oder (c) sofern Ihnen die Objektform nach
 Buchstabe (b) verbreitet wurde, einen Verweis auf die Quelle angeben, aus der
 sie bezogen werden kann. In jedem Fall sind die nach Section 5.1
-erforderlichen Hinweise beizubehalten.</p>
-<p id="s-5-4">5.4 Kennzeichnung von Änderungen — Nach besten Kräften. Wenn Sie eine Datei des
+erforderlichen Hinweise beizubehalten.
+
+5.4 Kennzeichnung von Änderungen — Nach besten Kräften. Wenn Sie eine Datei des
 lizenzierten Materials in Quellform ändern, müssen Sie nach besten Kräften in
 dieser Datei angeben, dass sie gegenüber dem Original geändert wurde, sofern
 diese Kennzeichnung nicht mit den nach Section 5.1 beibehaltenen Hinweisen in
-Konflikt gerät.</p>
-<p id="s-5-5">5.5 Keine zusätzlichen Beschränkungen — Sie dürfen, sei es als Bedingung der
+Konflikt gerät.
+
+5.5 Keine zusätzlichen Beschränkungen — Sie dürfen, sei es als Bedingung der
 Verbreitung oder anderweitig, keine Bedingung auferlegen, anbieten oder
 aufzuerlegen versuchen, die die einem Empfänger nach dieser Lizenz
 eingeräumten Rechte beschränkt oder zu beschränken vorgibt, noch von einem
 Empfänger verlangen, dass er als Bedingung für die Ausübung dieser Rechte
 Bedingungen akzeptiert, die über die dieser Lizenz hinausgehen. Diese Section
 hindert Sie nicht daran, in einer gesonderten Vereinbarung Verpflichtungen zu
-akzeptieren, die über die nach dieser Lizenz erforderlichen hinausgehen.</p>
-<p id="s-5-6">5.6 Keine Billigung — Die Nutzung des lizenzierten Materials impliziert keine
+akzeptieren, die über die nach dieser Lizenz erforderlichen hinausgehen.
+
+5.6 Keine Billigung — Die Nutzung des lizenzierten Materials impliziert keine
 Billigung, Förderung, Zertifizierung oder Verbundenheit durch oder mit dem
 Lizenzgeber und darf nicht als solche dargestellt werden, außer wie in
-Section 8 ausdrücklich erlaubt.</p>
-<p id="s-5-7">5.7 Hinweisdatei — Optional. Der Lizenzgeber kann nach eigenem Ermessen eine
+Section 8 ausdrücklich erlaubt.
+
+5.7 Hinweisdatei — Optional. Der Lizenzgeber kann nach eigenem Ermessen eine
 Hinweisdatei (unter welcher Bezeichnung auch immer, etwa „NOTICE") verbreiten,
 die zusätzliche Namensnennungen, Bezeichnungen oder Rechtshinweise enthält.
 Wird eine solche Hinweisdatei mit dem lizenzierten Material verbreitet, muss
@@ -408,8 +457,9 @@ enthaltenen Namensnennungshinweise aufnehmen, beschränkt auf die für die
 Teile des abgeleiteten Werkes geltenden Hinweise, die das lizenzierte Material
 einbeziehen, an einer der folgenden Stellen: innerhalb des abgeleiteten Werkes
 selbst, in einer es begleitenden Datei oder an einer für dessen Empfänger gut
-zugänglichen Stelle.</p>
-<p id="s-5-8">5.8 Gehostete Dienste — Wird das lizenzierte Material oder ein abgeleitetes
+zugänglichen Stelle.
+
+5.8 Gehostete Dienste — Wird das lizenzierte Material oder ein abgeleitetes
 Werk davon als gehosteter oder verwalteter Dienst im Sinne von Section 1.11
 bereitgestellt, gelten die Pflichten der Sections 5.1 bis 5.3 als erfüllt,
 wenn die in Section 5.1 beschriebenen Urheberrechtshinweise und entweder eine
@@ -418,8 +468,9 @@ Kopie des vollständigen Textes dieser Lizenz oder ein unmittelbarer Verweis
 werden, beispielsweise in der Dienstdokumentation, auf einer „Über"-Seite oder
 in den Nutzungsbedingungen. Nichts in dieser Section 5.8 verpflichtet Sie, die
 Quellform des Dienstes oder eines als gehosteter Dienst betriebenen
-abgeleiteten Werkes offenzulegen.</p>
-<p id="s-5-9">5.9 Gut sichtbare Namensnennung — Wenn Sie lizenziertes Material in Quellform
+abgeleiteten Werkes offenzulegen.
+
+5.9 Gut sichtbare Namensnennung — Wenn Sie lizenziertes Material in Quellform
 oder abgeleitete Werke davon in ein an Endnutzer verbreitetes Produkt
 einbeziehen, müssen die nach den Sections 5.1 bis 5.3 erforderlichen Hinweise
 in einer für die Empfänger des Produkts angemessen sichtbaren und zugänglichen
@@ -428,8 +479,9 @@ Form dargestellt werden, einschließlich, sofern das Produkt einen Abschnitt
 Aufnahme in diesen Abschnitt. Die Platzierung ausschließlich in
 maschinenlesbaren Dateien, Installationsprotokollen oder anderen für Endnutzer
 nicht angemessen zugänglichen Stellen erfüllt diese Section für an Endnutzer
-verbreitete Produkte nicht.</p>
-<p id="s-5-10">5.10 Ehrliche kommerzielle Verbreitung — Sie dürfen für die Verbreitung des
+verbreitete Produkte nicht.
+
+5.10 Ehrliche kommerzielle Verbreitung — Sie dürfen für die Verbreitung des
 lizenzierten Materials oder abgeleiteter Werke davon Entgelte verlangen. Sie
 dürfen jedoch nicht: (a) behaupten, das lizenzierte Material selbst sei
 proprietär oder Ihnen ausschließlich lizenziert; (b) einem Empfänger des
@@ -440,40 +492,49 @@ gegen Entgelt verbreiten, es unterlassen, klar offenzulegen, dass das
 lizenzierte Material unter dieser Lizenz auch kostenlos erhältlich ist. Diese
 Section hindert Sie nicht daran, Entgelte für Ihre abgeleiteten Werke,
 zusätzlichen Werke, Dienste, Support-, Wartungs- oder Garantieleistungen zu
-verlangen.</p>
-<h2 id="section-6">SECTION 6 - MATERIAL DRITTER</h2>
-<p id="s-6-1">6.1 Kennzeichnung und gesonderte Bedingungen — Das lizenzierte Material kann
+verlangen.
+
+SECTION 6 - MATERIAL DRITTER
+
+6.1 Kennzeichnung und gesonderte Bedingungen — Das lizenzierte Material kann
 zusammen mit Material Dritter verbreitet werden, das weiterhin seinen eigenen
 Bedingungen unterliegt. Nichts in dieser Lizenz lizenziert Material Dritter
 oder ist als solches auszulegen, und nichts in dieser Lizenz beschränkt die
-Rechte eines Rechteinhabers Dritter oder ist als solches auszulegen.</p>
-<p id="s-6-2">6.2 Einhaltung der Bedingungen Dritter — Zwingend. Wenn Sie Material Dritter
+Rechte eines Rechteinhabers Dritter oder ist als solches auszulegen.
+
+6.2 Einhaltung der Bedingungen Dritter — Zwingend. Wenn Sie Material Dritter
 nutzen, vervielfältigen oder verbreiten, das dem lizenzierten Material
 beigefügt ist, müssen Sie zusätzlich zu den Bedingungen dieser Lizenz die
-anwendbaren Bedingungen dieses Materials Dritter einhalten.</p>
-<p id="s-6-3">6.3 Beibehaltung von Hinweisen Dritter — Wenn der Lizenzgeber eine
+anwendbaren Bedingungen dieses Materials Dritter einhalten.
+
+6.3 Beibehaltung von Hinweisen Dritter — Wenn der Lizenzgeber eine
 Hinweisdatei, ein Bestandteilsmanifest oder eine Dokumentation verbreitet hat,
 die Material Dritter ausweist, müssen Sie mit jeder Kopie des lizenzierten
 Materials oder abgeleiteten Werkes, die Sie verbreiten, die Hinweise Dritter,
 Bestandteilsmanifeste und Lizenztexte beibehalten und weitergeben, die diesem
 Material Dritter beiliegen, in einer mit den Sections 5.1 bis 5.3 und 5.9
-vereinbaren Weise.</p>
-<p id="s-6-4">6.4 Keine Entfernung oder Verfälschung — Sie dürfen Herkunft, Namensnennung
+vereinbaren Weise.
+
+6.4 Keine Entfernung oder Verfälschung — Sie dürfen Herkunft, Namensnennung
 oder Lizenzbedingungen des dem lizenzierten Material beigefügten Materials
-Dritter nicht entfernen, verändern, verschleiern oder verfälschen.</p>
-<p id="s-6-5">6.5 Bedingungskonflikt — Widersprechen die auf einen Bestandteil des Materials
+Dritter nicht entfernen, verändern, verschleiern oder verfälschen.
+
+6.5 Bedingungskonflikt — Widersprechen die auf einen Bestandteil des Materials
 Dritter anwendbaren Lizenzbedingungen dieser Lizenz, so gehen die Bedingungen
 dieses Materials Dritter allein für diesen Bestandteil vor, und diese Lizenz
-gilt weiterhin für den übrigen Teil des lizenzierten Materials.</p>
-<h2 id="section-7">SECTION 7 - EINREICHUNG VON BEITRÄGEN</h2>
-<p id="s-7-1">7.1 Lizenzeinräumung an den Lizenzgeber — Sofern Sie nichts anderes
+gilt weiterhin für den übrigen Teil des lizenzierten Materials.
+
+SECTION 7 - EINREICHUNG VON BEITRÄGEN
+
+7.1 Lizenzeinräumung an den Lizenzgeber — Sofern Sie nichts anderes
 ausdrücklich erklären, unterliegt jeder Beitrag, den Sie absichtlich zur
 Aufnahme in das lizenzierte Material einreichen, den Bestimmungen dieser
 Lizenz, ohne zusätzliche Bedingungen. Ungeachtet des Vorstehenden ersetzt oder
 ändert nichts in dieser Lizenz die Bedingungen einer gesonderten
 Lizenzvereinbarung, die Sie hinsichtlich solcher Beiträge mit dem Lizenzgeber
-geschlossen haben.</p>
-<p id="s-7-2">7.2 Zusicherungen und Gewährleistungen — Mit der Einreichung eines Beitrags
+geschlossen haben.
+
+7.2 Zusicherungen und Gewährleistungen — Mit der Einreichung eines Beitrags
 sichern Sie zu und gewährleisten, dass: (a) Sie Inhaber des vollständigen
 Rechts, der Befugnis und der Berechtigung sind, die in Section 7.1
 eingeräumten Lizenzen zu erteilen, frei von allen Belastungen und Ansprüchen
@@ -482,23 +543,28 @@ nicht Ihre eigene Schöpfung ist, Sie dem Lizenzgeber die dritte Quelle des
 Beitrags schriftlich benannt und alle Rechte und Erlaubnisse erlangt haben
 oder sichergestellt haben, dass der Lizenzgeber sie erlangen kann, die zur
 Einbeziehung und Lizenzierung des Beitrags nach dieser Lizenz erforderlich
-sind.</p>
-<p id="s-7-3">7.3 Keine Annahmepflicht — Nichts in dieser Lizenz verpflichtet den
+sind.
+
+7.3 Keine Annahmepflicht — Nichts in dieser Lizenz verpflichtet den
 Lizenzgeber, einen Beitrag anzunehmen, einzubeziehen, zu integrieren oder
-anderweitig zu verwenden.</p>
-<p id="s-7-4">7.4 Urheberpersönlichkeitsrechte — Im größtmöglichen nach dem anwendbaren
+anderweitig zu verwenden.
+
+7.4 Urheberpersönlichkeitsrechte — Im größtmöglichen nach dem anwendbaren
 Recht zulässigen Umfang verzichten Sie mit der Einreichung eines Beitrags auf
 alle Urheberpersönlichkeitsrechte, einschließlich des Rechts auf Anerkennung
 der Urheberschaft und des Rechts auf Integrität, die Ihnen an diesem Beitrag
 zustehen mögen, zugunsten des Lizenzgebers, stets vorbehaltlich der durch
 diese Lizenz auferlegten Pflichten zur Namensnennung und Beibehaltung von
-Hinweisen.</p>
-<h2 id="section-8">SECTION 8 - MARKENRECHTLICHE BESTIMMUNGEN</h2>
-<p id="s-8-1">8.1 Eigentum — Das Kennzeichen steht ausschließlich dem Lizenzgeber zu. Diese
+Hinweisen.
+
+SECTION 8 - MARKENRECHTLICHE BESTIMMUNGEN
+
+8.1 Eigentum — Das Kennzeichen steht ausschließlich dem Lizenzgeber zu. Diese
 Lizenz gewährt Ihnen keine Rechte am Kennzeichen, und nichts in den Sections 2
 bis 7 überträgt — stillschweigend, durch Verwirkung oder anderweitig — Rechte
-an Marken, Dienstleistungsmarken, Handelsnamen, Aufmachungen oder Logos.</p>
-<p id="s-8-2">8.2 Erlaubte Nutzung — Ohne vorherige schriftliche Genehmigung des
+an Marken, Dienstleistungsmarken, Handelsnamen, Aufmachungen oder Logos.
+
+8.2 Erlaubte Nutzung — Ohne vorherige schriftliche Genehmigung des
 Lizenzgebers dürfen Sie: (a) das lizenzierte Material nutzen, um Ihre eigenen
 Nutzerwerke und abgeleiteten Werke zu eigenen Bedingungen zu erstellen und zu
 verbreiten, vorbehaltlich Section 5; (b) das Kennzeichen in Dokumentation,
@@ -510,8 +576,9 @@ Interoperabilität, Kompatibilität oder Herkunft (zum Beispiel „erstellt mit
 Nutzerwerk oder eine Implementierung mit dem lizenzierten Material kompatibel
 ist, sich daran richtet oder damit interoperiert, sofern diese Nutzung
 zutreffend, wahrheitsgemäß und nicht geeignet ist, jemanden über Herkunft,
-Förderung, Verbundenheit oder Billigung zu täuschen.</p>
-<p id="s-8-3">8.3 Verbotene Nutzung — Ohne vorherige ausdrückliche schriftliche Genehmigung
+Förderung, Verbundenheit oder Billigung zu täuschen.
+
+8.3 Verbotene Nutzung — Ohne vorherige ausdrückliche schriftliche Genehmigung
 des Lizenzgebers dürfen Sie nicht: (a) das Kennzeichen oder eine damit
 verwechselbar ähnliche Variante als oder als Teil des Namens oder der Marke
 Ihrer eigenen Produkte, Dienste, Implementierungen, Pakete oder Unternehmen
@@ -525,14 +592,17 @@ Unterstützung, Zertifizierung, Billigung, Förderung oder Verbundenheit durch
 den Lizenzgeber nahelegen könnte; oder (d) das Kennzeichen in einer Weise
 verwenden, die den damit verbundenen Ruf mindert, verwässert, beschädigt oder
 beeinträchtigt oder die gegen anwendbares Marken-, Lauterkeits- oder
-Irreführungsrecht verstößt.</p>
-<p id="s-8-4">8.4 Durchsetzung — Der Lizenzgeber behält sich das Recht vor, seine Rechte am
+Irreführungsrecht verstößt.
+
+8.4 Durchsetzung — Der Lizenzgeber behält sich das Recht vor, seine Rechte am
 Kennzeichen mit allen nach dem anwendbaren Recht verfügbaren rechtlichen und
 billigkeitsrechtlichen Mitteln durchzusetzen, einschließlich der Aufforderung
 zur Abhilfe, der Beantragung einstweiligen Rechtsschutzes und der Geltendmachung
-von Schadensersatz.</p>
-<h2 id="section-9">SECTION 9 - GEWÄHRLEISTUNGSAUSSCHLUSS</h2>
-<p>DAS LIZENZIERTE MATERIAL WIRD VOM LIZENZGEBER UND DEN MITWIRKENDEN „WIE BESEHEN"
+von Schadensersatz.
+
+SECTION 9 - GEWÄHRLEISTUNGSAUSSCHLUSS
+
+DAS LIZENZIERTE MATERIAL WIRD VOM LIZENZGEBER UND DEN MITWIRKENDEN „WIE BESEHEN"
 UND „WIE VERFÜGBAR" BEREITGESTELLT, OHNE GEWÄHRLEISTUNGEN JEGLICHER ART, OB
 AUSDRÜCKLICH, STILLSCHWEIGEND ODER GESETZLICH, EINSCHLIESSLICH, ABER NICHT
 BESCHRÄNKT AUF DIE STILLSCHWEIGENDEN GEWÄHRLEISTUNGEN DER MARKTGÄNGIGKEIT, DER
@@ -541,8 +611,9 @@ NICHTVERLETZUNG SOWIE JEGLICHER GEWÄHRLEISTUNGEN AUS GESCHÄFTSABWICKLUNG,
 LEISTUNGSERBRINGUNG ODER HANDELSBRÄUCHEN. ES WIRD NICHT ZUGESICHERT, DASS DAS
 LIZENZIERTE MATERIAL UNUNTERBROCHEN, RECHTZEITIG, SICHER ODER FEHLERFREI IST,
 DASS FEHLER BEHOBEN WERDEN ODER DASS ES IM ZUSAMMENWIRKEN MIT IHRER HARDWARE,
-IHREN SYSTEMEN ODER DATEN FUNKTIONIERT.</p>
-<p>IM GRÖSSMÖGLICHEN NACH DEM ANWENDBAREN RECHT ZULÄSSIGEN UMFANG TRÄGT
+IHREN SYSTEMEN ODER DATEN FUNKTIONIERT.
+
+IM GRÖSSMÖGLICHEN NACH DEM ANWENDBAREN RECHT ZULÄSSIGEN UMFANG TRÄGT
 AUSSCHLIESSLICH SIE DAS GESAMTE RISIKO AUS DER NUTZUNG DES LIZENZIERTEN
 MATERIALS. DIESE LIZENZ WIRD VOM LIZENZGEBER UND JEDEM MITWIRKENDEN
 INDIVIDUELL EINGERÄUMT, UND WEDER EIN LIZENZGEBER NOCH EIN MITWIRKENDER GIBT
@@ -550,9 +621,11 @@ EINE ZUSICHERUNG ODER GEWÄHRLEISTUNG IM NAMEN EINES ANDEREN AB. WENN SIE SICH
 ENTSCHEIDEN, IM ZUSAMMENHANG MIT DEM LIZENZIERTEN MATERIAL EINE GEWÄHRLEISTUNG
 ODER FREISTELLUNG ANZUBIETEN, TUN SIE DIES AUSSCHLIESSLICH IM EIGENEN NAMEN UND
 IN ALLEINIGER VERANTWORTUNG UND STELLEN DEN LIZENZGEBER UND DIE MITWIRKENDEN
-VON JEGLICHEN ANSPRÜCHEN AUS EINEM SOLCHEN ANGEBOT FREI.</p>
-<h2 id="section-10">SECTION 10 - HAFUNGSBESCHRÄNKUNG</h2>
-<p>IM GRÖSSMÖGLICHEN NACH DEM ANWENDBAREN RECHT ZULÄSSIGEN UMFANG HAFTEN DER
+VON JEGLICHEN ANSPRÜCHEN AUS EINEM SOLCHEN ANGEBOT FREI.
+
+SECTION 10 - HAFUNGSBESCHRÄNKUNG
+
+IM GRÖSSMÖGLICHEN NACH DEM ANWENDBAREN RECHT ZULÄSSIGEN UMFANG HAFTEN DER
 LIZENZGEBER ODER EIN MITWIRKENDER IHNEN ODER DRITTEN GEGENÜBER IN KEINEM FALL
 FÜR DIREKTE, INDIREKTE, ZUFÄLLIGE, BESONDERE, FOLGE-, EXEMPLARISCHE ODER
 STRAFSCHÄDEN, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF VERLUST VON NUTZUNG,
@@ -561,18 +634,22 @@ ERSATZWAREN ODER -DIENSTLEISTUNGEN, GLEICH AUS WELCHEM GRUND UND NACH WELCHER
 HAFTUNGSTHEORIE, OB VERTRAGLICH, DELIKTISCH (EINSCHLIESSLICH FAHRLÄSSIGKEIT ODER
 ANDERWEITIG), GEFÄHRDUNGSHAFTUNG ODER ANDERWEITIG, DIE SICH IN IRGENDEINER WEISE
 AUS DER NUTZUNG ODER DER UNMÖGLICHKEIT DER NUTZUNG DES LIZENZIERTEN MATERIALS
-ERGEBEN, SELBST WENN AUF DIE MÖGLICHKEIT SOLCHER SCHÄDEN HINGEWIESEN WURDE.</p>
-<p>SOWEIT DAS ANWENDBARE RECHT DEN AUSSCHLUSS ODER DIE BESCHRÄNKUNG BESTIMMTER
+ERGEBEN, SELBST WENN AUF DIE MÖGLICHKEIT SOLCHER SCHÄDEN HINGEWIESEN WURDE.
+
+SOWEIT DAS ANWENDBARE RECHT DEN AUSSCHLUSS ODER DIE BESCHRÄNKUNG BESTIMMTER
 HAFTUNGEN ODER SCHÄDEN VERBIETET, GELTEN DIE VORSTEHENDEN BESCHRÄNKUNGEN UND
 AUSSCHLÜSSE IM GRÖSSMÖGLICHEN NACH DEM ANWENDBAREN RECHT ZULÄSSIGEN UMFANG, UND
 JEDE HAFTUNG, DIE NACH DEM ANWENDBAREN RECHT NICHT AUSGESCHLOSSEN ODER
-BESCHRÄNKT WERDEN KANN, RICHTET SICH NACH DIESEM ANWENDBAREN RECHT.</p>
-<h2 id="section-11">SECTION 11 - BEENDIGUNG</h2>
-<p id="s-11-1">11.1 Beendigung wegen Verstoßes — Diese Lizenz und die darin eingeräumten
+BESCHRÄNKT WERDEN KANN, RICHTET SICH NACH DIESEM ANWENDBAREN RECHT.
+
+SECTION 11 - BEENDIGUNG
+
+11.1 Beendigung wegen Verstoßes — Diese Lizenz und die darin eingeräumten
 Rechte enden automatisch und ohne Mitteilung, wenn Sie gegen eine Bestimmung
 dieser Lizenz verstoßen, es sei denn, der Verstoß wird innerhalb von dreißig
-(30) Tagen nach Kenntniserlangung oder Mitteilung des Verstoßes geheilt.</p>
-<p id="s-11-2">11.2 Wesentlicher Verstoß — Die Nichterfüllung der zwingenden Pflichten zur
+(30) Tagen nach Kenntniserlangung oder Mitteilung des Verstoßes geheilt.
+
+11.2 Wesentlicher Verstoß — Die Nichterfüllung der zwingenden Pflichten zur
 Namensnennung, zur Beibehaltung von Hinweisen und zur Einhaltung der
 Pflichten Dritter nach den Sections 5 und 6 hinsichtlich der Nutzung oder
 Verbreitung von lizenziertem Material in Quellform stellt einen wesentlichen
@@ -583,19 +660,22 @@ Heilungsfrist, und Sie müssen jede Nutzung, Vervielfältigung und Verbreitung
 von lizenziertem Material in Quellform bis zur Heilung des Verstoßes
 einstellen. Wird der Verstoß innerhalb der Heilungsfrist geheilt, bleiben
 diese Lizenz und die darin eingeräumten Rechte in vollem Umfang wirksam und
-gelten als wegen dieses Verstoßes niemals beendet.</p>
-<p id="s-11-3">11.3 Nutzerwerke bleiben unberührt — Zur Klarstellung: Ein Verstoß gegen diese
+gelten als wegen dieses Verstoßes niemals beendet.
+
+11.3 Nutzerwerke bleiben unberührt — Zur Klarstellung: Ein Verstoß gegen diese
 Lizenz liegt nicht allein deshalb vor, weil Sie Nutzerwerke nutzen oder
 verbreiten, die für oder mit dem lizenzierten Material erstellt wurden und
-lizenziertes Material nicht in Quellform enthalten oder vervielfältigen.</p>
-<p id="s-11-4">11.4 Wirkung der Beendigung — Mit der Beendigung enden alle Ihnen nach dieser
+lizenziertes Material nicht in Quellform enthalten oder vervielfältigen.
+
+11.4 Wirkung der Beendigung — Mit der Beendigung enden alle Ihnen nach dieser
 Lizenz eingeräumten Lizenzen, und Ihre Rechte zur Nutzung, Änderung und
 Verbreitung des lizenzierten Materials enden unverzüglich. Die Sections 6, 8,
 9, 10, 11.4, 11.6, 12, 14 und 15 überdauern jede Beendigung. Haben Sie vor der
 Beendigung ein abgeleitetes Werk unterlizenziert, überdauern solche
 Unterlizenzen die Beendigung nur, soweit sie nicht gegen die Bestimmungen
-dieser Lizenz verstoßen.</p>
-<p id="s-11-5">11.5 Automatische Wiedereinsetzung — Enden die Ihnen von einem Lizenzgeber
+dieser Lizenz verstoßen.
+
+11.5 Automatische Wiedereinsetzung — Enden die Ihnen von einem Lizenzgeber
 eingeräumten Rechte nach Section 11.1 oder 11.2 wegen der Nichtheilung eines
 Verstoßes, werden diese Rechte automatisch mit dem Datum wiederhergestellt, an
 dem Sie alle Ihnen zurechenbaren vorherigen Verstöße heilen, sofern Sie diese
@@ -605,18 +685,22 @@ Beendigung von Ihnen von diesem Lizenzgeber eingeräumter Rechte nach dieser
 Lizenz ist. Jede nach dieser ersten Wiedereinsetzung eintretende Beendigung
 kann nur nach alleinigem Ermessen des Lizenzgebers rückgängig gemacht werden,
 nachdem Sie den Verstoß geheilt und den Lizenzgeber schriftlich von dieser
-Heilung unterrichtet haben.</p>
-<p id="s-11-6">11.6 Durchsetzungskosten — In jedem Verfahren, Schiedsverfahren oder jeder
+Heilung unterrichtet haben.
+
+11.6 Durchsetzungskosten — In jedem Verfahren, Schiedsverfahren oder jeder
 Klage zur Durchsetzung oder Auslegung dieser Lizenz ist die obsiegende Partei
 berechtigt, ihre angemessenen Anwaltsgebühren und Kosten zu erstatten, soweit
-das anwendbare Recht dies zulässt.</p>
-<h2 id="section-12">SECTION 12 - ANWENDBARES RECHT UND GERICHTSBARKEIT</h2>
-<p id="s-12-1">12.1 Anwendbares Recht — Der Lizenzgeber kann das auf diese Lizenz anwendbare
+das anwendbare Recht dies zulässt.
+
+SECTION 12 - ANWENDBARES RECHT UND GERICHTSBARKEIT
+
+12.1 Anwendbares Recht — Der Lizenzgeber kann das auf diese Lizenz anwendbare
 Recht durch eine Bestimmung (eine „Designation") nach Section 12.2 festlegen.
 Ohne wirksame Designation unterliegt diese Lizenz dem Recht der
 Gerichtsbarkeit, in der der Lizenzgeber seinen Sitz hat, und ist nach diesem
-auszulegen, ohne Berücksichtigung seiner Kollisionsnormen.</p>
-<p id="s-12-2">12.2 Gerichtsbarkeit und Designation — Der Lizenzgeber kann in der nach
+auszulegen, ohne Berücksichtigung seiner Kollisionsnormen.
+
+12.2 Gerichtsbarkeit und Designation — Der Lizenzgeber kann in der nach
 Section 5.7 verbreiteten Hinweisdatei, in der dem lizenzierten Material
 beiliegenden LICENSE-Datei oder in einer anderen mit dem lizenzierten Material
 verbreiteten Dokumentation in einer ausdrücklich als nach dieser Section 12.2
@@ -633,8 +717,9 @@ Arbitration Centre (SIAC) oder dem Hong Kong International Arbitration Centre
 Streitigkeiten, Meinungsverschiedenheiten oder Ansprüche aus oder im
 Zusammenhang mit dieser Lizenz der ausschließlichen Zuständigkeit der
 zuständigen Gerichte der Gerichtsbarkeit, in der der Lizenzgeber seinen Sitz
-hat.</p>
-<p id="s-12-3">12.3 Wahl eines neutralen Schiedsverfahrens — Ungeachtet der Sections 12.1 und
+hat.
+
+12.3 Wahl eines neutralen Schiedsverfahrens — Ungeachtet der Sections 12.1 und
 12.2 können Sie wählen, jede Streitigkeit, Meinungsverschiedenheit oder jeden
 Anspruch aus oder im Zusammenhang mit dieser Lizenz durch Schiedsverfahren
 statt durch Gerichtsverfahren beizulegen, indem Sie ein Schiedsverfahren nach
@@ -647,137 +732,163 @@ benachrichtigen. Eine Wahl nach dieser Section gilt nur für die Streitigkeit,
 für die sie getroffen wird, und bindet weder andere Personen noch künftige
 Streitigkeiten. Nichts in dieser Section 12 hindert eine Partei daran,
 dringenden vorläufigen oder einstweiligen Rechtsschutz bei einem zuständigen
-Gericht zu beantragen.</p>
-<p id="s-12-4">12.4 Zwingende Vorschriften — Verlangt eine Gerichtsbarkeit, dass ihre
+Gericht zu beantragen.
+
+12.4 Zwingende Vorschriften — Verlangt eine Gerichtsbarkeit, dass ihre
 zwingenden Gesetze oder ihr ordre public ungeachtet der nach Section 12.1
 getroffenen Rechtswahl gelten, so gehen die Vorschriften dieser
 Gerichtsbarkeit insoweit vor, als sie nicht durch Vereinbarung abbedungen
 werden können, und der übrige Teil dieser Lizenz bleibt in vollem Umfang
-wirksam.</p>
-<h2 id="section-13">SECTION 13 - SALVATORISCHE KLAUSEL UND VERZICHT</h2>
-<p id="s-13-1">13.1 Salvatorische Klausel — Wird eine Bestimmung oder ein Teil einer
+wirksam.
+
+SECTION 13 - SALVATORISCHE KLAUSEL UND VERZICHT
+
+13.1 Salvatorische Klausel — Wird eine Bestimmung oder ein Teil einer
 Bestimmung dieser Lizenz nach dem anwendbaren Recht für unwirksam, rechtswidrig
 oder nicht durchsetzbar erachtet, ist diese Bestimmung im größtmöglichen Umfang
 so auszulegen und umzugestalten, dass der Wille der Parteien erreicht wird,
-und die übrigen Bestimmungen dieser Lizenz bleiben in vollem Umfang wirksam.</p>
-<p id="s-13-2">13.2 Verzicht — Ein Verzicht auf eine Bestimmung dieser Lizenz wird nur wirksam,
+und die übrigen Bestimmungen dieser Lizenz bleiben in vollem Umfang wirksam.
+
+13.2 Verzicht — Ein Verzicht auf eine Bestimmung dieser Lizenz wird nur wirksam,
 wenn er schriftlich erfolgt und von der Partei unterzeichnet ist, gegen die er
 geltend gemacht wird. Die Nichtausübung oder Nichtdurchsetzung eines Rechts
 oder einer Bestimmung dieser Lizenz durch den Lizenzgeber stellt keinen
 Verzicht auf dieses Recht oder diese Bestimmung dar, und eine einmalige oder
 teilweise Ausübung eines Rechts oder einer Bestimmung schließt jede andere oder
-weitere Ausübung nicht aus.</p>
-<h2 id="section-14">SECTION 14 - GESAMTVEREINBARUNG; VERSIONEN</h2>
-<p id="s-14-1">14.1 Gesamtvereinbarung — Diese Lizenz stellt die gesamte Vereinbarung
+weitere Ausübung nicht aus.
+
+SECTION 14 - GESAMTVEREINBARUNG; VERSIONEN
+
+14.1 Gesamtvereinbarung — Diese Lizenz stellt die gesamte Vereinbarung
 zwischen Ihnen und dem Lizenzgeber in Bezug auf das lizenzierte Material dar
 und ersetzt alle vorherigen und gleichzeitigen mündlichen oder schriftlichen
 Verständigungen, Vereinbarungen, Zusicherungen und Mitteilungen zu diesem
-Gegenstand.</p>
-<p id="s-14-2">14.2 Änderung — Diese Lizenz kann nur durch eine von einem bevollmächtigten
+Gegenstand.
+
+14.2 Änderung — Diese Lizenz kann nur durch eine von einem bevollmächtigten
 Vertreter des Lizenzgebers unterzeichnete schriftliche Urkunde geändert oder
 ergänzt werden. Elektronische Signaturen und andere Formen der elektronischen
 Authentifizierung haben im größtmöglichen nach dem anwendbaren Recht
 zulässigen Umfang dieselbe rechtliche Wirkung und Gültigkeit wie
-handschriftliche Originalsignaturen.</p>
-<p id="s-14-3">14.3 Fortgeltung — Jede Version des lizenzierten Materials unterliegt der
+handschriftliche Originalsignaturen.
+
+14.3 Fortgeltung — Jede Version des lizenzierten Materials unterliegt der
 Version dieser Lizenz, unter der sie veröffentlicht wurde. Veröffentlicht der
 Lizenzgeber das lizenzierte Material unter einer späteren Version dieser
 Lizenz, können Sie Ihre Rechte an früheren Versionen des lizenzierten Materials
 unter der Version dieser Lizenz, unter der sie veröffentlicht wurden,
-weiterhin ausüben sowie diese weiterhin verbreiten und weiterlizenzieren.</p>
-<h2 id="section-15">SECTION 15 - ALLGEMEINE BESTIMMUNGEN</h2>
-<p id="s-15-1">15.1 Einhaltung von Gesetzen — Sie müssen bei der Ausübung der nach dieser
+weiterhin ausüben sowie diese weiterhin verbreiten und weiterlizenzieren.
+
+SECTION 15 - ALLGEMEINE BESTIMMUNGEN
+
+15.1 Einhaltung von Gesetzen — Sie müssen bei der Ausübung der nach dieser
 Lizenz eingeräumten Rechte alle anwendbaren Gesetze einhalten, einschließlich,
 aber nicht beschränkt auf Exportkontroll-, Einfuhr- und Sanktionsgesetze. Sie
 dürfen das lizenzierte Material nicht in einer Weise nutzen, die gegen
-anwendbares Recht verstößt.</p>
-<p id="s-15-2">15.2 Unabhängige Entwicklung — Nichts in dieser Lizenz ist so auszulegen, dass
+anwendbares Recht verstößt.
+
+15.2 Unabhängige Entwicklung — Nichts in dieser Lizenz ist so auszulegen, dass
 es Sie daran hindert, Werke oder Technologien unabhängig zu entwickeln,
 entwickeln zu lassen oder zu verbreiten, die funktionell ähnlich wie das
 lizenzierte Material, damit interoperabel oder dazu im Wettbewerb sind, sofern
 solche Werke lizenziertes Material nicht in Quellform unter Verstoß gegen diese
-Lizenz enthalten oder vervielfältigen.</p>
-<p id="s-15-3">15.3 Überschriften — Die Abschnitts- und Klauselüberschriften dieser Lizenz
+Lizenz enthalten oder vervielfältigen.
+
+15.3 Überschriften — Die Abschnitts- und Klauselüberschriften dieser Lizenz
 dienen nur der leichteren Bezugnahme und dürfen nicht zur Auslegung der
-Bestimmungen dieser Lizenz herangezogen werden.</p>
-<p id="s-15-4">15.4 Verhältnis der Parteien — Nichts in dieser Lizenz begründet oder gilt als
+Bestimmungen dieser Lizenz herangezogen werden.
+
+15.4 Verhältnis der Parteien — Nichts in dieser Lizenz begründet oder gilt als
 Begründung einer Gesellschaft, eines Joint Ventures, eines Vertretungs-,
 Arbeits- oder Treuhandverhältnisses zwischen Ihnen und dem Lizenzgeber oder
-einem Mitwirkenden.</p>
-<p id="s-15-5">15.5 Begünstigte Dritte — Vorbehaltlich der Bestimmungen dieser Lizenz ist
+einem Mitwirkenden.
+
+15.5 Begünstigte Dritte — Vorbehaltlich der Bestimmungen dieser Lizenz ist
 jeder Mitwirkende hinsichtlich seiner Beiträge ein begünstigter Dritter dieser
 Lizenz und kann die Bestimmungen dieser Lizenz insoweit unmittelbar gegen Sie
 durchsetzen, als dies zum Schutz seiner Rechte an seinen Beiträgen erforderlich
 ist. Jeder Rechteinhaber Dritter ist hinsichtlich seines Materials Dritter ein
-begünstigter Dritter dieser Lizenz, soweit in Section 6 vorgesehen.</p>
-<p id="s-15-6">15.6 Lizenztext — Der Text dieser Lizenz darf von jeder Person zu jedem Zweck
+begünstigter Dritter dieser Lizenz, soweit in Section 6 vorgesehen.
+
+15.6 Lizenztext — Der Text dieser Lizenz darf von jeder Person zu jedem Zweck
 vollständig, wörtlich und unverändert vervielfältigt werden, einschließlich
 zum Zweck der Einhaltung der Hinweispflichten nach Section 5, ohne dass eine
 weitere Erlaubnis oder Namensnennung über die Beibehaltung des Textes dieser
-Lizenz selbst hinaus erforderlich ist.</p>
-<p id="s-15-7">15.7 Keine Supportpflichten — Die Ausübung der nach dieser Lizenz eingeräumten
+Lizenz selbst hinaus erforderlich ist.
+
+15.7 Keine Supportpflichten — Die Ausübung der nach dieser Lizenz eingeräumten
 Rechte berechtigt Sie nicht zu Support, Wartung, Aktualisierungen, neuen
 Versionen, Fehlerkorrekturen oder sonstigen Leistungen des Lizenzgebers oder
 eines Mitwirkenden, unabhängig davon, ob solche Leistungen anderen zur
-Verfügung gestellt werden.</p>
-<p id="s-15-8">15.8 Amtliche Übersetzungen — Der Lizenzgeber kann Übersetzungen dieser Lizenz
+Verfügung gestellt werden.
+
+15.8 Amtliche Übersetzungen — Der Lizenzgeber kann Übersetzungen dieser Lizenz
 veröffentlichen. Nur eine vom Lizenzgeber ausdrücklich als amtlich bezeichnete
 Übersetzung ist eine „amtliche Übersetzung". Amtliche Übersetzungen dienen dem
 besseren Verständnis, und die Bedingungen dieser Lizenz gelten für alle
 Sprachfassungen gleichermaßen; bei Widersprüchen oder Unstimmigkeiten zwischen
 einer amtlichen Übersetzung und dem englischen Text dieser Lizenz geht der
-englische Text vor.</p>
-<p>------------------------------------------------------------------------</p>
-<h2 id="appendix">APPENDIX - WIE SIE DIE TIE PUBLIC LICENSE AUF IHR WERK ANWENDEN</h2>
-<p>Um die Tie Public License auf Ihr Werk anzuwenden, fügen Sie dem Werk die
+englische Text vor.
+
+------------------------------------------------------------------------
+
+APPENDIX - WIE SIE DIE TIE PUBLIC LICENSE AUF IHR WERK ANWENDEN
+
+Um die Tie Public License auf Ihr Werk anzuwenden, fügen Sie dem Werk die
 folgenden Hinweise bei. Am sichersten ist es, sie am Anfang jeder Quelldatei
 anzubringen, um die Bedingungen dieser Lizenz am wirksamsten zu erklären; jede
 Datei sollte mindestens die „Copyright"-Zeile und einen Hinweis darauf
-enthalten, wo der vollständige Hinweis zu finden ist.</p>
-<p>    &lt;eine Zeile mit dem Namen des Werkes und einer kurzen Idee, was es ist.&gt;
-    Copyright (C) &lt;year&gt; &lt;name of copyright holder&gt;</p>
-<p>    Dieses Werk wird unter der Tie Public License, Version 2.3 („TPL-2.3"),
+enthalten, wo der vollständige Hinweis zu finden ist.
+
+    <eine Zeile mit dem Namen des Werkes und einer kurzen Idee, was es ist.>
+    Copyright (C) <year> <name of copyright holder>
+
+    Dieses Werk wird unter der Tie Public License, Version 2.3 („TPL-2.3"),
     veröffentlicht.
     Der vollständige Lizenztext ist in der LICENSE-Datei im Wurzelverzeichnis
     der Distribution oder online unter
     https://github.com/tie-lang/TPL/blob/main/tpl.txt (der maßgebliche, stets
-    aktuelle Text dieser Lizenz) und unter https://tpl.franj2.top/ verfügbar.</p>
-<p>Ist das Werk interaktiv (zum Beispiel ein Kommandozeilenprogramm), lassen Sie
-es beim Start im interaktiven Modus einen kurzen Hinweis wie diesen ausgeben:</p>
-<p>    &lt;work&gt;  Copyright (C) &lt;year&gt;  &lt;name of copyright holder&gt;
+    aktuelle Text dieser Lizenz) und unter https://tpl.franj2.top/ verfügbar.
+
+Ist das Werk interaktiv (zum Beispiel ein Kommandozeilenprogramm), lassen Sie
+es beim Start im interaktiven Modus einen kurzen Hinweis wie diesen ausgeben:
+
+    <work>  Copyright (C) <year>  <name of copyright holder>
     This work comes with ABSOLUTELY NO WARRANTY; for details see the LICENSE
     file. This is free material, and you are welcome to redistribute it under
-    certain conditions; see the LICENSE file for details.</p>
-<p>Ist das Werk kein Programm (zum Beispiel ein Dokument, eine Schrift, ein
+    certain conditions; see the LICENSE file for details.
+
+Ist das Werk kein Programm (zum Beispiel ein Dokument, eine Schrift, ein
 Datensatz oder ein Modell), geben Sie den Hinweis auf einer Danksagungs-,
-Impressums- oder Lizenzseite oder in der das Werk begleitenden Datei an.</p>
-<p>Geben Sie im Hinweis stets die genaue Version („TPL-2.3") an. Verwenden Sie
+Impressums- oder Lizenzseite oder in der das Werk begleitenden Datei an.
+
+Geben Sie im Hinweis stets die genaue Version („TPL-2.3") an. Verwenden Sie
 keine Formulierungen wie „die aktuelle Version": Jede Veröffentlichung des
 Werkes unterliegt der in ihrem Hinweis angegebenen Version, wie in Section 14.3
-vorgesehen.</p>
-<p>Wenn Ihre Distribution Material Dritter im Sinne von Section 6 enthält,
+vorgesehen.
+
+Wenn Ihre Distribution Material Dritter im Sinne von Section 6 enthält,
 stellen Sie sicher, dass alle Hinweise Dritter, Bestandteilsmanifeste und
 Lizenztexte, die diesem Material beiliegen, nach den Sections 6.2 und 6.3 mit
-jeder Kopie beibehalten und weitergegeben werden.</p>
-<p>Beabsichtigen Sie, nach Section 12.2 ein anwendbares Recht oder einen
+jeder Kopie beibehalten und weitergegeben werden.
+
+Beabsichtigen Sie, nach Section 12.2 ein anwendbares Recht oder einen
 Gerichtsstand zu bestimmen, geben Sie die Designation klar in der LICENSE-Datei
 oder der Hinweisdatei an und kennzeichnen Sie sie als eine nach Section 12.2
-der Tie Public License erfolgende Bestimmung.</p>
-<p>Sie sollten zudem, falls erforderlich, Ihren Arbeitgeber (wenn Sie als
+der Tie Public License erfolgende Bestimmung.
+
+Sie sollten zudem, falls erforderlich, Ihren Arbeitgeber (wenn Sie als
 Programmierer tätig sind) oder Ihre Bildungseinrichtung eine
-„Copyright-Verzichtserklärung" für das Werk unterzeichnen lassen.</p>
-<p>Der Name des Lizenzgebers und das Kennzeichen dürfen nicht verwendet werden, um
+„Copyright-Verzichtserklärung" für das Werk unterzeichnen lassen.
+
+Der Name des Lizenzgebers und das Kennzeichen dürfen nicht verwendet werden, um
 Werke, die vom lizenzierten Material abgeleitet sind, zu billigen oder zu
 bewerben, ohne die vorherige schriftliche Genehmigung des Lizenzgebers, oder,
 soweit das Gesetz eine solche Nutzung vorsieht, in einer nicht
 verwechslungsfähigen Weise und in Übereinstimmung mit Section 10. Für Anfragen
 zur Nutzung des Namens oder Kennzeichens des Lizenzgebers wenden Sie sich bitte
-an den Lizenzgeber.</p>
-<p>------------------------------------------------------------------------</p>
-<h2 id="end">END OF TERMS AND CONDITIONS</h2>
-</div>
-</main>
-<footer>Tie Public License · maintained by the TIE-LANG organization · <a href="https://github.com/tie-lang/TPL">text repository</a> · <a href="https://github.com/tie-lang/tpl-www">website repository</a> · <a href="/de/">home</a></footer>
-<script>var tb=document.getElementById("themeBtn");if(tb){tb.addEventListener("click",function(){var r=document.documentElement,t=r.dataset.theme=="dark"?"light":"dark";r.dataset.theme=t;try{localStorage.setItem("tpl_theme",t)}catch(e){}})}</script>
-</body>
-</html>
+an den Lizenzgeber.
+
+------------------------------------------------------------------------
+
+END OF TERMS AND CONDITIONS
