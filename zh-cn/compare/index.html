@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>许可证对比 — Tie Public License</title>
+<meta name="description" content="TPL 2.3 与 MIT、Apache-2.0、BSD-3-Clause、GPL-3.0 的并排对比：专利授权、copyleft、AI 训练条款、商标保护等。">
 <link rel="stylesheet" href="/assets/site.css?v=11">
 <script>(function(){var t;try{t=localStorage.getItem("tpl_theme")}catch(e){}if(t!="dark"&&t!="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t})()</script>
 </head>
@@ -20,135 +22,71 @@
 </nav>
 
 <main>
-  <h1>TPL 与其他许可证对比</h1>
+  <h1>TPL 与其他许可证的对比</h1>
 
-  <p>TPL 2.2 与常见宽松/著佐权许可证的并排对比。本页仅为便利概览，不构成法律意见，
-  各许可证自身文本为准。TPL 的条款引用链接指向<a href="/zh-cn/2.2/">全文</a>对应锚点。</p>
+  <p>TPL 2.3 与最常见的宽松型与 copyleft 型许可证的并排摘要。本表仅为便于查阅，不构成法律意见——各许可证自身的文本才是权威。TPL 的引用链接指向<a href="/zh-cn/2.3/">全文</a>。</p>
 
   <table class="matrix">
     <tr>
-      <th>条件</th>
-      <th class="tpl-col">TPL 2.2</th>
-      <th>MIT</th>
-      <th>Apache-2.0</th>
-      <th>BSD-3-Clause</th>
-      <th>GPL-3.0</th>
+      <th>条件</th><th class="tpl-col">TPL 2.3</th><th>MIT</th><th>Apache-2.0</th><th>BSD-3-Clause</th><th>GPL-3.0</th>
     </tr>
     <tr>
-      <td>商用</td>
-      <td class="tpl-col yes">允许，明确</td>
-      <td class="yes">允许</td>
-      <td class="yes">允许</td>
-      <td class="yes">允许</td>
-      <td class="yes">允许</td>
+      <td>商业使用</td>
+      <td class="tpl-col yes">是，明文规定</td><td class="yes">是</td><td class="yes">是</td><td class="yes">是</td><td class="yes">是</td>
     </tr>
     <tr>
       <td>修改与再分发</td>
-      <td class="tpl-col yes">允许，明确</td>
-      <td class="yes">允许</td>
-      <td class="yes">允许</td>
-      <td class="yes">允许</td>
-      <td class="yes">允许</td>
+      <td class="tpl-col yes">是，明文规定</td><td class="yes">是</td><td class="yes">是</td><td class="yes">是</td><td class="yes">是</td>
     </tr>
     <tr>
       <td>专利授权</td>
-      <td class="tpl-col yes">明确授予 <a href="/zh-cn/2.3/#section-3">§3</a></td>
-      <td class="warn">未提及</td>
-      <td class="yes">明确授予</td>
-      <td class="warn">未提及</td>
-      <td class="yes">明确授予</td>
+      <td class="tpl-col yes">是，明文规定 <a href="/zh-cn/2.3/#section-3">§3</a></td><td class="warn">未提及</td><td class="yes">Yes, explicit</td><td class="warn">未提及</td><td class="yes">Yes, explicit</td>
     </tr>
     <tr>
-      <td>衍生作品传染（copyleft）</td>
-      <td class="tpl-col yes">无 <a href="/zh-cn/2.3/#s-6-3">§6.3</a></td>
-      <td class="yes">无</td>
-      <td class="yes">无</td>
-      <td class="yes">无</td>
-      <td class="no">强 copyleft</td>
+      <td>对衍生物的 copyleft</td>
+      <td class="tpl-col yes">无 —— 不含 copyleft <a href="/zh-cn/2.3/#s-4-3">§4.3</a></td><td class="yes">无</td><td class="yes">无</td><td class="yes">无</td><td class="no">有，强 copyleft</td>
     </tr>
     <tr>
-      <td>「用它构建的作品」归你（User Work）</td>
-      <td class="tpl-col yes">明确 <a href="/zh-cn/2.3/#section-6">§6</a></td>
-      <td class="warn">未提及</td>
-      <td class="warn">未提及</td>
-      <td class="warn">未提及</td>
-      <td class="warn">未提及</td>
+      <td>「用它构建的作品」归你</td>
+      <td class="tpl-col yes">是 —— 用户作品 <a href="/zh-cn/2.3/#section-4">§4</a></td><td class="warn">未涉及</td><td class="warn">未涉及</td><td class="warn">未涉及</td><td class="warn">未涉及</td>
     </tr>
     <tr>
-      <td>AI / 机器学习训练条款</td>
-      <td class="tpl-col yes">明确 <a href="/zh-cn/2.3/#s-6-4">§6.4</a></td>
-      <td class="warn">沉默</td>
-      <td class="warn">沉默</td>
-      <td class="warn">沉默</td>
-      <td class="dispute">沉默（有争议）</td>
+      <td>明确的 AI / ML 训练条款</td>
+      <td class="tpl-col yes">有 <a href="/zh-cn/2.3/#s-4-4">§4.4</a></td><td class="warn">沉默</td><td class="warn">沉默</td><td class="warn">沉默</td><td class="dispute">沉默（有争议）</td>
     </tr>
     <tr>
-      <td>必须注明修改</td>
-      <td class="tpl-col warn">尽力而为 <a href="/zh-cn/2.3/#s-4-4">§4.4</a></td>
-      <td class="yes">不要求</td>
-      <td class="no">要求（NOTICE）</td>
-      <td class="yes">不要求</td>
-      <td class="no">要求（标注）</td>
+      <td>须记录修改</td>
+      <td class="tpl-col yes">尽力而为 <a href="/zh-cn/2.3/#s-5-4">§5.4</a></td><td class="yes">无</td><td class="no">有（通知）</td><td class="yes">无</td><td class="no">有（标注）</td>
     </tr>
     <tr>
       <td>商标 / 品牌保护</td>
-      <td class="tpl-col yes">明确 <a href="/zh-cn/2.3/#section-10">§10</a></td>
-      <td class="warn">沉默</td>
-      <td class="warn">有限</td>
-      <td class="warn">非背书条款</td>
-      <td class="warn">沉默</td>
+      <td class="tpl-col yes">有 <a href="/zh-cn/2.3/#section-8">§8</a></td><td class="warn">沉默</td><td class="warn">有限</td><td class="warn">非背书条款</td><td class="warn">沉默</td>
     </tr>
     <tr>
-      <td>第三方资产穿透保留</td>
-      <td class="tpl-col yes">明确 <a href="/zh-cn/2.3/#section-5">§5</a></td>
-      <td class="warn">保留通知</td>
-      <td class="warn">NOTICE 文件</td>
-      <td class="warn">保留通知</td>
-      <td class="no">整体随许可</td>
+      <td>第三方资产穿透</td>
+      <td class="tpl-col yes">明文规定 <a href="/zh-cn/2.3/#section-6">§6</a></td><td class="warn">保留通知</td><td class="warn">NOTICE 文件</td><td class="warn">保留通知</td><td class="no">整体随许可</td>
     </tr>
     <tr>
       <td>托管服务的通知路径</td>
-      <td class="tpl-col yes">明确 <a href="/zh-cn/2.3/#s-4-8">§4.8</a></td>
-      <td class="warn">沉默</td>
-      <td class="warn">沉默</td>
-      <td class="warn">沉默</td>
-      <td class="warn">沉默（用 AGPL）</td>
+      <td class="tpl-col yes">明文规定 <a href="/zh-cn/2.3/#s-5-8">§5.8</a></td><td class="warn">沉默</td><td class="warn">沉默</td><td class="warn">沉默</td><td class="warn">沉默（用 AGPL）</td>
     </tr>
     <tr>
-      <td>可指定管辖法与法院</td>
-      <td class="tpl-col yes">可以 <a href="/zh-cn/2.3/#s-12-2">§12.2</a></td>
-      <td class="warn">沉默</td>
-      <td class="warn">沉默</td>
-      <td class="warn">沉默</td>
-      <td class="warn">沉默</td>
+      <td>管辖法律 / 法院指定</td>
+      <td class="tpl-col yes">有 <a href="/zh-cn/2.3/#s-12-2">§12.2</a></td><td class="warn">沉默</td><td class="warn">沉默</td><td class="warn">沉默</td><td class="warn">沉默</td>
     </tr>
     <tr>
-      <td>文本篇幅</td>
-      <td class="tpl-col no">长（约 46 KB）</td>
-      <td class="yes">极短</td>
-      <td class="warn">中等</td>
-      <td class="yes">极短</td>
-      <td class="no">长</td>
+      <td>许可证文本篇幅</td>
+      <td class="tpl-col yes">长（约 46 KB）</td><td class="yes">很短</td><td class="warn">中等</td><td class="yes">很短</td><td class="no">长</td>
     </tr>
   </table>
 
-  <p class="table-note">「沉默」指许可证文本未涉及该问题，此时行为回归一般版权法与
-  解释惯例。各许可证全文：<a href="https://github.com/tie-lang/TPL">TPL</a>、
-  <a href="https://opensource.org/license/mit">MIT</a>、
-  <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache-2.0</a>、
-  <a href="https://opensource.org/license/bsd-3-clause">BSD-3-Clause</a>、
-  <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL-3.0</a>。</p>
+  <p class="table-note">「沉默」指该许可证文本未涉及该问题；此时相关行为回落到一般著作权法与解释。全文：<a href="https://github.com/tie-lang/TPL">TPL</a>、<a href="https://opensource.org/license/mit">MIT</a>、<a href="https://www.apache.org/licenses/LICENSE-2.0">Apache-2.0</a>、<a href="https://opensource.org/license/bsd-3-clause">BSD-3-Clause</a>、<a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL-3.0</a>。</p>
 
-  <h2>一句话版本</h2>
+  <h2>一句话总结</h2>
   <ul>
-    <li><strong>从 MIT/Apache 过来，想要更明确的条款？</strong>TPL 保持一切宽松，
-        并为 AI 训练、User Work、托管服务、商标、第三方资产给出明确答案——代价是文本更长。</li>
-    <li><strong>从 GPL 过来，想让衍生作品保持闭源？</strong>TPL 无 copyleft（
-        <a href="/zh-cn/2.3/#s-6-3">§6.3</a>），同时保留通知与署名要求（
-        <a href="/zh-cn/2.3/#section-4">§4</a>）。</li>
-    <li><strong>想要一份带专利保护的宽松许可证？</strong>TPL 把明确的专利授权（
-        <a href="/zh-cn/2.3/#section-3">§3</a>）与宽松的分发条款合在同一部文本里——
-        常见替代品中 Apache-2.0 最接近。</li>
+    <li><strong>从 MIT/Apache 过来，想要更明确的条款？</strong>TPL 保持一切宽松，并为 AI 训练、用户作品、托管服务、商标与第三方资产给出明确答案——代价是文本更长。</li>
+    <li><strong>从 GPL 过来，想让衍生作品保持闭源？</strong>TPL 没有 copyleft（<a href="/zh-cn/2.3/#s-4-3">§4.3</a>），同时仍要求通知与署名（<a href="/zh-cn/2.3/#section-5">§5</a>）。</li>
+    <li><strong>想要带专利保护的单文件宽松许可证？</strong>TPL 将明文专利授权（<a href="/zh-cn/2.3/#section-3">§3</a>）与宽松分发打包在一起——Apache-2.0 是最接近的常见替代。</li>
   </ul>
 </main>
 <script>var tb=document.getElementById("themeBtn");if(tb){tb.addEventListener("click",function(){var r=document.documentElement,t=r.dataset.theme=="dark"?"light":"dark";r.dataset.theme=t;try{localStorage.setItem("tpl_theme",t)}catch(e){}})}</script>

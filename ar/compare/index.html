@@ -3,17 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Compare — Tie Public License</title>
-<meta name="description" content="Comparison matrix: TPL 2.2 vs MIT, Apache-2.0, BSD-3-Clause and GPL-3.0.">
-<link rel="stylesheet" href="/assets/site.css?v=10">
+<title>مقارنة الرخص — رخصة TIE العامة</title>
+<meta name="description" content="مقارنة TPL 2.3 مع MIT وApache-2.0 وBSD-3-Clause وGPL-3.0: البراءات وcopyleft وشروط الذكاء الاصطناعي وحماية العلامات وغيرها.">
+<link rel="stylesheet" href="/assets/site.css?v=11">
 <script>(function(){var t;try{t=localStorage.getItem("tpl_theme")}catch(e){}if(t!="dark"&&t!="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t})()</script>
 </head>
 <body>
-
 <nav class="top">
   <div class="brand"><a href="/ar/">Tie Public License</a></div>
   <div class="links">
-    <a href="/ar/">الرئيسية</a><a href="/ar/2.3/">النص</a><a class="on" href="/ar/compare/">مقارنة</a><a href="/ar/using/">الاستخدام</a><a href="/ar/faq/">الأسئلة الشائعة</a><a href="/ar/about/">حول</a>
+    <a href="/ar/">الرئيسية</a><a href="/ar/2.3/">النص</a><a class="on" href="/ar/compare/">مقارنة</a><a href="/ar/using/">الاستخدام</a><a href="/ar/faq/">الأسئلة الشائعة</a><a href="/ar/about/">حول</a><a href="/ar/localization/">التعريب</a><a href="/ar/contributing/">المساهمة</a>
     <details class="lang">
       <summary aria-label="Switch language"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg></summary>
       <div class="menu"><a href="/en/">English</a><a href="/zh-cn/">中文</a><a href="/es/">Español</a><a href="/fr/">Français</a><a href="/de/">Deutsch</a><a href="/ja/">日本語</a><a href="/pt/">Português</a><a href="/ru/">Русский</a><a href="/ko/">한국어</a></div>
@@ -21,152 +20,75 @@
     <button class="theme" id="themeBtn" type="button" aria-label="تبديل السمة الفاتحة والداكنة"><span class="ico-moon"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span><span class="ico-sun"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg></span></button>
   </div>
 </nav>
-<div class="banner">الترجمة غير متوفرة بعد؛ يُعرض النص الإنجليزي. النسخة الإنجليزية هي المعتمدة (§15.8).</div>
 
 <main>
-  <h1>Comparing TPL with other licenses</h1>
+  <h1>مقارنة TPL مع رخص أخرى</h1>
 
-  <p>A side-by-side summary of TPL 2.2 against the most common permissive and
-  copyleft licenses. This is a convenience overview, not legal advice — each
-  license's own text is authoritative. TPL references link into the
-  <a href="/en/2.2/">full text</a>.</p>
+  <p>ملخّص مقارن لـ TPL 2.3 مقابل أكثر الرخص المتسامحة وcopyleft شيوعًا. هذه نظرة للتيسير، وليست مشورة قانونية — والنص الخاص بكل رخصة هو المرجع. وإحالات TPL تربط بـ<a href="/ar/2.3/">النص الكامل</a>.</p>
 
   <table class="matrix">
     <tr>
-      <th>Condition</th>
-      <th class="tpl-col">TPL 2.2</th>
-      <th>MIT</th>
-      <th>Apache-2.0</th>
-      <th>BSD-3-Clause</th>
-      <th>GPL-3.0</th>
+      <th>الشرط</th><th class="tpl-col">TPL 2.3</th><th>MIT</th><th>Apache-2.0</th><th>BSD-3-Clause</th><th>GPL-3.0</th>
     </tr>
     <tr>
-      <td>Commercial use</td>
-      <td class="tpl-col yes">Yes, explicit</td>
-      <td class="yes">Yes</td>
-      <td class="yes">Yes</td>
-      <td class="yes">Yes</td>
-      <td class="yes">Yes</td>
+      <td>الاستخدام التجاري</td>
+      <td class="tpl-col yes">نعم، صريح</td><td class="yes">نعم</td><td class="yes">نعم</td><td class="yes">نعم</td><td class="yes">نعم</td>
     </tr>
     <tr>
-      <td>Modify &amp; redistribute</td>
-      <td class="tpl-col yes">Yes, explicit</td>
-      <td class="yes">Yes</td>
-      <td class="yes">Yes</td>
-      <td class="yes">Yes</td>
-      <td class="yes">Yes</td>
+      <td>التعديل وإعادة التوزيع</td>
+      <td class="tpl-col yes">نعم، صريح</td><td class="yes">نعم</td><td class="yes">نعم</td><td class="yes">نعم</td><td class="yes">نعم</td>
     </tr>
     <tr>
-      <td>Patent grant</td>
-      <td class="tpl-col yes">Yes, explicit <a href="/en/2.2/#section-3">§3</a></td>
-      <td class="warn">Not stated</td>
-      <td class="yes">Yes, explicit</td>
-      <td class="warn">Not stated</td>
-      <td class="yes">Yes, explicit</td>
+      <td>منح البراءات</td>
+      <td class="tpl-col yes">نعم، صريح <a href="/ar/2.3/#section-3">§3</a></td><td class="warn">غير مذكور</td><td class="yes">نعم، صريح</td><td class="warn">غير مذكور</td><td class="yes">نعم، صريح</td>
     </tr>
     <tr>
-      <td>Copyleft on derivatives</td>
-      <td class="tpl-col yes">No — no copyleft <a href="/en/2.2/#s-6-3">§6.3</a></td>
-      <td class="yes">No</td>
-      <td class="yes">No</td>
-      <td class="yes">No</td>
-      <td class="no">Yes, strong</td>
+      <td>copyleft على الأعمال المشتقة</td>
+      <td class="tpl-col yes">لا — بلا copyleft <a href="/ar/2.3/#s-4-3">§4.3</a></td><td class="yes">لا</td><td class="yes">لا</td><td class="yes">لا</td><td class="no">نعم، قوي</td>
     </tr>
     <tr>
-      <td>"Works built <em>with</em> it" are yours</td>
-      <td class="tpl-col yes">Yes — User Works <a href="/en/2.2/#section-6">§6</a></td>
-      <td class="warn">Not addressed</td>
-      <td class="warn">Not addressed</td>
-      <td class="warn">Not addressed</td>
-      <td class="warn">Not addressed</td>
+      <td>الأعمال المبنية <em>باستخدامه</em> ملكك</td>
+      <td class="tpl-col yes">نعم — أعمال المستخدم <a href="/ar/2.3/#section-4">§4</a></td><td class="warn">غير متناول</td><td class="warn">غير متناول</td><td class="warn">غير متناول</td><td class="warn">غير متناول</td>
     </tr>
     <tr>
-      <td>Explicit AI / ML training terms</td>
-      <td class="tpl-col yes">Yes <a href="/en/2.2/#s-6-4">§6.4</a></td>
-      <td class="warn">Silent</td>
-      <td class="warn">Silent</td>
-      <td class="warn">Silent</td>
-      <td class="dispute">Silent (disputed)</td>
+      <td>شروط صريحة لتدريب الذكاء الاصطناعي / تعلّم الآلة</td>
+      <td class="tpl-col yes">نعم <a href="/ar/2.3/#s-4-4">§4.4</a></td><td class="warn">صمت</td><td class="warn">صمت</td><td class="warn">صمت</td><td class="dispute">صمت (محل خلاف)</td>
     </tr>
     <tr>
-      <td>Must document changes</td>
-      <td class="tpl-col warn">Best effort <a href="/en/2.2/#s-4-4">§4.4</a></td>
-      <td class="yes">No</td>
-      <td class="no">Yes (notices)</td>
-      <td class="yes">No</td>
-      <td class="no">Yes (marked)</td>
+      <td>إلزام بتوثيق التغييرات</td>
+      <td class="tpl-col yes">بذل أفضل جهد <a href="/ar/2.3/#s-5-4">§5.4</a></td><td class="yes">لا</td><td class="no">نعم (إشعارات)</td><td class="yes">لا</td><td class="no">نعم (موسوم)</td>
     </tr>
     <tr>
-      <td>Trademark / brand protection</td>
-      <td class="tpl-col yes">Yes <a href="/en/2.2/#section-10">§10</a></td>
-      <td class="warn">Silent</td>
-      <td class="warn">Limited</td>
-      <td class="warn">Non-endorsement clause</td>
-      <td class="warn">Silent</td>
+      <td>حماية العلامة التجارية</td>
+      <td class="tpl-col yes">نعم <a href="/ar/2.3/#section-8">§8</a></td><td class="warn">صمت</td><td class="warn">محدود</td><td class="warn">شرط عدم التزكية</td><td class="warn">صمت</td>
     </tr>
     <tr>
-      <td>Third-party asset pass-through</td>
-      <td class="tpl-col yes">Explicit <a href="/en/2.2/#section-5">§5</a></td>
-      <td class="warn">Notice retention</td>
-      <td class="warn">NOTICE file</td>
-      <td class="warn">Notice retention</td>
-      <td class="no">Whole work licensed</td>
+      <td>انتقال أصول الغير</td>
+      <td class="tpl-col yes">صريح <a href="/ar/2.3/#section-6">§6</a></td><td class="warn">الاحتفاظ بالإشعارات</td><td class="warn">ملف NOTICE</td><td class="warn">الاحتفاظ بالإشعارات</td><td class="no">العمل كله مرخَّص</td>
     </tr>
     <tr>
-      <td>Hosted-service notice path</td>
-      <td class="tpl-col yes">Explicit <a href="/en/2.2/#s-4-8">§4.8</a></td>
-      <td class="warn">Silent</td>
-      <td class="warn">Silent</td>
-      <td class="warn">Silent</td>
-      <td class="warn">Silent (see AGPL)</td>
+      <td>مسار الإشعار للخدمات المستضافة</td>
+      <td class="tpl-col yes">صريح <a href="/ar/2.3/#s-5-8">§5.8</a></td><td class="warn">صمت</td><td class="warn">صمت</td><td class="warn">صمت</td><td class="warn">صمت (انظر AGPL)</td>
     </tr>
     <tr>
-      <td>Governing law / venue designation</td>
-      <td class="tpl-col yes">Yes <a href="/en/2.2/#s-12-2">§12.2</a></td>
-      <td class="warn">Silent</td>
-      <td class="warn">Silent</td>
-      <td class="warn">Silent</td>
-      <td class="warn">Silent</td>
+      <td>تعيين القانون / المحكمة</td>
+      <td class="tpl-col yes">نعم <a href="/ar/2.3/#s-12-2">§12.2</a></td><td class="warn">صمت</td><td class="warn">صمت</td><td class="warn">صمت</td><td class="warn">صمت</td>
     </tr>
     <tr>
-      <td>License text size</td>
-      <td class="tpl-col no">Long (~46 KB)</td>
-      <td class="yes">Very short</td>
-      <td class="warn">Medium</td>
-      <td class="yes">Very short</td>
-      <td class="no">Long</td>
+      <td>طول نص الرخصة</td>
+      <td class="tpl-col yes">طويل (~46 كيلوبايت)</td><td class="yes">قصير جدًا</td><td class="warn">متوسط</td><td class="yes">قصير جدًا</td><td class="no">طويل</td>
     </tr>
   </table>
 
-  <p class="table-note">"Silent" means the license text does not address the
-  question; behavior then falls back to general copyright law and interpretation.
-  The full texts: <a href="https://github.com/tie-lang/TPL">TPL</a>,
-  <a href="https://opensource.org/license/mit">MIT</a>,
-  <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache-2.0</a>,
-  <a href="https://opensource.org/license/bsd-3-clause">BSD-3-Clause</a>,
-  <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL-3.0</a>.</p>
+  <p class="table-note">تعني «الصمت» أن نص الرخصة لا يتناول المسألة؛ وحينها يعود السلوك إلى قانون حقوق النسخ العام والتفسير. النصوص الكاملة: <a href="https://github.com/tie-lang/TPL">TPL</a>، <a href="https://opensource.org/license/mit">MIT</a>، <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache-2.0</a>، <a href="https://opensource.org/license/bsd-3-clause">BSD-3-Clause</a>، <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL-3.0</a>.</p>
 
-  <h2>The short version</h2>
+  <h2>الخلاصة الموجزة</h2>
   <ul>
-    <li><strong>Come from MIT/Apache and want more explicit terms?</strong> TPL
-        keeps everything permissive and adds explicit answers for AI training,
-        User Works, hosted services, trademarks and third-party assets — at the
-        cost of a longer text.</li>
-    <li><strong>Come from GPL and want to keep your derivatives closed?</strong>
-        TPL has no copyleft (<a href="/en/2.2/#s-6-3">§6.3</a>) while still
-        requiring notices and attribution (<a href="/en/2.2/#section-4">§4</a>).</li>
-    <li><strong>Want a one-file permissive license with patent protection?</strong>
-        TPL bundles an explicit patent grant (<a href="/en/2.2/#section-3">§3</a>)
-        with permissive distribution — Apache-2.0 is the closest common
-        alternative.</li>
+    <li><strong>أتيت من MIT/Apache وتريد شروطًا أكثر وضوحًا؟</strong> تُبقي TPL كل شيء متسامحًا وتضيف إجابات صريحة لتدريب الذكاء الاصطناعي وأعمال المستخدم والخدمات المستضافة والعلامات وأصول الغير — مقابل نص أطول.</li>
+    <li><strong>أتيت من GPL وتريد إبقاء أعمالك المشتقة مغلقة؟</strong> لا copyleft في TPL (<a href="/ar/2.3/#s-4-3">§4.3</a>) مع اشتراط الإشعارات والإسناد (<a href="/ar/2.3/#section-5">§5</a>).</li>
+    <li><strong>تريد رخصة متسامحة في ملف واحد مع حماية بالبراءات؟</strong> تجمع TPL منحًا صريحًا للبراءات (<a href="/ar/2.3/#section-3">§3</a>) مع توزيع متسامح — وApache-2.0 هي البديل الشائع الأقرب.</li>
   </ul>
 </main>
-
-<footer>
-  Tie Public License · maintained by the TIE-LANG organization ·
-  <a href="https://github.com/tie-lang/TPL">text repository</a> · <a href="https://github.com/tie-lang/tpl-www">website repository</a>
-</footer>
-
 <script>var tb=document.getElementById("themeBtn");if(tb){tb.addEventListener("click",function(){var r=document.documentElement,t=r.dataset.theme=="dark"?"light":"dark";r.dataset.theme=t;try{localStorage.setItem("tpl_theme",t)}catch(e){}})}</script>
 </body>
 </html>
