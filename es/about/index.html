@@ -3,95 +3,57 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About — Tie Public License</title>
-<meta name="description" content="About the Tie Public License (TPL) and the TIE-LANG organization: maintenance, versioning and site notes.">
-<link rel="stylesheet" href="/assets/site.css?v=10">
+<title>Acerca de — Tie Public License</title>
+<meta name="description" content="Quién mantiene TPL, cómo funciona el versionado, cómo está hecho este sitio y enlaces afines.">
+<link rel="stylesheet" href="/assets/site.css?v=11">
 <script>(function(){var t;try{t=localStorage.getItem("tpl_theme")}catch(e){}if(t!="dark"&&t!="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t})()</script>
 </head>
 <body>
-
 <nav class="top">
   <div class="brand"><a href="/es/">Tie Public License</a></div>
   <div class="links">
-    <a href="/es/">Home</a><a href="/es/2.3/">Text</a><a href="/es/compare/">Compare</a><a href="/es/using/">Using</a><a href="/es/faq/">FAQ</a><a class="on" href="/es/about/">About</a>
+    <a href="/es/">Inicio</a><a href="/es/2.3/">Texto</a><a href="/es/compare/">Comparar</a><a href="/es/using/">Uso</a><a href="/es/faq/">Preguntas frecuentes</a><a class="on" href="/es/about/">Acerca de</a><a href="/es/localization/">Localización</a><a href="/es/contributing/">Contribuir</a>
     <details class="lang">
       <summary aria-label="Switch language"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg></summary>
       <div class="menu"><a href="/en/">English</a><a href="/zh-cn/">中文</a><a href="/fr/">Français</a><a href="/de/">Deutsch</a><a href="/ja/">日本語</a><a href="/pt/">Português</a><a href="/ru/">Русский</a><a href="/ko/">한국어</a><a href="/ar/">العربية</a></div>
     </details>
-    <button class="theme" id="themeBtn" type="button" aria-label="Toggle dark / light theme"><span class="ico-moon"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span><span class="ico-sun"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg></span></button>
+    <button class="theme" id="themeBtn" type="button" aria-label="Cambiar tema claro / oscuro"><span class="ico-moon"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span><span class="ico-sun"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg></span></button>
   </div>
 </nav>
-<div class="banner">La traducción de esta página aún no está disponible; se muestra el texto en inglés. Prevalece la versión en inglés (§15.8).</div>
-
 
 <main>
-  <h1>About</h1>
+  <h1>Acerca de</h1>
 
-  <h2>The license</h2>
-  <p>The <strong>Tie Public License (TPL)</strong> is a permissive,
-  attribution-based open source license published as a generic, reusable text:
-  any individual or legal entity may adopt it for any kind of work, without any
-  affiliation to or endorsement by the TIE-LANG organization. It is
-  general-purpose and field-of-use neutral, and it is written to answer the
-  questions newer licenses leave silent — AI training, works built <em>with</em>
-  the material, hosted services, third-party assets and brand protection.</p>
+  <h2>La licencia</h2>
+  <p>La <strong>Tie Public License (TPL)</strong> es una licencia de código abierto permisiva y basada en la atribución, publicada como un texto genérico y reutilizable: cualquier persona física o jurídica puede adoptarla para cualquier tipo de obra, sin vinculación con la organización TIE-LANG ni respaldo de esta. Es de propósito general y neutral en cuanto al ámbito de uso, y está escrita para responder a las preguntas que las licencias más recientes dejan en silencio: el entrenamiento de IA, las obras construidas <em>con</em> el material, los servicios alojados, los activos de terceros y la protección de la marca.</p>
 
-  <h2>Who maintains it</h2>
-  <p>TPL is published and maintained by the
-  <a href="https://github.com/tie-lang">TIE-LANG organization</a>, the
-  organization behind the
-  <a href="https://github.com/tie-lang/tie-main">tie programming language</a>.
-  The canonical, always-current license text is
-  <a href="https://github.com/tie-lang/TPL/blob/main/tpl.txt">tpl.txt</a> in the
-  <a href="https://github.com/tie-lang/TPL">tie-lang/TPL</a> repository.</p>
+  <h2>Quién la mantiene</h2>
+  <p>TPL es publicada y mantenida por la <a href="https://github.com/tie-lang">organización TIE-LANG</a>, la organización detrás del <a href="https://github.com/tie-lang/tie-main">lenguaje de programación tie</a>. El texto canónico y siempre actualizado de la licencia es <a href="https://github.com/tie-lang/TPL/blob/main/tpl.txt">tpl.txt</a> en el repositorio <a href="https://github.com/tie-lang/TPL">tie-lang/TPL</a>.</p>
 
-  <h2>Versioning policy</h2>
+  <h2>Política de versiones</h2>
   <ul>
-    <li>The current version is <a href="/en/2.2/">TPL 2.2</a> (published
-        2026-09-25). New adoptions should use it.</li>
-    <li>On every version bump, the repository keeps the authoritative
-        <code>tpl.txt</code> and a frozen, byte-identical copy named after the
-        version (<code>2.1</code>, <code>2.0</code>, …), so historical texts
-        remain exactly retrievable.</li>
-    <li>Works already distributed under an earlier version stay governed by that
-        version. Archived texts: <a href="/en/2.1/">2.1</a>,
-        <a href="/en/2.0/">2.0</a>.</li>
+    <li>La versión actual es <a href="/es/2.3/">TPL 2.3</a> (publicada el 2026-09-29). Las nuevas adopciones deberían usarla.</li>
+    <li>En cada cambio de versión, el repositorio conserva el <code>tpl.txt</code> autoritativo y una copia congelada y byte a byte idéntica nombrada según la versión (<code>2.1</code>, <code>2.0</code>, …), de modo que los textos históricos sigan siendo recuperables con exactitud.</li>
+    <li>Las obras ya distribuidas bajo una versión anterior siguen rigiéndose por esa versión. Textos archivados: <a href="/es/2.1/">2.1</a>, <a href="/es/2.0/">2.0</a>.</li>
   </ul>
 
-  <h2>About this site</h2>
-  <p>This site is intentionally minimal — plain hand-written HTML and a single
-  stylesheet, in the spirit of llvm.org: no frameworks, no build system, no
-  client-side JavaScript, no trackers. Every license page is generated
-  mechanically from the TPL repository's text files, so what you read here is
-  byte-faithful to the canonical text; version bumps regenerate the pages rather
-  than hand-editing them. The server negotiates the initial language from the
-  <code>Accept-Language</code> header; the switcher in the navigation goes
-  directly to the other language.</p>
+  <h2>Sobre este sitio</h2>
+  <p>Este sitio es deliberadamente mínimo: HTML escrito a mano y una única hoja de estilo, al estilo de llvm.org: sin marcos de trabajo, sin sistema de compilación, sin JavaScript en el cliente, sin rastreadores. Cada página de licencia se genera mecánicamente a partir de los archivos de texto del repositorio TPL, de modo que lo que lee aquí es fiel byte a byte al texto canónico; los cambios de versión regeneran las páginas en lugar de editarlas a mano. El servidor negocia el idioma inicial a partir de la cabecera <code>Accept-Language</code>; el selector de la navegación va directamente al otro idioma.</p>
 
-  <h2>Adoption</h2>
-  <p>TPL 2.2 is the standard license across the TIE ecosystem's repositories.
-  You do not need permission to use it: see
-  <a href="/en/using/">Using TPL</a> for the notice formats, and the
-  <a href="/en/faq/">FAQ</a> for common questions.</p>
+  <h2>Adopción</h2>
+  <p>TPL 2.3 es la licencia estándar en los repositorios del ecosistema TIE. No necesita permiso para usarla: consulte <a href="/es/using/">Usar TPL</a> para los formatos de aviso y las <a href="/es/faq/">preguntas frecuentes</a> para dudas comunes.</p>
 
-  <h2>Friendly links</h2>
+  <h2>Enlaces afines</h2>
   <ul>
-    <li><a href="https://github.com/tie-lang">TIE-LANG organization</a> — GitHub home of the ecosystem</li>
-    <li><a href="https://github.com/tie-lang/tie-main">tie</a> — the programming language that started TPL</li>
-    <li><a href="https://github.com/tie-lang/TPL">tie-lang/TPL</a> — the canonical license text repository</li>
-    <li><a href="https://github.com/tie-lang/zd-java">zd-java</a> — the zd binary data format library (JDK 17+, zero dependencies)</li>
+    <li><a href="https://github.com/tie-lang">Organización TIE-LANG</a> — hogar del ecosistema en GitHub</li>
+    <li><a href="https://github.com/tie-lang/tie-main">tie</a> — el lenguaje de programación que dio origen a TPL</li>
+    <li><a href="https://github.com/tie-lang/TPL">tie-lang/TPL</a> — el repositorio del texto canónico de la licencia</li>
+    <li><a href="https://github.com/tie-lang/zd-java">zd-java</a> — la biblioteca del formato binario zd (JDK 17+, sin dependencias)</li>
   </ul>
 
-  <h2>Disclaimer</h2>
-  <p>Nothing on this site is legal advice. The license text itself — the
-  English <code>tpl.txt</code> — is the only authoritative source.</p>
+  <h2>Aviso legal</h2>
+  <p>Nada de este sitio constituye asesoramiento jurídico. El propio texto de la licencia — el <code>tpl.txt</code> en inglés — es la única fuente autoritativa.</p>
 </main>
-
-<footer>
-  Tie Public License · maintained by the TIE-LANG organization ·
-  <a href="https://github.com/tie-lang/TPL">text repository</a> · <a href="https://github.com/tie-lang/tpl-www">website repository</a>
-</footer>
-
 <script>var tb=document.getElementById("themeBtn");if(tb){tb.addEventListener("click",function(){var r=document.documentElement,t=r.dataset.theme=="dark"?"light":"dark";r.dataset.theme=t;try{localStorage.setItem("tpl_theme",t)}catch(e){}})}</script>
 </body>
 </html>
