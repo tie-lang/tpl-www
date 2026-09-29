@@ -165,6 +165,38 @@ func is_digit(b: i64) -> bool {
     return b >= 48 && b <= 57
 }
 
+// 该位置是否为引号类字符（" ' « “）——定义式条款的判据
+func is_quote_start(s: string, i: i64) -> bool {
+    var n = len(s)
+    if i >= n {
+        return false
+    }
+    var b = str_byte(s, i)
+    if b == 34 || b == 39 {
+        return true
+    }
+    if b == 194 && i + 1 < n && str_byte(s, i + 1) == 171 {
+        return true
+    }
+    if b == 226 && i + 2 < n && str_byte(s, i + 1) == 128 && str_byte(s, i + 2) == 156 {
+        return true
+    }
+    return false
+}
+
+// 行内是否含 em dash（U+2014，含中文「——」）——标题式条款的判据
+func has_em_dash(s: string) -> bool {
+    var n = len(s)
+    var i: i64 = 0
+    while i + 2 < n {
+        if str_byte(s, i) == 226 && str_byte(s, i + 1) == 128 && str_byte(s, i + 2) == 148 {
+            return true
+        }
+        i = i + 1
+    }
+    return false
+}
+
 // 是否为条款起始行："N.N ..."（N 为一至多位数字，后跟空格）
 // 例：1.1 / 1.10 / 4.8 / 15.2
 func is_clause(s: string) -> bool {
@@ -183,7 +215,12 @@ func is_clause(s: string) -> bool {
     }
     if k == j { return false }          // 点后无数字
     if k >= n { return false }
-    return str_byte(s, k) == 32          // 数字后必须跟空格
+    if str_byte(s, k) != 32 {
+        return false                     // 数字后必须跟空格
+    }
+    // 增强判据：须为「引号式定义」（1.1 "Term" ...）或「含破折号的标题」（2.1 Title — ...），
+    // 以排除正文折行恰好以 N.N 开头造成的幻影锚点
+    return is_quote_start(s, k + 1) || has_em_dash(s)
 }
 
 // 条款锚点 id："1.10 ..." → "s-1-10"
