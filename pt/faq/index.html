@@ -3,139 +3,80 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FAQ — Tie Public License</title>
-<meta name="description" content="Frequently asked questions about the Tie Public License (TPL): commercial use, AI training, User Works, hosted services, trademarks.">
-<link rel="stylesheet" href="/assets/site.css?v=10">
+<title>Perguntas frequentes — Tie Public License</title>
+<meta name="description" content="Perguntas frequentes sobre a TPL 2.3: utilização comercial, treino de IA, Obras de Utilizador, serviços alojados, marcas e versões.">
+<link rel="stylesheet" href="/assets/site.css?v=11">
 <script>(function(){var t;try{t=localStorage.getItem("tpl_theme")}catch(e){}if(t!="dark"&&t!="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t})()</script>
 </head>
 <body>
-
 <nav class="top">
   <div class="brand"><a href="/pt/">Tie Public License</a></div>
   <div class="links">
-    <a href="/pt/">Home</a><a href="/pt/2.3/">Text</a><a href="/pt/compare/">Compare</a><a href="/pt/using/">Using</a><a class="on" href="/pt/faq/">FAQ</a><a href="/pt/about/">About</a>
+    <a href="/pt/">Início</a><a href="/pt/2.3/">Texto</a><a href="/pt/compare/">Comparar</a><a href="/pt/using/">Utilização</a><a class="on" href="/pt/faq/">Perguntas frequentes</a><a href="/pt/about/">Acerca de</a><a href="/pt/localization/">Localização</a><a href="/pt/contributing/">Contribuir</a>
     <details class="lang">
       <summary aria-label="Switch language"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg></summary>
       <div class="menu"><a href="/en/">English</a><a href="/zh-cn/">中文</a><a href="/es/">Español</a><a href="/fr/">Français</a><a href="/de/">Deutsch</a><a href="/ja/">日本語</a><a href="/ru/">Русский</a><a href="/ko/">한국어</a><a href="/ar/">العربية</a></div>
     </details>
-    <button class="theme" id="themeBtn" type="button" aria-label="Toggle dark / light theme"><span class="ico-moon"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span><span class="ico-sun"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg></span></button>
+    <button class="theme" id="themeBtn" type="button" aria-label="Alternar tema claro / escuro"><span class="ico-moon"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span><span class="ico-sun"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg></span></button>
   </div>
 </nav>
-<div class="banner">A tradução desta página ainda não está disponível; o texto em inglês é exibido. A versão em inglês prevalece (§15.8).</div>
-
 
 <main>
-  <h1>Frequently asked questions</h1>
+  <h1>Perguntas frequentes</h1>
 
-  <p>These answers summarize the license for convenience. The license text
-  (<a href="/en/2.2/">TPL 2.2</a>) is authoritative in case of any difference.
-  Section references link into the full text.</p>
+  <p>Estas respostas resumem a licença por conveniência. O texto da licença (<a href="/pt/2.3/">TPL 2.3</a>) é autoritativo em caso de qualquer diferença. As referências de secção ligam ao texto completo.</p>
 
   <div class="faq-item">
-    <h3>May I use TPL-licensed material commercially?</h3>
-    <p>Yes. The grants are universal and field-of-use neutral: commercial use,
-    modification, and redistribution are expressly permitted
-    (<a href="/en/2.2/#section-2">Section 2</a>). You may charge for distribution
-    and for services, support, maintenance, or warranties — provided you do not
-    misrepresent the material as proprietary, do not restrict recipients' rights,
-    and disclose clearly when you charge for the Licensed Material itself, which
-    remains free of charge under the license
-    (<a href="/en/2.2/#s-4-10">Section 4.10</a>).</p>
+    <h3>Posso usar material licenciado sob a TPL comercialmente?</h3>
+    <p>Sim. As concessões são universais e neutras quanto ao domínio de aplicação: a utilização comercial, a modificação e a redistribuição são expressamente permitidas (<a href="/pt/2.3/#section-2">Section 2</a>). Pode cobrar pela distribuição e por serviços, suporte, manutenção ou garantias — desde que não apresente o material como proprietário, não restrinja os direitos dos destinatários e divulgue claramente quando cobra pelo próprio Material Licenciado, que permanece gratuito sob a licença (<a href="/pt/2.3/#s-5-10">Section 5.10</a>).</p>
   </div>
 
   <div class="faq-item">
-    <h3>Do I have to release the source code of my changes?</h3>
-    <p>No. TPL is permissive and contains no copyleft: nothing requires you to
-    license, publish, disclose, or release the source code of your Derivative
-    Works or User Works under this license or any other
-    (<a href="/en/2.2/#s-6-3">Section 6.3</a>). You only need to satisfy the
-    notice and attribution conditions in
-    <a href="/en/2.2/#section-4">Section 4</a>.</p>
+    <h3>Tenho de publicar o código-fonte das minhas alterações?</h3>
+    <p>Não. A TPL é permissiva e não contém copyleft: nada o obriga a licenciar, publicar, divulgar ou libertar o código-fonte das suas Obras Derivadas ou Obras de Utilizador sob esta licença ou qualquer outra (<a href="/pt/2.3/#s-4-3">Section 4.3</a>). Só precisa de cumprir as condições de aviso e atribuição da <a href="/pt/2.3/#section-5">Section 5</a>.</p>
   </div>
 
   <div class="faq-item">
-    <h3>What is a "User Work"?</h3>
-    <p>A work that <em>you author for or with</em> the Licensed Material — for
-    example, a program written in a language distributed under TPL, or an
-    application built on a TPL-licensed library (<a href="/en/2.2/#s-1-7">Section
-    1.7</a>). User Works are your own works: no license conditions attach to
-    them, and no attribution, notice, or license text is required in them, unless
-    they incorporate or reproduce Licensed Material source code
-    (<a href="/en/2.2/#s-6-1">Sections 6.1</a>,
-    <a href="/en/2.2/#s-6-2">6.2</a>).</p>
+    <h3>O que é uma «Obra de Utilizador»?</h3>
+    <p>Uma obra que <em>cria para ou com</em> o Material Licenciado — por exemplo, um programa escrito numa linguagem distribuída sob a TPL, ou uma aplicação construída sobre uma biblioteca licenciada sob a TPL (<a href="/pt/2.3/#s-1-7">Section 1.7</a>). As Obras de Utilizador são obras suas: não lhes é aplicada qualquer condição de licença e não se exige nelas atribuição, aviso ou texto de licença, salvo se incorporarem ou reproduzirem o código-fonte do Material Licenciado (<a href="/pt/2.3/#s-4-1">Sections 4.1</a>, <a href="/pt/2.3/#s-4-2">4.2</a>).</p>
   </div>
 
   <div class="faq-item">
-    <h3>Can I train AI or machine-learning models on TPL-licensed material?</h3>
-    <p>Yes. Reproducing the Licensed Material to train, fine-tune, evaluate, or
-    otherwise improve a model is a use and reproduction permitted under Section 2
-    (<a href="/en/2.2/#s-6-4">Section 6.4(a)</a>). The model's weights, parameters,
-    and other learned artifacts are not Object Code, not Derivative Works, and not
-    Licensed Material (6.4(b)). Output generated by the model is a User Work of
-    whoever generates it, regardless of training data (6.4(c)), and no attribution
-    or license obligation attaches to outputs by reason of training alone (6.4(d)).
-    The one caveat: to the extent an output incorporates or reproduces Licensed
-    Material source code, that portion remains subject to Section 4.</p>
+    <h3>Posso treinar modelos de IA ou de aprendizagem automática com material licenciado sob a TPL?</h3>
+    <p>Sim. Reproduzir o Material Licenciado para treinar, afinar, avaliar ou de outro modo melhorar um modelo é uma utilização e reprodução permitidas pela Section 2 (<a href="/pt/2.3/#s-4-4">Section 4.4(a)</a>). Os pesos, parâmetros e outros artefactos aprendidos do modelo não são Forma-Objeto, nem Obras Derivadas, nem Material Licenciado (4.4(b)). A saída gerada pelo modelo é uma Obra de Utilizador de quem a gera, independentemente dos dados de treino (4.4(c)), e nenhuma obrigação de atribuição se aplica às saídas pelo simples facto do treino (4.4(d)).</p>
   </div>
 
   <div class="faq-item">
-    <h3>I run the material as a hosted service. What must I do?</h3>
-    <p>Make the copyright notices, and either a copy of or a direct reference
-    (such as a URL) to the complete license text, readily accessible to your
-    users — for example in the documentation, an "about" page, or the terms of
-    service (<a href="/en/2.2/#s-4-8">Section 4.8</a>). Nothing in Section 4.8
-    obliges you to disclose the source code of the service.</p>
+    <h3>Opero o material como serviço alojado. O que devo fazer?</h3>
+    <p>Além de conservar os avisos, deve tornar facilmente acessíveis aos seus utilizadores os avisos de direitos de autor do Material Licenciado e uma cópia do texto completo da licença ou uma referência direta (como um URL) — por exemplo na documentação, numa página «acerca de» ou nos termos de serviço (<a href="/pt/2.3/#s-5-8">Section 5.8</a>). A Section 5.8 não o obriga a divulgar o código-fonte do serviço.</p>
   </div>
 
   <div class="faq-item">
-    <h3>Where must notices appear in an end-user product?</h3>
-    <p>Notices must be reasonably conspicuous and accessible to recipients — for
-    example in an "About", "Credits", or "Legal Notices" section. Placement solely
-    in machine-readable files or installer logs does not satisfy this for products
-    distributed to end users (<a href="/en/2.2/#s-4-9">Section 4.9</a>).</p>
+    <h3>Onde devem aparecer os avisos num produto para utilizadores finais?</h3>
+    <p>Os avisos devem ser razoavelmente visíveis e acessíveis aos destinatários — por exemplo numa secção «Acerca de», «Créditos» ou «Avisos legais». A colocação apenas em ficheiros legíveis por máquina ou registos do instalador não satisfaz isto para produtos distribuídos a utilizadores finais (<a href="/pt/2.3/#s-5-9">Section 5.9</a>).</p>
   </div>
 
   <div class="faq-item">
-    <h3>Can I use the TIE name or logo to promote my project?</h3>
-    <p>Not without prior written permission. The Licensor's name and Brand Mark
-    may not be used to endorse or promote works derived from the Licensed
-    Material, except where the law provides for such use in a non-confusing
-    manner (<a href="/en/2.2/#section-10">Section 10</a>). Stating factually that
-    your project uses TPL-licensed material is different from implying endorsement.</p>
+    <h3>Posso usar o nome ou o logótipo TIE para promover o meu projeto?</h3>
+    <p>Não sem autorização prévia por escrito. O nome do Licenciante e a Marca não podem ser usados para aprovar ou promover obras derivadas do Material Licenciado, exceto quando a lei preveja tal utilização de forma não confusa (<a href="/pt/2.3/#section-8">Section 8</a>). Afirmar factualmente que o seu projeto usa material licenciado sob a TPL é diferente de sugerir aprovação.</p>
   </div>
 
   <div class="faq-item">
-    <h3>My distribution bundles third-party assets. What applies to them?</h3>
-    <p>Their own licenses. Third-party material is identified and governed by its
-    separate terms (<a href="/en/2.2/#s-5-1">Section 5.1</a>); you must comply
-    with those terms (5.2), retain third-party notices and license texts (5.3),
-    and not remove or misrepresent them (5.4).</p>
+    <h3>A minha distribuição inclui elementos de terceiros. O que se lhes aplica?</h3>
+    <p>As suas próprias licenças. O material de terceiros é identificado e regido pelos seus termos separados (<a href="/pt/2.3/#s-6-1">Section 6.1</a>); deve cumprir esses termos (6.2), conservar os avisos e textos de licença de terceiros (6.3), e não os remover nem deturpar (6.4).</p>
   </div>
 
   <div class="faq-item">
-    <h3>Which version of TPL applies to a given work?</h3>
-    <p>The version stated in the work's LICENSE file or notice. Works distributed
-    under TPL 2.0 or 2.1 remain governed by those versions; the current version is
-    <a href="/en/2.2/">TPL 2.2</a>. New adoptions should use the current version.</p>
+    <h3>Que versão da TPL se aplica a uma determinada obra?</h3>
+    <p>A versão indicada no ficheiro LICENSE ou no aviso da obra. As obras distribuídas sob a TPL 2.0, 2.1 ou 2.2 continuam a reger-se por essas versões; a versão atual é a <a href="/pt/2.3/">TPL 2.3</a>. As novas adoções devem usar a versão atual.</p>
   </div>
 
   <div class="faq-item">
-    <h3>Who governs disputes?</h3>
-    <p>In the absence of an effective Designation, the license is governed by the
-    law of the Licensor's domicile, and disputes go to the competent courts there
-    (<a href="/en/2.2/#s-12-1">Sections 12.1</a>,
-    <a href="/en/2.2/#s-12-2">12.2</a>). A Licensor may designate a specific
-    governing law and/or venue by a plainly identified Designation in the LICENSE
-    or notice file. Mandatory local law prevails where it cannot be excluded
-    (12.3).</p>
+    <h3>Quem tem competência para os litígios?</h3>
+    <p>Na ausência de Designação eficaz, a licença rege-se pela lei do domicílio do Licenciante e os litígios vão para os tribunais competentes desse local (<a href="/pt/2.3/#s-12-1">Sections 12.1</a>, <a href="/pt/2.3/#s-12-2">12.2</a>). O Licenciante pode designar uma lei aplicável e/ou um foro concretos através de uma Designação claramente identificada no ficheiro LICENSE ou de avisos. A lei local imperativa prevalece onde não possa ser afastada (12.4).</p>
   </div>
+
 </main>
-
-<footer>
-  Tie Public License · maintained by the TIE-LANG organization ·
-  <a href="https://github.com/tie-lang/TPL">text repository</a> · <a href="https://github.com/tie-lang/tpl-www">website repository</a>
-</footer>
-
 <script>var tb=document.getElementById("themeBtn");if(tb){tb.addEventListener("click",function(){var r=document.documentElement,t=r.dataset.theme=="dark"?"light":"dark";r.dataset.theme=t;try{localStorage.setItem("tpl_theme",t)}catch(e){}})}</script>
 </body>
 </html>

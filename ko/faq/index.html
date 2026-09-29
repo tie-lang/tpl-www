@@ -3,139 +3,80 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FAQ — Tie Public License</title>
-<meta name="description" content="Frequently asked questions about the Tie Public License (TPL): commercial use, AI training, User Works, hosted services, trademarks.">
-<link rel="stylesheet" href="/assets/site.css?v=10">
+<title>자주 묻는 질문 — Tie Public License</title>
+<meta name="description" content="TPL 2.3에 관한 자주 묻는 질문: 상업적 이용, AI 학습, 이용자 저작물, 호스팅 서비스, 상표, 적용 버전.">
+<link rel="stylesheet" href="/assets/site.css?v=11">
 <script>(function(){var t;try{t=localStorage.getItem("tpl_theme")}catch(e){}if(t!="dark"&&t!="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t})()</script>
 </head>
 <body>
-
 <nav class="top">
   <div class="brand"><a href="/ko/">Tie Public License</a></div>
   <div class="links">
-    <a href="/ko/">Home</a><a href="/ko/2.3/">Text</a><a href="/ko/compare/">Compare</a><a href="/ko/using/">Using</a><a class="on" href="/ko/faq/">FAQ</a><a href="/ko/about/">About</a>
+    <a href="/ko/">홈</a><a href="/ko/2.3/">본문</a><a href="/ko/compare/">비교</a><a href="/ko/using/">적용</a><a class="on" href="/ko/faq/">자주 묻는 질문</a><a href="/ko/about/">소개</a><a href="/ko/localization/">현지화</a><a href="/ko/contributing/">기여</a>
     <details class="lang">
       <summary aria-label="Switch language"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg></summary>
       <div class="menu"><a href="/en/">English</a><a href="/zh-cn/">中文</a><a href="/es/">Español</a><a href="/fr/">Français</a><a href="/de/">Deutsch</a><a href="/ja/">日本語</a><a href="/pt/">Português</a><a href="/ru/">Русский</a><a href="/ar/">العربية</a></div>
     </details>
-    <button class="theme" id="themeBtn" type="button" aria-label="Toggle dark / light theme"><span class="ico-moon"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span><span class="ico-sun"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg></span></button>
+    <button class="theme" id="themeBtn" type="button" aria-label="밝은 / 어두운 테마 전환"><span class="ico-moon"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span><span class="ico-sun"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg></span></button>
   </div>
 </nav>
-<div class="banner">이 페이지의 번역은 아직 제공되지 않습니다. 영어 텍스트가 표시됩니다. 영어 버전이 우선합니다(§15.8).</div>
-
 
 <main>
-  <h1>Frequently asked questions</h1>
+  <h1>자주 묻는 질문</h1>
 
-  <p>These answers summarize the license for convenience. The license text
-  (<a href="/en/2.2/">TPL 2.2</a>) is authoritative in case of any difference.
-  Section references link into the full text.</p>
+  <p>아래 답변은 편의를 위해 라이선스를 요약한 것입니다. 차이가 있는 경우 라이선스 본문(<a href="/ko/2.3/">TPL 2.3</a>)이 우선합니다. 조항 참조는 전문으로 연결됩니다.</p>
 
   <div class="faq-item">
-    <h3>May I use TPL-licensed material commercially?</h3>
-    <p>Yes. The grants are universal and field-of-use neutral: commercial use,
-    modification, and redistribution are expressly permitted
-    (<a href="/en/2.2/#section-2">Section 2</a>). You may charge for distribution
-    and for services, support, maintenance, or warranties — provided you do not
-    misrepresent the material as proprietary, do not restrict recipients' rights,
-    and disclose clearly when you charge for the Licensed Material itself, which
-    remains free of charge under the license
-    (<a href="/en/2.2/#s-4-10">Section 4.10</a>).</p>
+    <h3>TPL 라이선스 자료를 상업적으로 이용할 수 있습니까?</h3>
+    <p>예. 허용은 보편적이며 이용 분야에 중립적입니다. 상업적 이용, 변경, 재배포가 모두 명시적으로 허용됩니다(<a href="/ko/2.3/#section-2">Section 2</a>). 배포와 서비스, 지원, 유지보수, 보증에 대해 대가를 청구할 수 있습니다 — 다만 자료를 독점적이라고 허위로 표시하지 않고, 수령자의 권리를 제한하지 않으며, 라이선스 대상물 자체에 대해 대가를 받을 때 그것이 라이선스 아래 무료로도 이용 가능함을 명확히 공개하는 것을 조건으로 합니다(<a href="/ko/2.3/#s-5-10">Section 5.10</a>).</p>
   </div>
 
   <div class="faq-item">
-    <h3>Do I have to release the source code of my changes?</h3>
-    <p>No. TPL is permissive and contains no copyleft: nothing requires you to
-    license, publish, disclose, or release the source code of your Derivative
-    Works or User Works under this license or any other
-    (<a href="/en/2.2/#s-6-3">Section 6.3</a>). You only need to satisfy the
-    notice and attribution conditions in
-    <a href="/en/2.2/#section-4">Section 4</a>.</p>
+    <h3>제 변경의 소스 코드를 공개해야 합니까?</h3>
+    <p>아니요. TPL은 허용적이며 copyleft를 포함하지 않습니다. 귀하의 2차적 저작물이나 이용자 저작물의 소스 코드를 이 라이선스 또는 다른 어떤 라이선스 아래에서도 라이선스, 공표, 공개, 공개할 것을 요구하는 규정은 없습니다(<a href="/ko/2.3/#s-4-3">Section 4.3</a>). <a href="/ko/2.3/#section-5">Section 5</a>의 고지와 출처 표시 조건만 충족하면 됩니다.</p>
   </div>
 
   <div class="faq-item">
-    <h3>What is a "User Work"?</h3>
-    <p>A work that <em>you author for or with</em> the Licensed Material — for
-    example, a program written in a language distributed under TPL, or an
-    application built on a TPL-licensed library (<a href="/en/2.2/#s-1-7">Section
-    1.7</a>). User Works are your own works: no license conditions attach to
-    them, and no attribution, notice, or license text is required in them, unless
-    they incorporate or reproduce Licensed Material source code
-    (<a href="/en/2.2/#s-6-1">Sections 6.1</a>,
-    <a href="/en/2.2/#s-6-2">6.2</a>).</p>
+    <h3>「이용자 저작물」이란 무엇입니까?</h3>
+    <p>라이선스 대상물을 <em>위해 또는 그것을 사용하여</em> 귀하가 작성하는 저작물입니다 — 예컨대 TPL 아래 배포되는 언어로 작성된 프로그램, TPL 라이선스 라이브러리 위에 구축된 응용 프로그램 등입니다(<a href="/ko/2.3/#s-1-7">Section 1.7</a>). 이용자 저작물은 귀하 자신의 저작물입니다. 어떠한 라이선스 조건도 부수하지 않으며, 그 안에 출처 표시, 고지, 라이선스 본문을 요구하지도 않습니다. 다만 소스 형태의 라이선스 대상물을 포함하거나 복제하는 경우는 예외입니다(<a href="/ko/2.3/#s-4-1">Sections 4.1</a>, <a href="/ko/2.3/#s-4-2">4.2</a>).</p>
   </div>
 
   <div class="faq-item">
-    <h3>Can I train AI or machine-learning models on TPL-licensed material?</h3>
-    <p>Yes. Reproducing the Licensed Material to train, fine-tune, evaluate, or
-    otherwise improve a model is a use and reproduction permitted under Section 2
-    (<a href="/en/2.2/#s-6-4">Section 6.4(a)</a>). The model's weights, parameters,
-    and other learned artifacts are not Object Code, not Derivative Works, and not
-    Licensed Material (6.4(b)). Output generated by the model is a User Work of
-    whoever generates it, regardless of training data (6.4(c)), and no attribution
-    or license obligation attaches to outputs by reason of training alone (6.4(d)).
-    The one caveat: to the extent an output incorporates or reproduces Licensed
-    Material source code, that portion remains subject to Section 4.</p>
+    <h3>TPL 라이선스 자료로 AI나 기계학습 모델을 학습시킬 수 있습니까?</h3>
+    <p>예. 모델을 학습, 미세 조정, 평가 또는 그 밖의 방법으로 개선하기 위해 라이선스 대상물을 복제하는 것은 Section 2에 따라 허용되는 이용 및 복제입니다(<a href="/ko/2.3/#s-4-4">Section 4.4(a)</a>). 모델의 가중치, 매개변수 및 그 밖의 학습된 산출물은 객체 형태도, 2차적 저작물도, 라이선스 대상물도 아닙니다(4.4(b)). 모델이 생성한 출력은 학습 데이터와 무관하게 이를 생성한 자의 이용자 저작물이며(4.4(c)), 학습만을 이유로 출력에 출처 표시 의무가 발생하지 않습니다(4.4(d)).</p>
   </div>
 
   <div class="faq-item">
-    <h3>I run the material as a hosted service. What must I do?</h3>
-    <p>Make the copyright notices, and either a copy of or a direct reference
-    (such as a URL) to the complete license text, readily accessible to your
-    users — for example in the documentation, an "about" page, or the terms of
-    service (<a href="/en/2.2/#s-4-8">Section 4.8</a>). Nothing in Section 4.8
-    obliges you to disclose the source code of the service.</p>
+    <h3>자료를 호스팅 서비스로 운영합니다. 무엇을 해야 합니까?</h3>
+    <p>고지 유지에 더하여, 라이선스 대상물의 저작권 고지와 라이선스 전문의 사본 또는 직접 참조(URL 등)를 이용자가 쉽게 접근할 수 있게 해야 합니다 — 예컨대 문서, 「정보」 페이지, 이용약관에 두는 방식입니다(<a href="/ko/2.3/#s-5-8">Section 5.8</a>). Section 5.8은 서비스의 소스 코드 공개를 요구하지 않습니다.</p>
   </div>
 
   <div class="faq-item">
-    <h3>Where must notices appear in an end-user product?</h3>
-    <p>Notices must be reasonably conspicuous and accessible to recipients — for
-    example in an "About", "Credits", or "Legal Notices" section. Placement solely
-    in machine-readable files or installer logs does not satisfy this for products
-    distributed to end users (<a href="/en/2.2/#s-4-9">Section 4.9</a>).</p>
+    <h3>최종 이용자 제품에서 고지는 어디에 표시해야 합니까?</h3>
+    <p>고지는 수령자에게 합리적으로 눈에 띄고 접근 가능해야 합니다 — 예컨대 「정보」, 「크레딧」, 「법적 고지」 항목입니다. 기계 판독 가능 파일이나 설치 프로그램 로그에만 두는 것은 최종 이용자에게 배포되는 제품에 대해서는 이 요건을 충족하지 않습니다(<a href="/ko/2.3/#s-5-9">Section 5.9</a>).</p>
   </div>
 
   <div class="faq-item">
-    <h3>Can I use the TIE name or logo to promote my project?</h3>
-    <p>Not without prior written permission. The Licensor's name and Brand Mark
-    may not be used to endorse or promote works derived from the Licensed
-    Material, except where the law provides for such use in a non-confusing
-    manner (<a href="/en/2.2/#section-10">Section 10</a>). Stating factually that
-    your project uses TPL-licensed material is different from implying endorsement.</p>
+    <h3>TIE 이름이나 로고를 제 프로젝트 홍보에 쓸 수 있습니까?</h3>
+    <p>사전 서면 허락 없이는 안 됩니다. 라이선스 제공자의 이름과 표장은 라이선스 대상물에서 파생된 저작물을 승인하거나 홍보하는 데 사용될 수 없으며, 법이 혼동을 일으키지 않는 방식으로 그러한 이용을 허용하는 경우는 예외입니다(<a href="/ko/2.3/#section-8">Section 8</a>). 귀하의 프로젝트가 TPL 라이선스 자료를 사용한다고 사실대로 밝히는 것은 승인을 암시하는 것과 다릅니다.</p>
   </div>
 
   <div class="faq-item">
-    <h3>My distribution bundles third-party assets. What applies to them?</h3>
-    <p>Their own licenses. Third-party material is identified and governed by its
-    separate terms (<a href="/en/2.2/#s-5-1">Section 5.1</a>); you must comply
-    with those terms (5.2), retain third-party notices and license texts (5.3),
-    and not remove or misrepresent them (5.4).</p>
+    <h3>제 배포물에 제3자 자산이 포함되어 있습니다. 무엇이 적용됩니까?</h3>
+    <p>그들 자신의 라이선스입니다. 제3자 자료는 독립된 조건으로 식별되고 규율됩니다(<a href="/ko/2.3/#s-6-1">Section 6.1</a>). 그 조건을 준수하고(6.2), 제3자 고지와 라이선스 본문을 보존하며(6.3), 이를 제거하거나 허위로 표시해서는 안 됩니다(6.4).</p>
   </div>
 
   <div class="faq-item">
-    <h3>Which version of TPL applies to a given work?</h3>
-    <p>The version stated in the work's LICENSE file or notice. Works distributed
-    under TPL 2.0 or 2.1 remain governed by those versions; the current version is
-    <a href="/en/2.2/">TPL 2.2</a>. New adoptions should use the current version.</p>
+    <h3>특정 저작물에는 어느 버전의 TPL이 적용됩니까?</h3>
+    <p>그 저작물의 LICENSE 파일이나 고지에 기재된 버전입니다. TPL 2.0, 2.1, 2.2 아래 배포된 저작물은 계속 그 버전에 따릅니다. 현재 버전은 <a href="/ko/2.3/">TPL 2.3</a>입니다. 새로운 채택에는 현재 버전을 사용하십시오.</p>
   </div>
 
   <div class="faq-item">
-    <h3>Who governs disputes?</h3>
-    <p>In the absence of an effective Designation, the license is governed by the
-    law of the Licensor's domicile, and disputes go to the competent courts there
-    (<a href="/en/2.2/#s-12-1">Sections 12.1</a>,
-    <a href="/en/2.2/#s-12-2">12.2</a>). A Licensor may designate a specific
-    governing law and/or venue by a plainly identified Designation in the LICENSE
-    or notice file. Mandatory local law prevails where it cannot be excluded
-    (12.3).</p>
+    <h3>분쟁은 누가 관할합니까?</h3>
+    <p>유효한 지정이 없으면 라이선스는 라이선스 제공자의 소재지 법에 따르고, 분쟁은 그 지역의 관할 법원에 제기됩니다(<a href="/ko/2.3/#s-12-1">Sections 12.1</a>, <a href="/ko/2.3/#s-12-2">12.2</a>). 라이선스 제공자는 LICENSE 파일이나 고지 파일에 명확히 식별된 지정으로 특정 준거법 및/또는 재판적을 지정할 수 있습니다. 배제할 수 없는 현지 강행법규가 우선합니다(12.4).</p>
   </div>
+
 </main>
-
-<footer>
-  Tie Public License · maintained by the TIE-LANG organization ·
-  <a href="https://github.com/tie-lang/TPL">text repository</a> · <a href="https://github.com/tie-lang/tpl-www">website repository</a>
-</footer>
-
 <script>var tb=document.getElementById("themeBtn");if(tb){tb.addEventListener("click",function(){var r=document.documentElement,t=r.dataset.theme=="dark"?"light":"dark";r.dataset.theme=t;try{localStorage.setItem("tpl_theme",t)}catch(e){}})}</script>
 </body>
 </html>

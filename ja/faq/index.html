@@ -3,139 +3,80 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FAQ — Tie Public License</title>
-<meta name="description" content="Frequently asked questions about the Tie Public License (TPL): commercial use, AI training, User Works, hosted services, trademarks.">
-<link rel="stylesheet" href="/assets/site.css?v=10">
+<title>よくある質問 — Tie Public License</title>
+<meta name="description" content="TPL 2.3 に関するよくある質問：商用利用、AI 学習、利用者著作物、ホスト型サービス、商標、適用版。">
+<link rel="stylesheet" href="/assets/site.css?v=11">
 <script>(function(){var t;try{t=localStorage.getItem("tpl_theme")}catch(e){}if(t!="dark"&&t!="light"){t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t})()</script>
 </head>
 <body>
-
 <nav class="top">
   <div class="brand"><a href="/ja/">Tie Public License</a></div>
   <div class="links">
-    <a href="/ja/">Home</a><a href="/ja/2.3/">Text</a><a href="/ja/compare/">Compare</a><a href="/ja/using/">Using</a><a class="on" href="/ja/faq/">FAQ</a><a href="/ja/about/">About</a>
+    <a href="/ja/">ホーム</a><a href="/ja/2.3/">テキスト</a><a href="/ja/compare/">比較</a><a href="/ja/using/">採用</a><a class="on" href="/ja/faq/">よくある質問</a><a href="/ja/about/">本ライセンスについて</a><a href="/ja/localization/">ローカライズ</a><a href="/ja/contributing/">貢献</a>
     <details class="lang">
       <summary aria-label="Switch language"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg></summary>
       <div class="menu"><a href="/en/">English</a><a href="/zh-cn/">中文</a><a href="/es/">Español</a><a href="/fr/">Français</a><a href="/de/">Deutsch</a><a href="/pt/">Português</a><a href="/ru/">Русский</a><a href="/ko/">한국어</a><a href="/ar/">العربية</a></div>
     </details>
-    <button class="theme" id="themeBtn" type="button" aria-label="Toggle dark / light theme"><span class="ico-moon"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span><span class="ico-sun"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg></span></button>
+    <button class="theme" id="themeBtn" type="button" aria-label="ライト／ダークテーマの切り替え"><span class="ico-moon"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></span><span class="ico-sun"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg></span></button>
   </div>
 </nav>
-<div class="banner">このページの翻訳はまだ提供されていません。英語テキストを表示しています。英語版が優先されます（§15.8）。</div>
-
 
 <main>
-  <h1>Frequently asked questions</h1>
+  <h1>よくある質問</h1>
 
-  <p>These answers summarize the license for convenience. The license text
-  (<a href="/en/2.2/">TPL 2.2</a>) is authoritative in case of any difference.
-  Section references link into the full text.</p>
+  <p>以下の回答は便宜のためにライセンスを要約したものです。相違がある場合はライセンス本文（<a href="/ja/2.3/">TPL 2.3</a>）が優先します。条項参照は全文へリンクしています。</p>
 
   <div class="faq-item">
-    <h3>May I use TPL-licensed material commercially?</h3>
-    <p>Yes. The grants are universal and field-of-use neutral: commercial use,
-    modification, and redistribution are expressly permitted
-    (<a href="/en/2.2/#section-2">Section 2</a>). You may charge for distribution
-    and for services, support, maintenance, or warranties — provided you do not
-    misrepresent the material as proprietary, do not restrict recipients' rights,
-    and disclose clearly when you charge for the Licensed Material itself, which
-    remains free of charge under the license
-    (<a href="/en/2.2/#s-4-10">Section 4.10</a>).</p>
+    <h3>TPL で許諾された素材を商用利用できますか？</h3>
+    <p>はい。許諾は普遍的で利用分野について中立です。商用利用、改変、再配布はいずれも明文で許容されています（<a href="/ja/2.3/#section-2">第 2 節</a>）。配布、およびサービス・サポート・保守・保証について対価を請求できます — ただし素材をプロプライエタリと偽らず、受領者の権利を制限せず、ライセンス対象物自体に対して対価を請求する場合はそれが本ライセンスの下で無償でも入手可能であることを明確に開示することを条件とします（<a href="/ja/2.3/#s-5-10">第 5.10 条</a>）。</p>
   </div>
 
   <div class="faq-item">
-    <h3>Do I have to release the source code of my changes?</h3>
-    <p>No. TPL is permissive and contains no copyleft: nothing requires you to
-    license, publish, disclose, or release the source code of your Derivative
-    Works or User Works under this license or any other
-    (<a href="/en/2.2/#s-6-3">Section 6.3</a>). You only need to satisfy the
-    notice and attribution conditions in
-    <a href="/en/2.2/#section-4">Section 4</a>.</p>
+    <h3>自分の変更のソースコードを公開する必要がありますか？</h3>
+    <p>いいえ。TPL は寛容型で copyleft を含みません。あなたの派生物や利用者著作物のソースコードを、本ライセンスまたは他のいかなるライセンスの下でも、ライセンス・公開・開示・公表することを要求する規定はありません（<a href="/ja/2.3/#s-4-3">第 4.3 条</a>）。<a href="/ja/2.3/#section-5">第 5 節</a>の通知および表示の条件を満たすだけで足ります。</p>
   </div>
 
   <div class="faq-item">
-    <h3>What is a "User Work"?</h3>
-    <p>A work that <em>you author for or with</em> the Licensed Material — for
-    example, a program written in a language distributed under TPL, or an
-    application built on a TPL-licensed library (<a href="/en/2.2/#s-1-7">Section
-    1.7</a>). User Works are your own works: no license conditions attach to
-    them, and no attribution, notice, or license text is required in them, unless
-    they incorporate or reproduce Licensed Material source code
-    (<a href="/en/2.2/#s-6-1">Sections 6.1</a>,
-    <a href="/en/2.2/#s-6-2">6.2</a>).</p>
+    <h3>「利用者著作物」とは何ですか？</h3>
+    <p>ライセンス対象物の<em>ために、またはそれを用いて</em>あなたが作成する著作物です — 例えば TPL の下で配布される言語で書かれたプログラム、TPL ライセンスのライブラリ上に構築されたアプリケーションなど（<a href="/ja/2.3/#s-1-7">第 1.7 条</a>）。利用者著作物はあなた自身の著作物です。ライセンス条件は一切付随せず、その中に表示・通知・ライセンス本文を求めることもありません。ただし、ソース形態のライセンス対象物を含みまたは複製する場合は除きます（<a href="/ja/2.3/#s-4-1">第 4.1 条</a>、<a href="/ja/2.3/#s-4-2">第 4.2 条</a>）。</p>
   </div>
 
   <div class="faq-item">
-    <h3>Can I train AI or machine-learning models on TPL-licensed material?</h3>
-    <p>Yes. Reproducing the Licensed Material to train, fine-tune, evaluate, or
-    otherwise improve a model is a use and reproduction permitted under Section 2
-    (<a href="/en/2.2/#s-6-4">Section 6.4(a)</a>). The model's weights, parameters,
-    and other learned artifacts are not Object Code, not Derivative Works, and not
-    Licensed Material (6.4(b)). Output generated by the model is a User Work of
-    whoever generates it, regardless of training data (6.4(c)), and no attribution
-    or license obligation attaches to outputs by reason of training alone (6.4(d)).
-    The one caveat: to the extent an output incorporates or reproduces Licensed
-    Material source code, that portion remains subject to Section 4.</p>
+    <h3>TPL で許諾された素材で AI・機械学習モデルを学習できますか？</h3>
+    <p>はい。モデルを学習、微調整、評価、その他の方法で改善するためにライセンス対象物を複製することは、第 2 節により許容される利用および複製です（<a href="/ja/2.3/#s-4-4">第 4.4(a) 条</a>）。モデルの重み・パラメータその他の学習成果物は、オブジェクト形態でも派生物でもライセンス対象物でもありません（4.4(b)）。モデルが生成した出力は、学習データに関係なく、それを生成した者の利用者著作物です（4.4(c)）。そして学習だけを理由として出力に表示義務は生じません（4.4(d)）。</p>
   </div>
 
   <div class="faq-item">
-    <h3>I run the material as a hosted service. What must I do?</h3>
-    <p>Make the copyright notices, and either a copy of or a direct reference
-    (such as a URL) to the complete license text, readily accessible to your
-    users — for example in the documentation, an "about" page, or the terms of
-    service (<a href="/en/2.2/#s-4-8">Section 4.8</a>). Nothing in Section 4.8
-    obliges you to disclose the source code of the service.</p>
+    <h3>素材をホスト型サービスとして運用しています。何をすべきですか？</h3>
+    <p>通知の保持に加えて、ライセンス対象物の著作権通知と、ライセンス全文の複製物または直接の参照（URL など）を、利用者が容易にアクセスできるようにする必要があります — 例えば文書、「概要」ページ、利用規約などです（<a href="/ja/2.3/#s-5-8">第 5.8 条</a>）。第 5.8 条はサービスのソースコードの開示を義務付けません。</p>
   </div>
 
   <div class="faq-item">
-    <h3>Where must notices appear in an end-user product?</h3>
-    <p>Notices must be reasonably conspicuous and accessible to recipients — for
-    example in an "About", "Credits", or "Legal Notices" section. Placement solely
-    in machine-readable files or installer logs does not satisfy this for products
-    distributed to end users (<a href="/en/2.2/#s-4-9">Section 4.9</a>).</p>
+    <h3>最終利用者向け製品では、通知はどこに表示すべきですか？</h3>
+    <p>通知は受領者にとって合理的に目立ち、アクセス可能でなければなりません — 例えば「概要」「クレジット」「法的通知」の欄です。機械可読ファイルやインストーラのログにのみ配置することは、最終利用者に配布される製品については本要件を満たしません（<a href="/ja/2.3/#s-5-9">第 5.9 条</a>）。</p>
   </div>
 
   <div class="faq-item">
-    <h3>Can I use the TIE name or logo to promote my project?</h3>
-    <p>Not without prior written permission. The Licensor's name and Brand Mark
-    may not be used to endorse or promote works derived from the Licensed
-    Material, except where the law provides for such use in a non-confusing
-    manner (<a href="/en/2.2/#section-10">Section 10</a>). Stating factually that
-    your project uses TPL-licensed material is different from implying endorsement.</p>
+    <h3>TIE の名称やロゴを自分のプロジェクトの宣伝に使えますか？</h3>
+    <p>事前の書面による許可がなければ使えません。許諾者の名称と標章は、ライセンス対象物から派生した著作物を承認または宣伝するために使用できません。法律が混同を生じさせない方法でそのような利用を認める場合を除きます（<a href="/ja/2.3/#section-8">第 8 節</a>）。自分のプロジェクトが TPL ライセンスの素材を使っていると事実として述べることは、承認を示唆することとは異なります。</p>
   </div>
 
   <div class="faq-item">
-    <h3>My distribution bundles third-party assets. What applies to them?</h3>
-    <p>Their own licenses. Third-party material is identified and governed by its
-    separate terms (<a href="/en/2.2/#s-5-1">Section 5.1</a>); you must comply
-    with those terms (5.2), retain third-party notices and license texts (5.3),
-    and not remove or misrepresent them (5.4).</p>
+    <h3>私の配布物は第三者資産を同梱しています。何が適用されますか？</h3>
+    <p>それら自身のライセンスです。第三者素材は独立した条件で特定され、規律されます（<a href="/ja/2.3/#s-6-1">第 6.1 条</a>）。それらの条件を遵守し（6.2）、第三者の通知とライセンス本文を保持し（6.3）、それらを削除・不実表示してはなりません（6.4）。</p>
   </div>
 
   <div class="faq-item">
-    <h3>Which version of TPL applies to a given work?</h3>
-    <p>The version stated in the work's LICENSE file or notice. Works distributed
-    under TPL 2.0 or 2.1 remain governed by those versions; the current version is
-    <a href="/en/2.2/">TPL 2.2</a>. New adoptions should use the current version.</p>
+    <h3>ある著作物にはどの版の TPL が適用されますか？</h3>
+    <p>その著作物の LICENSE ファイルまたは通知に記載された版です。TPL 2.0、2.1、2.2 の下で配布された著作物は引き続きそれらの版に服します。現行版は <a href="/ja/2.3/">TPL 2.3</a> です。新たな採用には現行版を用いてください。</p>
   </div>
 
   <div class="faq-item">
-    <h3>Who governs disputes?</h3>
-    <p>In the absence of an effective Designation, the license is governed by the
-    law of the Licensor's domicile, and disputes go to the competent courts there
-    (<a href="/en/2.2/#s-12-1">Sections 12.1</a>,
-    <a href="/en/2.2/#s-12-2">12.2</a>). A Licensor may designate a specific
-    governing law and/or venue by a plainly identified Designation in the LICENSE
-    or notice file. Mandatory local law prevails where it cannot be excluded
-    (12.3).</p>
+    <h3>紛争は誰が管轄しますか？</h3>
+    <p>有効な指定がない場合、ライセンスは許諾者の住所地の法に準拠し、紛争はその地の管轄裁判所に付されます（<a href="/ja/2.3/#s-12-1">第 12.1 条</a>、<a href="/ja/2.3/#s-12-2">第 12.2 条</a>）。許諾者は LICENSE ファイルまたは通知ファイルに明確に識別された指定により、特定の準拠法や管轄を指定できます。排除できない現地の強行法規が優先します（12.4）。</p>
   </div>
+
 </main>
-
-<footer>
-  Tie Public License · maintained by the TIE-LANG organization ·
-  <a href="https://github.com/tie-lang/TPL">text repository</a> · <a href="https://github.com/tie-lang/tpl-www">website repository</a>
-</footer>
-
 <script>var tb=document.getElementById("themeBtn");if(tb){tb.addEventListener("click",function(){var r=document.documentElement,t=r.dataset.theme=="dark"?"light":"dark";r.dataset.theme=t;try{localStorage.setItem("tpl_theme",t)}catch(e){}})}</script>
 </body>
 </html>
