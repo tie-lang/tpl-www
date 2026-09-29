@@ -256,48 +256,72 @@ var g_lang_names: table<string> = []
 var g_lang_banners: table<string> = []
 // 非权威参考译文提示（存在译文文件时使用）
 var g_lang_refnotes: table<string> = []
+// 官方翻译标志（1 = 已由许可人依 §15.8 指定为官方翻译）
+var g_lang_official: table<i64> = []
+// 官方翻译提示（存在译文文件且官方时使用）
+var g_lang_official_notes: table<string> = []
 
 func init_langs() {
     table_push(g_lang_codes, "en")
     table_push(g_lang_names, "English")
     table_push(g_lang_banners, "")
     table_push(g_lang_refnotes, "")
+    table_push(g_lang_official, 0)
+    table_push(g_lang_official_notes, "")
     table_push(g_lang_codes, "zh-cn")
     table_push(g_lang_names, "中文")
     table_push(g_lang_banners, "此页为英文权威文本 —— 中文翻译尚未发布。英文版本为准（English version prevails）。<a href=\"/zh-cn/\">中文说明页</a>")
     table_push(g_lang_refnotes, "本页为 TPL 2.3 的非权威参考译文。英文版本为准（English version prevails）。")
+    table_push(g_lang_official, 1)
+    table_push(g_lang_official_notes, "本页为 TPL 2.3 的官方翻译。英文版本为准（English version prevails, §15.8）。")
     table_push(g_lang_codes, "es")
     table_push(g_lang_names, "Español")
     table_push(g_lang_banners, "La traducción de esta página aún no está disponible; se muestra el texto en inglés. Prevalece la versión en inglés (§15.8).")
     table_push(g_lang_refnotes, "Esta página contiene una traducción de referencia no oficial de TPL 2.3. Prevalece el texto en inglés (§15.8).")
+    table_push(g_lang_official, 1)
+    table_push(g_lang_official_notes, "Esta página es una traducción oficial de TPL 2.3. Prevalece el texto en inglés (§15.8).")
     table_push(g_lang_codes, "fr")
     table_push(g_lang_names, "Français")
     table_push(g_lang_banners, "La traduction de cette page n'est pas encore disponible ; le texte anglais est affiché. La version anglaise prévaut (§15.8).")
     table_push(g_lang_refnotes, "Cette page contient une traduction de référence non officielle de TPL 2.3. Le texte anglais prévaut (§15.8).")
+    table_push(g_lang_official, 1)
+    table_push(g_lang_official_notes, "Cette page est une traduction officielle de TPL 2.3. Le texte anglais prévaut (§15.8).")
     table_push(g_lang_codes, "de")
     table_push(g_lang_names, "Deutsch")
     table_push(g_lang_banners, "Eine Übersetzung dieser Seite ist noch nicht verfügbar; der englische Text wird angezeigt. Die englische Fassung gilt (§15.8).")
     table_push(g_lang_refnotes, "Diese Seite enthält eine nicht amtliche Referenzübersetzung von TPL 2.3. Maßgeblich ist der englische Text (§15.8).")
+    table_push(g_lang_official, 1)
+    table_push(g_lang_official_notes, "Diese Seite ist eine amtliche Übersetzung von TPL 2.3. Maßgeblich ist der englische Text (§15.8).")
     table_push(g_lang_codes, "ja")
     table_push(g_lang_names, "日本語")
     table_push(g_lang_banners, "このページの翻訳はまだ提供されていません。英語テキストを表示しています。英語版が優先されます（§15.8）。")
     table_push(g_lang_refnotes, "このページは TPL 2.3 の非公式参考訳です。英語原文が優先されます（§15.8）。")
+    table_push(g_lang_official, 1)
+    table_push(g_lang_official_notes, "このページは TPL 2.3 の公式翻訳です。英語原文が優先されます（§15.8）。")
     table_push(g_lang_codes, "pt")
     table_push(g_lang_names, "Português")
     table_push(g_lang_banners, "A tradução desta página ainda não está disponível; o texto em inglês é exibido. A versão em inglês prevalece (§15.8).")
     table_push(g_lang_refnotes, "Esta página contém uma tradução de referência não oficial da TPL 2.3. O texto em inglês prevalece (§15.8).")
+    table_push(g_lang_official, 1)
+    table_push(g_lang_official_notes, "Esta página é uma tradução oficial da TPL 2.3. O texto em inglês prevalece (§15.8).")
     table_push(g_lang_codes, "ru")
     table_push(g_lang_names, "Русский")
     table_push(g_lang_banners, "Перевод этой страницы пока недоступен; показан английский текст. Английская версия имеет приоритет (§15.8).")
     table_push(g_lang_refnotes, "Эта страница содержит неофициальный справочный перевод TPL 2.3. Приоритет имеет английский текст (§15.8).")
+    table_push(g_lang_official, 1)
+    table_push(g_lang_official_notes, "Эта страница — официальный перевод TPL 2.3. Приоритет имеет английский текст (§15.8).")
     table_push(g_lang_codes, "ko")
     table_push(g_lang_names, "한국어")
     table_push(g_lang_banners, "이 페이지의 번역은 아직 제공되지 않습니다. 영어 텍스트가 표시됩니다. 영어 버전이 우선합니다(§15.8).")
     table_push(g_lang_refnotes, "이 페이지는 TPL 2.3의 비공식 참고 번역입니다. 영어 원문이 우선합니다(§15.8).")
+    table_push(g_lang_official, 1)
+    table_push(g_lang_official_notes, "이 페이지는 TPL 2.3의 공식 번역입니다. 영어 원문이 우선합니다(§15.8).")
     table_push(g_lang_codes, "ar")
     table_push(g_lang_names, "العربية")
     table_push(g_lang_banners, "الترجمة غير متوفرة بعد؛ يُعرض النص الإنجليزي. النسخة الإنجليزية هي المعتمدة (§15.8).")
     table_push(g_lang_refnotes, "هذه الصفحة ترجمة مرجعية غير رسمية للـ TPL 2.3. النص الإنجليزي هو المعتمد (§15.8).")
+    table_push(g_lang_official, 1)
+    table_push(g_lang_official_notes, "هذه الصفحة ترجمة رسمية للـ TPL 2.3. النص الإنجليزي هو المعتمد (§15.8).")
 }
 
 // 顶部导航（cur: 当前语言代码；ver_suffix: 版本路径后缀；zh: 中文界面标签）
@@ -361,7 +385,7 @@ func emit_shell_open(h: i64, title: string, cur: string, ver_suffix: string, zh:
     sb_append(h, "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n")
     sb_append(h, "<title>" + esc_html(title) + "</title>\n")
     sb_append(h, "<meta name=\"description\" content=\"The Tie Public License (TPL) — a permissive, attribution-based open source license published by the TIE-LANG organization.\">\n")
-    sb_append(h, "<link rel=\"stylesheet\" href=\"/assets/site.css?v=10\">\n")
+    sb_append(h, "<link rel=\"stylesheet\" href=\"/assets/site.css?v=11\">\n")
     sb_append(h, "<script>(function(){var t;try{t=localStorage.getItem(\"tpl_theme\")}catch(e){}if(t!=\"dark\"&&t!=\"light\"){t=window.matchMedia&&window.matchMedia(\"(prefers-color-scheme: dark)\").matches?\"dark\":\"light\"}document.documentElement.dataset.theme=t})()</script>\n")
     sb_append(h, "</head>\n<body>\n")
     emit_nav(h, cur, ver_suffix, zh)
@@ -482,7 +506,7 @@ func emit_body(h: i64, src: string) {
 // 生成一个版本的 en 页 + zh 回落页 + 纯文本副本
 // src: TPL 仓文本路径；ver/date: 元数据；current: 是否当前版本
 // out_root: 站点根目录
-func gen_version(src: string, ver: string, date: string, current: bool, out_root: string) {
+func gen_version(src: string, ver: string, date: string, current: bool, out_root: string, xlat_root: string) {
     var body = file_read(src)
     if len(body) < 100 {
         print_err("gen_lic: source too small or unreadable: " + src)
@@ -500,13 +524,21 @@ func gen_version(src: string, ver: string, date: string, current: bool, out_root
         var banner = g_lang_banners[i]
         var lbody = body
         // 译文源：translations/<lang>/tpl-<ver>.<lang>.txt 存在则启用（无须改本表）
-        var xlat = out_root + "translations\\" + lc + "\\" + "tpl-" + ver + "." + lc + ".txt"
+        var xlat = xlat_root + lc + "\\" + "tpl-" + ver + "." + lc + ".txt"
         if file_exists(xlat) {
             lbody = file_read(xlat)
-            banner = g_lang_refnotes[i]
+            if g_lang_official[i] == 1 {
+                banner = g_lang_official_notes[i]
+            } else {
+                banner = g_lang_refnotes[i]
+            }
         }
         if banner != "" {
-            sb_append(h, "<div class=\"banner\">" + banner + "</div>\n")
+            var bcls = "banner"
+            if g_lang_official[i] == 1 && file_exists(xlat) {
+                bcls = "banner official"
+            }
+            sb_append(h, "<div class=\"" + bcls + "\">" + banner + "</div>\n")
         }
         sb_append(h, "<div class=\"lic-head\">")
         sb_append(h, "<h1>Tie Public License " + ver + "</h1>")
@@ -557,10 +589,11 @@ func gen_version(src: string, ver: string, date: string, current: bool, out_root
 func main() {
     init_langs()
     var root = "F:\\\\Projects\\\\tpl-www\\\\"
-    gen_version("F:\\\\Projects\\\\TPL\\\\2.3",    "2.3", "2026-09-29", true,  root)
-    gen_version("F:\\\\Projects\\\\TPL\\\\2.2",    "2.2", "2026-09-25", false, root)
-    gen_version("F:\\\\Projects\\\\TPL\\\\2.1",    "2.1", "2026-09-17", false, root)
-    gen_version("F:\\\\Projects\\\\TPL\\\\2.0",    "2.0", "2026-09-15", false, root)
+    var xroot = "F:\\\\\\\\Projects\\\\\\\\TPL\\\\\\\\translations\\\\\\\\"
+    gen_version("F:\\\\Projects\\\\TPL\\\\2.3",    "2.3", "2026-09-29", true,  root, xroot)
+    gen_version("F:\\\\Projects\\\\TPL\\\\2.2",    "2.2", "2026-09-25", false, root, xroot)
+    gen_version("F:\\\\Projects\\\\TPL\\\\2.1",    "2.1", "2026-09-17", false, root, xroot)
+    gen_version("F:\\\\Projects\\\\TPL\\\\2.0",    "2.0", "2026-09-15", false, root, xroot)
     println("[gen] done")
     exit(0)
 }
