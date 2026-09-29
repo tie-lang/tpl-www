@@ -205,9 +205,45 @@ func clause_id(s: string) -> string {
 
 // ---------- 页面骨架 ----------
 
-// 顶部导航（license 页：Text 项高亮；语言下拉为原生 details/summary；zh 控制导航标签语言）
-// home: 本语言树根；other_prefix: 对应他语言同名页；lang_self/other: 语言显示名
-func emit_nav(h: i64, home: string, other_prefix: string, lang_self: string, lang_other: string, zh: bool) {
+// 多语言表：代码与显示名（en 为权威语言；zh-cn 有中文界面；其余为英文回退页）
+var g_lang_codes: table<string> = []
+var g_lang_names: table<string> = []
+var g_lang_banners: table<string> = []
+
+func init_langs() {
+    table_push(g_lang_codes, "en")
+    table_push(g_lang_names, "English")
+    table_push(g_lang_banners, "")
+    table_push(g_lang_codes, "zh-cn")
+    table_push(g_lang_names, "中文")
+    table_push(g_lang_banners, "此页为英文权威文本 —— 中文翻译尚未发布。英文版本为准（English version prevails）。<a href=\"/zh-cn/\">中文说明页</a>")
+    table_push(g_lang_codes, "es")
+    table_push(g_lang_names, "Español")
+    table_push(g_lang_banners, "La traducción de esta página aún no está disponible; se muestra el texto en inglés. Prevalece la versión en inglés (§15.8).")
+    table_push(g_lang_codes, "fr")
+    table_push(g_lang_names, "Français")
+    table_push(g_lang_banners, "La traduction de cette page n'est pas encore disponible ; le texte anglais est affiché. La version anglaise prévaut (§15.8).")
+    table_push(g_lang_codes, "de")
+    table_push(g_lang_names, "Deutsch")
+    table_push(g_lang_banners, "Eine Übersetzung dieser Seite ist noch nicht verfügbar; der englische Text wird angezeigt. Die englische Fassung gilt (§15.8).")
+    table_push(g_lang_codes, "ja")
+    table_push(g_lang_names, "日本語")
+    table_push(g_lang_banners, "このページの翻訳はまだ提供されていません。英語テキストを表示しています。英語版が優先されます（§15.8）。")
+    table_push(g_lang_codes, "pt")
+    table_push(g_lang_names, "Português")
+    table_push(g_lang_banners, "A tradução desta página ainda não está disponível; o texto em inglês é exibido. A versão em inglês prevalece (§15.8).")
+    table_push(g_lang_codes, "ru")
+    table_push(g_lang_names, "Русский")
+    table_push(g_lang_banners, "Перевод этой страницы пока недоступен; показан английский текст. Английская версия имеет приоритет (§15.8).")
+    table_push(g_lang_codes, "ko")
+    table_push(g_lang_names, "한국어")
+    table_push(g_lang_banners, "이 페이지의 번역은 아직 제공되지 않습니다. 영어 텍스트가 표시됩니다. 영어 버전이 우선합니다(§15.8).")
+}
+
+// 顶部导航（cur: 当前语言代码；ver_suffix: 版本路径后缀；zh: 中文界面标签）
+// 语言下拉列出全部语言（省略当前语言），仍为零 JS 原生 details/summary
+func emit_nav(h: i64, cur: string, ver_suffix: string, zh: bool) {
+    var home = "/" + cur + "/"
     var l_home = "Home"
     var l_text = "Text"
     var l_cmp = "Compare"
@@ -226,33 +262,38 @@ func emit_nav(h: i64, home: string, other_prefix: string, lang_self: string, lan
     }
     sb_append(h, "<nav class=\"top\"><div class=\"brand\"><a href=\"" + home + "\">Tie Public License</a></div><div class=\"links\">")
     sb_append(h, "<a href=\"" + home + "\">" + l_home + "</a>")
-    if zh {
-        sb_append(h, "<a class=\"on\" href=\"#\">" + l_text + "</a>")
-    } else {
-        sb_append(h, "<a href=\"" + home + "2.2/\">" + l_text + "</a>")
-    }
+    sb_append(h, "<a class=\"on\" href=\"#\">" + l_text + "</a>")
     sb_append(h, "<a href=\"" + home + "compare/\">" + l_cmp + "</a>")
     sb_append(h, "<a href=\"" + home + "using/\">" + l_using + "</a>")
     sb_append(h, "<a href=\"" + home + "faq/\">" + l_faq + "</a>")
     sb_append(h, "<a href=\"" + home + "about/\">" + l_about + "</a>")
-    sb_append(h, "<details class=\"lang\"><summary aria-label=\"Language: " + lang_self + " / " + lang_other + "\">" + lang_icon + "</summary><div class=\"menu\"><a href=\"" + other_prefix + "\">" + lang_other + "</a></div></details>")
+    sb_append(h, "<details class=\"lang\"><summary aria-label=\"Language\">" + lang_icon + "</summary><div class=\"menu\">")
+    var n = len(g_lang_codes)
+    var i: i64 = 0
+    while i < n {
+        var lc = g_lang_codes[i]
+        if lc != cur {
+            sb_append(h, "<a href=\"/" + lc + "/" + ver_suffix + "\">" + g_lang_names[i] + "</a>")
+        }
+        i = i + 1
+    }
+    sb_append(h, "</div></details>")
     sb_append(h, "<button class=\"theme\" id=\"themeBtn\" type=\"button\" aria-label=\"" + l_theme + "\"><span class=\"ico-moon\">" + ico_moon + "</span><span class=\"ico-sun\">" + ico_sun + "</span></button>")
     sb_append(h, "</div></nav>\n")
 }
 
 // 页面头尾壳
-func emit_shell_open(h: i64, title: string, home: string, other_prefix: string, lang_self: string, lang_other: string, zh: bool) {
-    sb_append(h, "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n")
+func emit_shell_open(h: i64, title: string, cur: string, ver_suffix: string, zh: bool) {
+    sb_append(h, "<!DOCTYPE html>\n<html lang=\"" + cur + "\">\n<head>\n<meta charset=\"utf-8\">\n")
     sb_append(h, "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n")
     sb_append(h, "<title>" + esc_html(title) + "</title>\n")
     sb_append(h, "<meta name=\"description\" content=\"The Tie Public License (TPL) — a permissive, attribution-based open source license published by the TIE-LANG organization.\">\n")
-    sb_append(h, "<link rel=\"stylesheet\" href=\"/assets/site.css?v=7\">\n")
+    sb_append(h, "<link rel=\"stylesheet\" href=\"/assets/site.css?v=8\">\n")
     sb_append(h, "<script>(function(){var t;try{t=localStorage.getItem(\"tpl_theme\")}catch(e){}if(t!=\"dark\"&&t!=\"light\"){t=window.matchMedia&&window.matchMedia(\"(prefers-color-scheme: dark)\").matches?\"dark\":\"light\"}document.documentElement.dataset.theme=t})()</script>\n")
     sb_append(h, "</head>\n<body>\n")
-    emit_nav(h, home, other_prefix, lang_self, lang_other, zh)
+    emit_nav(h, cur, ver_suffix, zh)
     sb_append(h, "<main>\n")
 }
-
 func emit_shell_close(h: i64, home: string) {
     sb_append(h, "</main>\n")
     sb_append(h, "<footer>Tie Public License · maintained by the TIE-LANG organization · <a href=\"https://github.com/tie-lang/TPL\">text repository</a> · <a href=\"https://github.com/tie-lang/tpl-www\">website repository</a> · <a href=\"" + home + "\">home</a></footer>\n")
@@ -355,66 +396,72 @@ func gen_version(src: string, ver: string, date: string, current: bool, out_root
         print_err("gen_lic: source too small or unreadable: " + src)
         exit(1)
     }
-
-    var en_dir = out_root + "en\\" + ver
-    var zh_dir = out_root + "zh-cn\\" + ver
-    mkdir_all(en_dir)
-    mkdir_all(zh_dir)
-
-    // ---- 英文页（权威版本）----
-    var h = string_builder()
-    emit_shell_open(h, "Tie Public License " + ver, "/en/", "/zh-cn/2.2/", "English", "中文", false)
-    sb_append(h, "<div class=\"lic-head\">")
-    sb_append(h, "<h1>Tie Public License " + ver + "</h1>")
-    sb_append(h, "<p class=\"meta\">")
-    if current {
-        sb_append(h, "Current version")
-    } else {
-        sb_append(h, "Archived version")
+    var n = len(g_lang_codes)
+    var i: i64 = 0
+    while i < n {
+        var lc = g_lang_codes[i]
+        var zh = lc == "zh-cn"
+        var dir = out_root + lc + "\\" + ver
+        mkdir_all(dir)
+        var h = string_builder()
+        emit_shell_open(h, "Tie Public License " + ver, lc, ver + "/", zh)
+        var banner = g_lang_banners[i]
+        if banner != "" {
+            sb_append(h, "<div class=\"banner\">" + banner + "</div>\n")
+        }
+        sb_append(h, "<div class=\"lic-head\">")
+        sb_append(h, "<h1>Tie Public License " + ver + "</h1>")
+        sb_append(h, "<p class=\"meta\">")
+        if current {
+            if zh { sb_append(h, "当前版本") } else { sb_append(h, "Current version") }
+        } else {
+            if zh { sb_append(h, "历史存档版本") } else { sb_append(h, "Archived version") }
+        }
+        if zh {
+            sb_append(h, " · 发布于 " + date + " · <a href=\"/" + lc + "/" + ver + "/tpl-" + ver + ".txt\">纯文本</a></p>")
+        } else {
+            sb_append(h, " · published " + date + " · <a href=\"/" + lc + "/" + ver + "/tpl-" + ver + ".txt\">plain text</a></p>")
+        }
+        sb_append(h, "<p class=\"meta versions\">Versions: ")
+        var vs = table_new_string()
+        table_push(vs, "2.3")
+        table_push(vs, "2.2")
+        table_push(vs, "2.1")
+        table_push(vs, "2.0")
+        var vn = len(vs)
+        var j: i64 = 0
+        while j < vn {
+            var v = vs[j]
+            if v != ver {
+                sb_append(h, "<a href=\"/" + lc + "/" + v + "/\">" + v + "</a>")
+                if j < vn - 1 {
+                    sb_append(h, " · ")
+                }
+            }
+            j = j + 1
+        }
+        sb_append(h, "</p>")
+        sb_append(h, "</div>\n")
+        sb_append(h, "<div class=\"lic\">\n")
+        emit_body(h, body)
+        sb_append(h, "</div>\n")
+        emit_shell_close(h, "/" + lc + "/")
+        file_write(dir + "\\index.html", sb_build(h))
+        if lc == "en" {
+            file_write(dir + "\\tpl-" + ver + ".txt", body)
+        }
+        i = i + 1
     }
-    sb_append(h, " · published " + date + " · <a href=\"/en/" + ver + "/tpl-" + ver + ".txt\">plain text</a></p>")
-    sb_append(h, "<p class=\"meta versions\">Versions: <a href=\"/en/2.2/\">2.2</a> · <a href=\"/en/2.1/\">2.1</a> · <a href=\"/en/2.0/\">2.0</a></p>")
-    sb_append(h, "</div>\n")
-    sb_append(h, "<div class=\"lic\">\n")
-    emit_body(h, body)
-    sb_append(h, "</div>\n")
-    emit_shell_close(h, "/en/")
-    file_write(en_dir + "\\index.html", sb_build(h))
-
-    // ---- 纯文本副本 ----
-    file_write(en_dir + "\\tpl-" + ver + ".txt", body)
-
-    // ---- 中文回落页：英文权威文本 + 横幅 ----
-    var z = string_builder()
-    emit_shell_open(z, "Tie Public License " + ver, "/zh-cn/", "/en/2.2/", "中文", "English", true)
-    sb_append(z, "<div class=\"banner\">此页为英文权威文本 —— 中文翻译尚未发布。英文版本为准（English version prevails）。<a href=\"/zh-cn/\">中文说明页</a></div>\n")
-    sb_append(z, "<div class=\"lic-head\">")
-    sb_append(z, "<h1>Tie Public License " + ver + "</h1>")
-    sb_append(z, "<p class=\"meta\">")
-    if current {
-        sb_append(z, "当前版本 · ")
-    } else {
-        sb_append(z, "历史存档版本 · ")
-    }
-    sb_append(z, "发布于 " + date + " · <a href=\"/zh-cn/" + ver + "/tpl-" + ver + ".txt\">纯文本</a></p>")
-    sb_append(z, "<p class=\"meta versions\">版本：<a href=\"/zh-cn/2.2/\">2.2</a> · <a href=\"/zh-cn/2.1/\">2.1</a> · <a href=\"/zh-cn/2.0/\">2.0</a></p>")
-    sb_append(z, "</div>\n")
-    sb_append(z, "<div class=\"lic\">\n")
-    emit_body(z, body)
-    sb_append(z, "</div>\n")
-    emit_shell_close(z, "/zh-cn/")
-    file_write(zh_dir + "\\index.html", sb_build(z))
-
-    println("[gen] " + ver + " -> en/zh pages + txt (" + to_string(len(body)) + " bytes)")
+    println("[gen] " + ver + " -> " + to_string(n) + " languages + txt (" + to_string(len(body)) + " bytes)")
 }
 
 func main() {
-    var root = "F:\\Projects\\tpl-www\\"
-    // 当前版本读权威 tpl.txt；历史版本读版本号副本（二者本就逐字节一致）
-    gen_version("F:\\Projects\\TPL\\2.3",    "2.3", "2026-09-29", true,  root)
-    gen_version("F:\\Projects\\TPL\\2.2",    "2.2", "2026-09-25", false, root)
-    gen_version("F:\\Projects\\TPL\\2.1",    "2.1", "2026-09-17", false, root)
-    gen_version("F:\\Projects\\TPL\\2.0",    "2.0", "2026-09-15", false, root)
+    init_langs()
+    var root = "F:\\\\Projects\\\\tpl-www\\\\"
+    gen_version("F:\\\\Projects\\\\TPL\\\\2.3",    "2.3", "2026-09-29", true,  root)
+    gen_version("F:\\\\Projects\\\\TPL\\\\2.2",    "2.2", "2026-09-25", false, root)
+    gen_version("F:\\\\Projects\\\\TPL\\\\2.1",    "2.1", "2026-09-17", false, root)
+    gen_version("F:\\\\Projects\\\\TPL\\\\2.0",    "2.0", "2026-09-15", false, root)
     println("[gen] done")
     exit(0)
 }
