@@ -294,6 +294,10 @@ func init_langs() {
     table_push(g_lang_names, "한국어")
     table_push(g_lang_banners, "이 페이지의 번역은 아직 제공되지 않습니다. 영어 텍스트가 표시됩니다. 영어 버전이 우선합니다(§15.8).")
     table_push(g_lang_refnotes, "이 페이지는 TPL 2.3의 비공식 참고 번역입니다. 영어 원문이 우선합니다(§15.8).")
+    table_push(g_lang_codes, "ar")
+    table_push(g_lang_names, "العربية")
+    table_push(g_lang_banners, "الترجمة غير متوفرة بعد؛ يُعرض النص الإنجليزي. النسخة الإنجليزية هي المعتمدة (§15.8).")
+    table_push(g_lang_refnotes, "هذه الصفحة ترجمة مرجعية غير رسمية للـ TPL 2.3. النص الإنجليزي هو المعتمد (§15.8).")
 }
 
 // 顶部导航（cur: 当前语言代码；ver_suffix: 版本路径后缀；zh: 中文界面标签）
@@ -315,6 +319,15 @@ func emit_nav(h: i64, cur: string, ver_suffix: string, zh: bool) {
         l_faq = "常见问题"
         l_about = "关于"
         l_theme = "切换深浅色主题"
+    }
+    if cur == "ar" {
+        l_home = "الرئيسية"
+        l_text = "النص"
+        l_cmp = "مقارنة"
+        l_using = "الاستخدام"
+        l_faq = "الأسئلة الشائعة"
+        l_about = "حول"
+        l_theme = "تبديل السمة الفاتحة والداكنة"
     }
     sb_append(h, "<nav class=\"top\"><div class=\"brand\"><a href=\"" + home + "\">Tie Public License</a></div><div class=\"links\">")
     sb_append(h, "<a href=\"" + home + "\">" + l_home + "</a>")
@@ -340,11 +353,15 @@ func emit_nav(h: i64, cur: string, ver_suffix: string, zh: bool) {
 
 // 页面头尾壳
 func emit_shell_open(h: i64, title: string, cur: string, ver_suffix: string, zh: bool) {
-    sb_append(h, "<!DOCTYPE html>\n<html lang=\"" + cur + "\">\n<head>\n<meta charset=\"utf-8\">\n")
+    var dir_attr = ""
+    if cur == "ar" {
+        dir_attr = " dir=\"rtl\""
+    }
+    sb_append(h, "<!DOCTYPE html>\n<html lang=\"" + cur + "\"" + dir_attr + ">\n<head>\n<meta charset=\"utf-8\">\n")
     sb_append(h, "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n")
     sb_append(h, "<title>" + esc_html(title) + "</title>\n")
     sb_append(h, "<meta name=\"description\" content=\"The Tie Public License (TPL) — a permissive, attribution-based open source license published by the TIE-LANG organization.\">\n")
-    sb_append(h, "<link rel=\"stylesheet\" href=\"/assets/site.css?v=8\">\n")
+    sb_append(h, "<link rel=\"stylesheet\" href=\"/assets/site.css?v=10\">\n")
     sb_append(h, "<script>(function(){var t;try{t=localStorage.getItem(\"tpl_theme\")}catch(e){}if(t!=\"dark\"&&t!=\"light\"){t=window.matchMedia&&window.matchMedia(\"(prefers-color-scheme: dark)\").matches?\"dark\":\"light\"}document.documentElement.dataset.theme=t})()</script>\n")
     sb_append(h, "</head>\n<body>\n")
     emit_nav(h, cur, ver_suffix, zh)
@@ -359,6 +376,21 @@ func emit_shell_close(h: i64, home: string) {
 
 // ---------- 许可证正文转换 ----------
 
+// 行首是否为 4 个空格（附录通知模板等代码型块）——RTL 页面需隔离为 LTR
+func is_indented(s: string) -> bool {
+    if len(s) < 4 {
+        return false
+    }
+    var i: i64 = 0
+    while i < 4 {
+        if str_byte(s, i) != 32 {
+            return false
+        }
+        i = i + 1
+    }
+    return true
+}
+
 // 输出一个块：块内行以 \n 连接，条款起始块带 id 锚点
 func flush_block(h: i64, blk: table<string>) {
     var cnt = len(blk)
@@ -370,7 +402,11 @@ func flush_block(h: i64, blk: table<string>) {
     if is_clause(first) {
         id_attr = " id=\"" + clause_id(first) + "\""
     }
-    sb_append(h, "<p" + id_attr + ">")
+    var ltr_attr = ""
+    if is_indented(first) {
+        ltr_attr = " dir=\"ltr\" class=\"tpl-code\""
+    }
+    sb_append(h, "<p" + id_attr + ltr_attr + ">")
     var j: i64 = 0
     while j < cnt {
         if j > 0 {

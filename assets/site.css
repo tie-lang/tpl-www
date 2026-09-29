@@ -105,7 +105,8 @@ body {
   background: var(--bg);
   color: var(--fg);
   font: 15px/1.65 -apple-system, "Segoe UI", "Helvetica Neue", Arial,
-        "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+        "Segoe UI", Tahoma, "Noto Naskh Arabic", "Geeza Pro", sans-serif;
 }
 
 a { color: var(--link); text-decoration: none; }
@@ -170,7 +171,7 @@ details.lang summary svg { display: block; }
 
 details.lang .menu {
   position: absolute;
-  right: 0;
+  inset-inline-end: 0;
   top: calc(100% + 4px);
   background: var(--bg);
   border: 1px solid var(--border-strong);
@@ -234,7 +235,7 @@ h3 { font-size: 16px; font-weight: 500; margin: 24px 0 8px; }
 
 p, li { margin: 0 0 10px; }
 
-ul { margin: 0 0 14px; padding-left: 22px; }
+ul { margin: 0 0 14px; padding-inline-start: 22px; }
 
 .muted { color: var(--muted); }
 
@@ -314,7 +315,7 @@ table.matrix th {
 
 table.matrix td:first-child,
 table.matrix th:first-child {
-  text-align: left;
+  text-align: start;
   white-space: nowrap;
 }
 
@@ -360,6 +361,9 @@ code {
 }
 
 pre code { background: none; padding: 0; }
+
+/* 附录通知模板等代码型块：RTL 页面中强制从左到右 */
+.tpl-code { text-align: left; }
 
 /* ---------- FAQ ---------- */
 
